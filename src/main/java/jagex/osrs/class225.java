@@ -7,7 +7,7 @@ public class class225 extends Node {
 
     class225(Buffer var1) {
         var1.offset = var1.bytes.length - 3;
-        int var2 = var1.getUByte();
+        int var2 = var1.readUint8();
         int var3 = var1.readUint16();
         int var4 = var2 * 10 + 14;
         var1.offset = 0;
@@ -27,7 +27,7 @@ public class class225 extends Node {
             var14 = -1;
 
             while (true) {
-                var15 = var1.getUByte();
+                var15 = var1.readUint8();
                 if (var15 != var14) {
                     ++var4;
                 }
@@ -89,7 +89,7 @@ public class class225 extends Node {
 
         int var29;
         for (var29 = 0; var29 < var6; ++var29) {
-            var28 = var28 + var1.getUByte() & 127;
+            var28 = var28 + var1.readUint8() & 127;
             if (var28 != 0 && var28 != 32) {
                 if (var28 == 1) {
                     ++var16;

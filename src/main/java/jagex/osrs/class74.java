@@ -15,7 +15,7 @@ public class class74 {
             "7237300117305667488707183861728052766358166655052137727439795191253340127955075499635575104901523446809299097934591732635674173519120047404024393881551683");
     }
 
-    static final void method1987(int var0) {
+    static void logout() {
         client.field690.method2190((byte) -31);
         class125.method3052(-1338888273);
         class243.field3173.method3057();
@@ -25,11 +25,11 @@ public class class74 {
         }
 
         System.gc();
-        class180.method3732(2, -1797790835);
+        class180.method3732(2);
         client.field878 = -1;
         client.field879 = false;
         class148.method3368(-1980257067);
-        class16.method202(10, -1194677662);
+        client.setState(10);
     }
 
     static final int method1984(class232 var0, int var1, int var2) {
@@ -69,7 +69,7 @@ public class class74 {
                         var10 += var3[var5++];
                         var11 = class18.method213(var10, -1683045115);
                         var12 = var3[var5++];
-                        if (var12 != -1 && (!class84.method2125(var12, -205103429).field3512
+                        if (var12 != -1 && (!ItemConfig.get(var12).field3512
                             || client.field647)) {
                             for (var13 = 0; var13 < var11.field2762.length; ++var13) {
                                 if (var12 + 1 == var11.field2762[var13]) {
@@ -108,7 +108,7 @@ public class class74 {
                         var10 += var3[var5++];
                         var11 = class18.method213(var10, -490736277);
                         var12 = var3[var5++];
-                        if (var12 != -1 && (!class84.method2125(var12, -205103429).field3512
+                        if (var12 != -1 && (!ItemConfig.get(var12).field3512
                             || client.field647)) {
                             for (var13 = 0; var13 < var11.field2762.length; ++var13) {
                                 if (var12 + 1 == var11.field2762[var13]) {

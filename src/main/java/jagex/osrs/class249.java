@@ -140,7 +140,7 @@ public abstract class class249 {
         int var4 = var1.length;
         this.checksum = class73.checksumIEEE(var1, 0, var4, (byte) -11);
         Buffer var5 = new Buffer(class234.unpack(var1));
-        int format = var5.getUByte();
+        int format = var5.readUint8();
         if (format < 5 || format > 7) {
             throw new RuntimeException("");
         }
@@ -149,7 +149,7 @@ public abstract class class249 {
             var5.getInt();
         }
 
-        int var7 = var5.getUByte();
+        int var7 = var5.readUint8();
         if (format >= 7) {
             this.field3224 = var5.method3785(130636952);
         } else {

@@ -25,6 +25,6 @@ public class class247 extends Node {
     }
 
     public static void method4821(byte var0) {
-        class318.field3852 = new class205();
+        class318.field3852 = new IterableDeque();
     }
 }

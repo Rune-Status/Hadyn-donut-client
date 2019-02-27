@@ -37,7 +37,7 @@ public class class251 extends class249 {
             int var10 = class79.releaseManifest.getInt();
             this.initialize(var9, var10);
         } else {
-            class70.method1947((class251) null, 255, 255, 0, (byte) 0, true, 87474936);
+            ScriptExecutor.method1947((class251) null, 255, 255, 0, (byte) 0, true, 87474936);
             class252.field3275[_id] = this;
         }
 
@@ -63,10 +63,10 @@ public class class251 extends class249 {
         if (this.field3255 != null && this.field3253 != null && this.field3253[var1]) {
             ArchiveCache var3 = this.field3255;
             byte[] var5 = null;
-            class207 var6 = class250.field3242;
+            Deque var6 = class250.field3242;
             synchronized (class250.field3242) {
-                for (class247 var7 = (class247) class250.field3242.method4298(); var7 != null;
-                     var7 = (class247) class250.field3242.method4283()) {
+                for (class247 var7 = (class247) class250.field3242.getFirst(); var7 != null;
+                     var7 = (class247) class250.field3242.getNext()) {
                     if ((long) var1 == var7.key && var3 == var7.field3215
                         && var7.field3213 == 0) {
                         var5 = var7.field3212;
@@ -82,7 +82,7 @@ public class class251 extends class249 {
                 this.method4928(var3, var1, var10, true, (byte) -105);
             }
         } else {
-            class70.method1947(this, this.id, var1, super.field3228[var1], (byte) 2, true,
+            ScriptExecutor.method1947(this, this.id, var1, super.field3228[var1], (byte) 2, true,
                                87474936);
         }
 
@@ -118,9 +118,9 @@ public class class251 extends class249 {
                     var5.key = (long) var2;
                     var5.field3215 = var3;
                     var5.field3214 = this;
-                    class207 var6 = class250.field3242;
+                    Deque var6 = class250.field3242;
                     synchronized (class250.field3242) {
-                        class250.field3242.method4276(var5);
+                        class250.field3242.addLast(var5);
                     }
 
                     Object var11 = class250.field3241;
@@ -166,18 +166,19 @@ public class class251 extends class249 {
             if (this.field3251) {
                 throw new RuntimeException();
             } else if (bytes == null) {
-                class70.method1947(this, 255, this.id, this.expectedChecksum, (byte) 0, true,
+                ScriptExecutor.method1947(this, 255, this.id, this.expectedChecksum, (byte) 0, true,
                                    87474936);
             } else {
                 crc.reset();
                 crc.update(bytes, 0, bytes.length);
                 var6 = (int) crc.getValue();
                 if (var6 != this.expectedChecksum) {
-                    class70.method1947(this, 255, this.id, this.expectedChecksum, (byte) 0, true,
+                    ScriptExecutor
+                        .method1947(this, 255, this.id, this.expectedChecksum, (byte) 0, true,
                                        87474936);
                 } else {
                     Buffer buffer = new Buffer(class234.unpack(bytes));
-                    int protocol = buffer.getUByte();
+                    int protocol = buffer.readUint8();
                     if (protocol != 5 && protocol != 6) {
                         throw new RuntimeException(protocol + "," + this.id + "," + var2);
                     }
@@ -188,7 +189,8 @@ public class class251 extends class249 {
                     }
 
                     if (version != this.expectedVersion) {
-                        class70.method1947(this, 255, this.id, this.expectedChecksum, (byte) 0, true, 87474936);
+                        ScriptExecutor
+                            .method1947(this, 255, this.id, this.expectedChecksum, (byte) 0, true, 87474936);
                     } else {
                         this.method4846(bytes, (byte) -119);
                         this.method4926(-1874473815);
@@ -214,7 +216,7 @@ public class class251 extends class249 {
                 } else {
                     this.field3253[var2] = false;
                     if (this.field3252 || var4) {
-                        class70
+                        ScriptExecutor
                             .method1947(this, this.id, var2, super.field3228[var2], (byte) 2,
                                         var4, 87474936);
                     }
@@ -223,7 +225,7 @@ public class class251 extends class249 {
             } else {
                 this.field3253[var2] = false;
                 if (this.field3252 || var4) {
-                    class70.method1947(this, this.id, var2, super.field3228[var2], (byte) 2,
+                    ScriptExecutor.method1947(this, this.id, var2, super.field3228[var2], (byte) 2,
                                        var4, 87474936);
                 }
 
@@ -238,10 +240,10 @@ public class class251 extends class249 {
             int var4 = this.id;
             ArchiveCache var5 = this.manifests;
             byte[] var7 = null;
-            class207 var8 = class250.field3242;
+            Deque var8 = class250.field3242;
             synchronized (class250.field3242) {
-                for (class247 var9 = (class247) class250.field3242.method4298(); var9 != null;
-                     var9 = (class247) class250.field3242.method4283()) {
+                for (class247 var9 = (class247) class250.field3242.getFirst(); var9 != null;
+                     var9 = (class247) class250.field3242.getNext()) {
                     if ((long) var4 == var9.key && var5 == var9.field3215
                         && var9.field3213 == 0) {
                         var7 = var9.field3212;
@@ -257,7 +259,8 @@ public class class251 extends class249 {
                 this.method4928(var5, var4, var12, true, (byte) -11);
             }
         } else {
-            class70.method1947(this, 255, this.id, this.expectedChecksum, (byte) 0, true, 87474936);
+            ScriptExecutor
+                .method1947(this, 255, this.id, this.expectedChecksum, (byte) 0, true, 87474936);
         }
 
     }

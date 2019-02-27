@@ -65,8 +65,8 @@ public class class220 extends class107 {
     }
 
     static void method4522(short var0) {
-        for (class69 var1 = (class69) class69.field1051.method4298(); var1 != null;
-             var1 = (class69) class69.field1051.method4283()) {
+        for (class69 var1 = (class69) class69.field1051.getFirst(); var1 != null;
+             var1 = (class69) class69.field1051.getNext()) {
             if (var1.field1061 != null) {
                 var1.method1832(-720032025);
             }
@@ -85,8 +85,8 @@ public class class220 extends class107 {
         if (var5 != null) {
             this.field2554[var1][var2] = null;
             if ((this.field2548[var1] & 2) != 0) {
-                for (class221 var6 = (class221) this.field2562.field2615.method4298(); var6 != null;
-                     var6 = (class221) this.field2562.field2615.method4283()) {
+                for (class221 var6 = (class221) this.field2562.field2615.getFirst(); var6 != null;
+                     var6 = (class221) this.field2562.field2615.getNext()) {
                     if (var5.field2585 == var6.field2585 && var6.field2577 < 0 && var5 != var6) {
                         var5.field2577 = 0;
                         break;
@@ -100,8 +100,8 @@ public class class220 extends class107 {
     }
 
     void method4413(int var1, int var2) {
-        for (class221 var3 = (class221) this.field2562.field2615.method4298(); var3 != null;
-             var3 = (class221) this.field2562.field2615.method4283()) {
+        for (class221 var3 = (class221) this.field2562.field2615.getFirst(); var3 != null;
+             var3 = (class221) this.field2562.field2615.getNext()) {
             if (var1 < 0 || var3.field2585 == var1) {
                 if (var3.field2581 != null) {
                     var3.field2581.method2482(class97.field1377 / 100);
@@ -211,7 +211,7 @@ public class class220 extends class107 {
                     this.field2555[var1][var7.field2583] = var7;
                 }
 
-                this.field2562.field2615.method4276(var7);
+                this.field2562.field2615.addLast(var7);
                 this.field2554[var1][var2] = var7;
             }
         }
@@ -378,8 +378,8 @@ public class class220 extends class107 {
 
     void method4417(int var1, int var2) {
         if ((this.field2548[var1] & 2) != 0) {
-            for (class221 var3 = (class221) this.field2562.field2615.method4298(); var3 != null;
-                 var3 = (class221) this.field2562.field2615.method4283()) {
+            for (class221 var3 = (class221) this.field2562.field2615.getFirst(); var3 != null;
+                 var3 = (class221) this.field2562.field2615.getNext()) {
                 if (var3.field2585 == var1 && this.field2554[var1][var3.field2568] == null
                     && var3.field2577 < 0) {
                     var3.field2577 = 0;
@@ -395,8 +395,8 @@ public class class220 extends class107 {
 
     void method4418(int var1, int var2) {
         if ((this.field2548[var1] & 4) != 0) {
-            for (class221 var3 = (class221) this.field2562.field2615.method4298(); var3 != null;
-                 var3 = (class221) this.field2562.field2615.method4283()) {
+            for (class221 var3 = (class221) this.field2562.field2615.getFirst(); var3 != null;
+                 var3 = (class221) this.field2562.field2615.getNext()) {
                 if (var3.field2585 == var1) {
                     var3.field2567 = 0;
                 }
@@ -861,8 +861,8 @@ public class class220 extends class107 {
     }
 
     void method4496(int var1, int var2) {
-        for (class221 var3 = (class221) this.field2562.field2615.method4298(); var3 != null;
-             var3 = (class221) this.field2562.field2615.method4283()) {
+        for (class221 var3 = (class221) this.field2562.field2615.getFirst(); var3 != null;
+             var3 = (class221) this.field2562.field2615.getNext()) {
             if ((var1 < 0 || var3.field2585 == var1) && var3.field2577 < 0) {
                 this.field2554[var3.field2585][var3.field2568] = null;
                 var3.field2577 = 0;

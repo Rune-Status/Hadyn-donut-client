@@ -62,9 +62,9 @@ public class class141 extends class285 {
                     }
                 } else {
                     for (var11 = 7; var11 >= 0; --var11) {
-                        if (client.field767[var11] != null) {
+                        if (client.playerOptions[var11] != null) {
                             short var12 = 0;
-                            if (client.field767[var11].equalsIgnoreCase("Attack")) {
+                            if (client.playerOptions[var11].equalsIgnoreCase("Attack")) {
                                 if (class78.field1134 == client.field671) {
                                     continue;
                                 }
@@ -88,7 +88,7 @@ public class class141 extends class285 {
 
                             boolean var13 = false;
                             var8 = client.field742[var11] + var12;
-                            class79.method2039(client.field767[var11],
+                            class79.method2039(client.playerOptions[var11],
                                                class128.method3233(16777215, 893393642) + var5,
                                                var8, var1, var2, var3, -829746987);
                         }

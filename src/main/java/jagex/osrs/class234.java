@@ -6,7 +6,7 @@ public class class234 {
 
     static final byte[] unpack(byte[] bytes) {
         Buffer var2 = new Buffer(bytes);
-        int compression = var2.getUByte();
+        int compression = var2.readUint8();
         int compressedLength = var2.getInt();
         if (compressedLength < 0 || class249.maximumLength
             != 0 && compressedLength > class249.maximumLength) {
@@ -39,8 +39,8 @@ public class class234 {
                                  int var6, int var7, int var8, int var9) {
         class63 var10 = null;
 
-        for (class63 var11 = (class63) client.field688.method4298(); var11 != null;
-             var11 = (class63) client.field688.method4283()) {
+        for (class63 var11 = (class63) client.field688.getFirst(); var11 != null;
+             var11 = (class63) client.field688.getNext()) {
             if (var0 == var11.field934 && var11.field922 == var1 && var2 == var11.field925
                 && var3 == var11.field926) {
                 var10 = var11;
@@ -55,7 +55,7 @@ public class class234 {
             var10.field922 = var1;
             var10.field925 = var2;
             class43.method790(var10, (short) 13600);
-            client.field688.method4276(var10);
+            client.field688.addLast(var10);
         }
 
         var10.field929 = var4;

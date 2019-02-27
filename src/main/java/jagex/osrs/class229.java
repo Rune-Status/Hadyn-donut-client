@@ -81,7 +81,7 @@ public class class229 {
                         var10 = true;
                     }
 
-                    if (var12 >= 512 && !class84.method2125(var12 - 512, -205103429)
+                    if (var12 >= 512 && !ItemConfig.get(var12 - 512)
                                                 .method5331(this.field2637, 1586509307)) {
                         var10 = true;
                     }
@@ -114,7 +114,7 @@ public class class229 {
                         }
 
                         if (var14 >= 512) {
-                            var15 = class84.method2125(var14 - 512, -205103429)
+                            var15 = ItemConfig.get(var14 - 512)
                                            .method5332(this.field2637, (byte) 10);
                             if (var15 != null) {
                                 var16[var12++] = var15;
@@ -212,7 +212,7 @@ public class class229 {
                     var2 = true;
                 }
 
-                if (var4 >= 512 && !class84.method2125(var4 - 512, -205103429)
+                if (var4 >= 512 && !ItemConfig.get(var4 - 512)
                                            .method5333(this.field2637, -601287689)) {
                     var2 = true;
                 }
@@ -236,7 +236,7 @@ public class class229 {
                     }
 
                     if (var6 >= 512) {
-                        var7 = class84.method2125(var6 - 512, -205103429)
+                        var7 = ItemConfig.get(var6 - 512)
                                       .method5365(this.field2637, (short) 13056);
                         if (var7 != null) {
                             var8[var4++] = var7;

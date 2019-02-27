@@ -32,20 +32,20 @@ public class class59 extends class208 {
     }
 
     static int method1144(int var0, class86 var1, boolean var2, int var3) {
-        class232 var4 = var2 ? class10.field75 : class70.field1080;
+        class232 var4 = var2 ? class10.field75 : ScriptExecutor.field1080;
         if (var0 == 1700) {
-            class70.field1070[++class60.field600 - 1] = var4.field2793;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2793;
             return 1;
         } else if (var0 == 1701) {
             if (var4.field2793 != -1) {
-                class70.field1070[++class60.field600 - 1] = var4.field2794;
+                ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2794;
             } else {
-                class70.field1070[++class60.field600 - 1] = 0;
+                ScriptExecutor.field1070[++class60.field600 - 1] = 0;
             }
 
             return 1;
         } else if (var0 == 1702) {
-            class70.field1070[++class60.field600 - 1] = var4.field2787;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2787;
             return 1;
         } else {
             return 2;

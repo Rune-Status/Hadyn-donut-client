@@ -9,7 +9,7 @@ public abstract class class64 extends class129 {
     int field967;
     int field959;
     boolean field941;
-    class205 field987;
+    IterableDeque field987;
     int[] wz;
     byte field938;
     int field955;
@@ -86,7 +86,7 @@ public abstract class class64 extends class129 {
         this.field961 = new int[4];
         this.field962 = new int[4];
         this.field963 = new int[4];
-        this.field987 = new class205();
+        this.field987 = new IterableDeque();
         this.field965 = -1;
         this.field966 = false;
         this.field967 = -1;
@@ -240,7 +240,7 @@ public abstract class class64 extends class129 {
             if (var9 == null) {
                 this.field987.method4246(var13);
             } else {
-                class205.method4245(var13, var9);
+                IterableDeque.method4245(var13, var9);
             }
 
             var13.method1959(var2 + var4, var5, var6, var3, -18241211);

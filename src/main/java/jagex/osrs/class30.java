@@ -286,7 +286,7 @@ public final class class30 {
             System.nanoTime();
             if (var1.method4848(class29.field289.field298, var2, (short) -16695)) {
                 byte[] var22 = var1.method4849(class29.field289.field298, var2, -1174587453);
-                this.field308 = class70.method1946(var22, -2026803712);
+                this.field308 = ScriptExecutor.method1946(var22, -2026803712);
             }
 
             System.nanoTime();

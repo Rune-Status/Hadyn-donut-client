@@ -44,7 +44,7 @@ public class class20 {
             class79.field1163 = var3;
             class319.method6043();
             byte[] var5 = var0.method4849("title.jpg", "", -2130431892);
-            class79.field1145 = class70.method1946(var5, 272914243);
+            class79.field1145 = ScriptExecutor.method1946(var5, 272914243);
             class79.field1146 = class79.field1145.method6153();
             if ((client.field660 & 536870912) != 0) {
                 class265.field3401 = class257
@@ -157,7 +157,7 @@ public class class20 {
             if (!GameApplet.field435.field1035) {
                 class27.method516(2, InboundPacketDescriptor.index6, "scape main", "", 255, false, 507894573);
             } else {
-                class180.method3732(2, -1397011765);
+                class180.method3732(2);
             }
 
             class227.method4642(false, -714835684);
@@ -174,14 +174,14 @@ public class class20 {
 
     public void method262(Buffer var1, int var2, int var3) {
         this.field200 = var2;
-        this.field201 = var1.method3778(-2077960881);
-        this.field192 = var1.method3778(-794565518);
+        this.field201 = var1.getString();
+        this.field192 = var1.getString();
         this.field197 = new class228(var1.getInt());
         this.field195 = var1.getInt();
-        var1.getUByte();
-        this.field202 = var1.getUByte() == 1;
-        this.field196 = var1.getUByte();
-        int var4 = var1.getUByte();
+        var1.readUint8();
+        this.field202 = var1.readUint8() == 1;
+        this.field196 = var1.readUint8();
+        int var4 = var1.readUint8();
         this.field193 = new LinkedList();
 
         for (int var5 = 0; var5 < var4; ++var5) {
@@ -304,7 +304,7 @@ public class class20 {
     }
 
     class31 method247(Buffer var1, int var2) {
-        int var3 = var1.getUByte();
+        int var3 = var1.readUint8();
         class15 var4 = (class15) class43
             .method791(class15.method170((short) 8313), var3, 1443720514);
         Object var5 = null;

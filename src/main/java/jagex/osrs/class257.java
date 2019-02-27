@@ -109,17 +109,17 @@ public class class257 extends class208 {
         } else if (var2 == 2) {
             this.field3311 = var1.method3898((byte) -118);
         } else if (var2 == 3) {
-            this.field3316 = var1.method3778(-906025237);
+            this.field3316 = var1.getString();
         } else if (var2 == 4) {
             this.field3327 = var1.method3773(31798142);
         } else if (var2 == 5) {
             var1.method3773(-587115775);
         } else if (var2 == 6) {
-            this.field3318 = var1.getUByte();
+            this.field3318 = var1.readUint8();
         } else {
             int var4;
             if (var2 == 7) {
-                var4 = var1.getUByte();
+                var4 = var1.readUint8();
                 if ((var4 & 1) == 0) {
                     ;
                 }
@@ -128,11 +128,11 @@ public class class257 extends class208 {
                     ;
                 }
             } else if (var2 == 8) {
-                var1.getUByte();
+                var1.readUint8();
             } else if (var2 >= 10 && var2 <= 14) {
-                this.field3320[var2 - 10] = var1.method3778(-1150134762);
+                this.field3320[var2 - 10] = var1.getString();
             } else if (var2 == 15) {
-                var4 = var1.getUByte();
+                var4 = var1.readUint8();
                 this.field3322 = new int[var4 * 2];
 
                 int var5;
@@ -141,7 +141,7 @@ public class class257 extends class208 {
                 }
 
                 var1.getInt();
-                var5 = var1.getUByte();
+                var5 = var1.readUint8();
                 this.field3329 = new int[var5];
 
                 int var6;
@@ -156,7 +156,7 @@ public class class257 extends class208 {
                 }
             } else if (var2 != 16) {
                 if (var2 == 17) {
-                    this.field3321 = var1.method3778(-812622843);
+                    this.field3321 = var1.getString();
                 } else if (var2 == 18) {
                     var1.method3898((byte) -111);
                 } else if (var2 == 19) {
@@ -166,25 +166,25 @@ public class class257 extends class208 {
                 } else if (var2 == 22) {
                     var1.getInt();
                 } else if (var2 == 23) {
-                    var1.getUByte();
-                    var1.getUByte();
-                    var1.getUByte();
+                    var1.readUint8();
+                    var1.readUint8();
+                    var1.readUint8();
                 } else if (var2 == 24) {
                     var1.method3814((byte) -1);
                     var1.method3814((byte) -1);
                 } else if (var2 == 25) {
                     var1.method3898((byte) -91);
                 } else if (var2 == 28) {
-                    var1.getUByte();
+                    var1.readUint8();
                 } else if (var2 == 29) {
                     this.field3324 = (class272) class43
-                        .method791(class243.method4797((byte) 112), var1.getUByte(),
+                        .method791(class243.method4797((byte) 112), var1.readUint8(),
                                    1443720514);
                 } else if (var2 == 30) {
                     class254[] var7 = new class254[]{class254.field3296, class254.field3291,
                         class254.field3290};
                     this.field3328 = (class254) class43
-                        .method791(var7, var1.getUByte(), 1443720514);
+                        .method791(var7, var1.readUint8(), 1443720514);
                 }
             }
         }
@@ -197,7 +197,7 @@ public class class257 extends class208 {
 
     public void method5053(Buffer var1, byte var2) {
         while (true) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 == 0) {
                 return;
             }

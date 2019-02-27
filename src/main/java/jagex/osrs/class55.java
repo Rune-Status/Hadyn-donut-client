@@ -85,14 +85,14 @@ public class class55 {
                     }
 
                     var12.offset = 0;
-                    var13 = var12.getUByte();
+                    var13 = var12.readUint8();
                     if (var13 < 1 || var13 > 3) {
                         throw new IOException("" + var13);
                     }
 
                     int var14 = 0;
                     if (var13 > 1) {
-                        var14 = var12.getUByte();
+                        var14 = var12.readUint8();
                     }
 
                     if (var13 <= 2) {

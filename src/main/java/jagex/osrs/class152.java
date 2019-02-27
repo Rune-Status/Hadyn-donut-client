@@ -16,7 +16,7 @@ public class class152 extends class162 {
         this.field1977 = 256;
         this.field1984 = 1;
         this.field1981 = 0;
-        this.field1979 = class120.method2866((short) 3133);
+        this.field1979 = Time.currentTimeMillis();
 
         for (int var1 = 0; var1 < 10; ++var1) {
             this.field1976[var1] = this.field1979;
@@ -50,7 +50,7 @@ public class class152 extends class162 {
         int var5 = this.field1984;
         this.field1977 = 300;
         this.field1984 = 1;
-        this.field1979 = class120.method2866((short) 3133);
+        this.field1979 = Time.currentTimeMillis();
         if (this.field1976[this.field1978] == 0L) {
             this.field1977 = var4;
             this.field1984 = var5;

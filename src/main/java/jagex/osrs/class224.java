@@ -4,10 +4,10 @@ public class class224 extends class107 {
 
     class90 field2617;
     class220 field2616;
-    class207 field2615;
+    Deque field2615;
 
     class224(class220 var1) {
-        this.field2615 = new class207();
+        this.field2615 = new Deque();
         this.field2617 = new class90();
         this.field2616 = var1;
     }
@@ -15,24 +15,24 @@ public class class224 extends class107 {
     static int method4625(int var0, class86 var1, boolean var2, byte var3) {
         String var4;
         if (var0 == 3100) {
-            var4 = class70.field1065[--class70.field1072];
+            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
             class59.method1163(0, "", var4, -1483885983);
             return 1;
         } else if (var0 == 3101) {
             class60.field600 -= 2;
-            class34.method617(class69.localPlayer, class70.field1070[class60.field600],
-                              class70.field1070[class60.field600 + 1], -683909322);
+            class34.method617(class69.localPlayer, ScriptExecutor.field1070[class60.field600],
+                              ScriptExecutor.field1070[class60.field600 + 1], -683909322);
             return 1;
         } else if (var0 == 3103) {
-            if (!class70.field1079) {
-                class70.field1078 = true;
+            if (!ScriptExecutor.field1079) {
+                ScriptExecutor.field1078 = true;
             }
 
             return 1;
         } else {
             int var11;
             if (var0 == 3104) {
-                var4 = class70.field1065[--class70.field1072];
+                var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                 var11 = 0;
                 if (class219.method4375(var4, (byte) -115)) {
                     var11 = HandshakePacket.method3663(var4, -2069553789);
@@ -46,7 +46,7 @@ public class class224 extends class107 {
             } else {
                 OutboundPacket var15;
                 if (var0 == 3105) {
-                    var4 = class70.field1065[--class70.field1072];
+                    var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                     var15 = class131
                         .method3243(class171.field2302, client.field690.random, (byte) 72);
                     var15.buffer.writeByte(var4.length() + 1);
@@ -54,7 +54,7 @@ public class class224 extends class107 {
                     client.field690.method2193(var15, -512529177);
                     return 1;
                 } else if (var0 == 3106) {
-                    var4 = class70.field1065[--class70.field1072];
+                    var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                     var15 = class131
                         .method3243(class171.field2215, client.field690.random, (byte) 75);
                     var15.buffer.writeByte(var4.length() + 1);
@@ -65,53 +65,53 @@ public class class224 extends class107 {
                     String var8;
                     int var16;
                     if (var0 == 3107) {
-                        var16 = class70.field1070[--class60.field600];
-                        var8 = class70.field1065[--class70.field1072];
+                        var16 = ScriptExecutor.field1070[--class60.field600];
+                        var8 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                         class36.method691(var16, var8, -1790829652);
                         return 1;
                     } else if (var0 == 3108) {
                         class60.field600 -= 3;
-                        var16 = class70.field1070[class60.field600];
-                        var11 = class70.field1070[class60.field600 + 1];
-                        int var10 = class70.field1070[class60.field600 + 2];
+                        var16 = ScriptExecutor.field1070[class60.field600];
+                        var11 = ScriptExecutor.field1070[class60.field600 + 1];
+                        int var10 = ScriptExecutor.field1070[class60.field600 + 2];
                         class232 var14 = class18.method213(var10, -1792831098);
                         class134.method3262(var14, var16, var11, 468651930);
                         return 1;
                     } else if (var0 == 3109) {
                         class60.field600 -= 2;
-                        var16 = class70.field1070[class60.field600];
-                        var11 = class70.field1070[class60.field600 + 1];
-                        class232 var12 = var2 ? class10.field75 : class70.field1080;
+                        var16 = ScriptExecutor.field1070[class60.field600];
+                        var11 = ScriptExecutor.field1070[class60.field600 + 1];
+                        class232 var12 = var2 ? class10.field75 : ScriptExecutor.field1080;
                         class134.method3262(var12, var16, var11, 1580750309);
                         return 1;
                     } else if (var0 == 3110) {
-                        class14.field132 = class70.field1070[--class60.field600] == 1;
+                        class14.field132 = ScriptExecutor.field1070[--class60.field600] == 1;
                         return 1;
                     } else if (var0 == 3111) {
-                        class70.field1070[++class60.field600 - 1] =
+                        ScriptExecutor.field1070[++class60.field600 - 1] =
                             GameApplet.field435.field1029 ? 1 : 0;
                         return 1;
                     } else if (var0 == 3112) {
-                        GameApplet.field435.field1029 = class70.field1070[--class60.field600] == 1;
+                        GameApplet.field435.field1029 = ScriptExecutor.field1070[--class60.field600] == 1;
                         Player.writePreferences();
                         return 1;
                     } else if (var0 == 3113) {
-                        var4 = class70.field1065[--class70.field1072];
-                        boolean var5 = class70.field1070[--class60.field600] == 1;
-                        class138.method3291(var4, var5, false, (short) 2500);
+                        var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
+                        boolean var5 = ScriptExecutor.field1070[--class60.field600] == 1;
+                        class138.openUrl(var4, var5, false, (short) 2500);
                         return 1;
                     } else if (var0 == 3115) {
-                        var16 = class70.field1070[--class60.field600];
+                        var16 = ScriptExecutor.field1070[--class60.field600];
                         var15 = class131
                             .method3243(class171.field2249, client.field690.random, (byte) 27);
                         var15.buffer.writeShort(var16);
                         client.field690.method2193(var15, 782614107);
                         return 1;
                     } else if (var0 == 3116) {
-                        var16 = class70.field1070[--class60.field600];
-                        class70.field1072 -= 2;
-                        var8 = class70.field1065[class70.field1072];
-                        String var6 = class70.field1065[class70.field1072 + 1];
+                        var16 = ScriptExecutor.field1070[--class60.field600];
+                        ScriptExecutor.field1072 -= 2;
+                        var8 = ScriptExecutor.field1065[ScriptExecutor.field1072];
+                        String var6 = ScriptExecutor.field1065[ScriptExecutor.field1072 + 1];
                         if (var8.length() > 500) {
                             return 1;
                         } else if (var6.length() > 500) {
@@ -130,16 +130,16 @@ public class class224 extends class107 {
                             return 1;
                         }
                     } else if (var0 == 3117) {
-                        client.field789 = class70.field1070[--class60.field600] == 1;
+                        client.field789 = ScriptExecutor.field1070[--class60.field600] == 1;
                         return 1;
                     } else if (var0 == 3118) {
-                        client.field791 = class70.field1070[--class60.field600] == 1;
+                        client.field791 = ScriptExecutor.field1070[--class60.field600] == 1;
                         return 1;
                     } else if (var0 == 3119) {
-                        client.field762 = class70.field1070[--class60.field600] == 1;
+                        client.field762 = ScriptExecutor.field1070[--class60.field600] == 1;
                         return 1;
                     } else if (var0 == 3120) {
-                        if (class70.field1070[--class60.field600] == 1) {
+                        if (ScriptExecutor.field1070[--class60.field600] == 1) {
                             client.field676 |= 1;
                         } else {
                             client.field676 &= -2;
@@ -147,7 +147,7 @@ public class class224 extends class107 {
 
                         return 1;
                     } else if (var0 == 3121) {
-                        if (class70.field1070[--class60.field600] == 1) {
+                        if (ScriptExecutor.field1070[--class60.field600] == 1) {
                             client.field676 |= 2;
                         } else {
                             client.field676 &= -3;
@@ -155,7 +155,7 @@ public class class224 extends class107 {
 
                         return 1;
                     } else if (var0 == 3122) {
-                        if (class70.field1070[--class60.field600] == 1) {
+                        if (ScriptExecutor.field1070[--class60.field600] == 1) {
                             client.field676 |= 4;
                         } else {
                             client.field676 &= -5;
@@ -163,7 +163,7 @@ public class class224 extends class107 {
 
                         return 1;
                     } else if (var0 == 3123) {
-                        if (class70.field1070[--class60.field600] == 1) {
+                        if (ScriptExecutor.field1070[--class60.field600] == 1) {
                             client.field676 |= 8;
                         } else {
                             client.field676 &= -9;
@@ -174,22 +174,22 @@ public class class224 extends class107 {
                         client.field676 = 0;
                         return 1;
                     } else if (var0 == 3125) {
-                        client.field748 = class70.field1070[--class60.field600] == 1;
+                        client.field748 = ScriptExecutor.field1070[--class60.field600] == 1;
                         return 1;
                     } else if (var0 == 3126) {
-                        client.field758 = class70.field1070[--class60.field600] == 1;
+                        client.field758 = ScriptExecutor.field1070[--class60.field600] == 1;
                         return 1;
                     } else if (var0 == 3127) {
-                        class74.method1993(class70.field1070[--class60.field600] == 1, 1738595403);
+                        class74.method1993(ScriptExecutor.field1070[--class60.field600] == 1, 1738595403);
                         return 1;
                     } else if (var0 == 3128) {
-                        class70.field1070[++class60.field600 - 1] =
+                        ScriptExecutor.field1070[++class60.field600 - 1] =
                             class59.method1164(16748608) ? 1 : 0;
                         return 1;
                     } else if (var0 == 3129) {
                         class60.field600 -= 2;
-                        client.field723 = class70.field1070[class60.field600];
-                        client.field724 = class70.field1070[class60.field600 + 1];
+                        client.field723 = ScriptExecutor.field1070[class60.field600];
+                        client.field724 = ScriptExecutor.field1070[class60.field600 + 1];
                         return 1;
                     } else if (var0 == 3130) {
                         class60.field600 -= 2;
@@ -198,8 +198,8 @@ public class class224 extends class107 {
                         --class60.field600;
                         return 1;
                     } else if (var0 == 3132) {
-                        class70.field1070[++class60.field600 - 1] = class68.windowWidth;
-                        class70.field1070[++class60.field600 - 1] = class141.windowHeight;
+                        ScriptExecutor.field1070[++class60.field600 - 1] = class68.windowWidth;
+                        ScriptExecutor.field1070[++class60.field600 - 1] = class141.windowHeight;
                         return 1;
                     } else if (var0 == 3133) {
                         --class60.field600;
@@ -211,11 +211,11 @@ public class class224 extends class107 {
                         return 1;
                     } else if (var0 == 3136) {
                         client.field805 = 3;
-                        client.field642 = class70.field1070[--class60.field600];
+                        client.field642 = ScriptExecutor.field1070[--class60.field600];
                         return 1;
                     } else if (var0 == 3137) {
                         client.field805 = 2;
-                        client.field642 = class70.field1070[--class60.field600];
+                        client.field642 = ScriptExecutor.field1070[--class60.field600];
                         return 1;
                     } else if (var0 == 3138) {
                         client.field805 = 0;
@@ -226,21 +226,21 @@ public class class224 extends class107 {
                     } else if (var0 == 3140) {
                         client.field805 = 3;
                         client.field642 =
-                            var2 ? class10.field75.field2770 : class70.field1080.field2770;
+                            var2 ? class10.field75.field2770 : ScriptExecutor.field1080.field2770;
                         return 1;
                     } else {
                         boolean var9;
                         if (var0 == 3141) {
-                            var9 = class70.field1070[--class60.field600] == 1;
+                            var9 = ScriptExecutor.field1070[--class60.field600] == 1;
                             GameApplet.field435.field1033 = var9;
                             Player.writePreferences();
                             return 1;
                         } else if (var0 == 3142) {
-                            class70.field1070[++class60.field600 - 1] =
+                            ScriptExecutor.field1070[++class60.field600 - 1] =
                                 GameApplet.field435.field1033 ? 1 : 0;
                             return 1;
                         } else if (var0 == 3143) {
-                            var9 = class70.field1070[--class60.field600] == 1;
+                            var9 = ScriptExecutor.field1070[--class60.field600] == 1;
                             client.field746 = var9;
                             if (!var9) {
                                 GameApplet.field435.field1034 = "";
@@ -249,7 +249,7 @@ public class class224 extends class107 {
 
                             return 1;
                         } else if (var0 == 3144) {
-                            class70.field1070[++class60.field600 - 1] = client.field746 ? 1 : 0;
+                            ScriptExecutor.field1070[++class60.field600 - 1] = client.field746 ? 1 : 0;
                             return 1;
                         } else {
                             return var0 == 3145 ? 1 : 2;
@@ -263,8 +263,8 @@ public class class224 extends class107 {
     protected void vmethod4620(int[] var1, int var2, int var3) {
         this.field2617.vmethod4620(var1, var2, var3);
 
-        for (class221 var6 = (class221) this.field2615.method4298(); var6 != null;
-             var6 = (class221) this.field2615.method4283()) {
+        for (class221 var6 = (class221) this.field2615.getFirst(); var6 != null;
+             var6 = (class221) this.field2615.getNext()) {
             if (!this.field2616.method4429(var6, 1540281522)) {
                 int var4 = var2;
                 int var5 = var3;
@@ -288,8 +288,8 @@ public class class224 extends class107 {
     protected void vmethod4601(int var1) {
         this.field2617.vmethod4601(var1);
 
-        for (class221 var3 = (class221) this.field2615.method4298(); var3 != null;
-             var3 = (class221) this.field2615.method4283()) {
+        for (class221 var3 = (class221) this.field2615.getFirst(); var3 != null;
+             var3 = (class221) this.field2615.getNext()) {
             if (!this.field2616.method4429(var3, 1414307274)) {
                 int var2 = var1;
 
@@ -311,7 +311,7 @@ public class class224 extends class107 {
     protected class107 vmethod4598() {
         class221 var1;
         do {
-            var1 = (class221) this.field2615.method4283();
+            var1 = (class221) this.field2615.getNext();
             if (var1 == null) {
                 return null;
             }
@@ -399,7 +399,7 @@ public class class224 extends class107 {
     }
 
     protected class107 vmethod4596() {
-        class221 var1 = (class221) this.field2615.method4298();
+        class221 var1 = (class221) this.field2615.getFirst();
         return (class107) (var1 == null ? null
             : (var1.field2581 != null ? var1.field2581 : this.vmethod4598()));
     }

@@ -6,9 +6,9 @@ public class class201 implements Iterator {
 
     Node field2477;
     Node field2476;
-    class205 field2478;
+    IterableDeque field2478;
 
-    class201(class205 var1) {
+    class201(IterableDeque var1) {
         this.field2476 = null;
         this.field2478 = var1;
         this.field2477 = this.field2478.root.nextNode;

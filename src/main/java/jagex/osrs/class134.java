@@ -34,10 +34,10 @@ public final class class134 {
         if (client.field798) {
             class232 var1 = class9.method102(class306.field3796, client.field799, -2003252325);
             if (var1 != null && var1.field2742 != null) {
-                class57 var2 = new class57();
+                ScriptCall var2 = new ScriptCall();
                 var2.field570 = var1;
-                var2.field575 = var1.field2742;
-                class53.method1076(var2, -1192761091);
+                var2.arguments = var1.field2742;
+                ScriptExecutor.execute(var2);
             }
 
             client.field798 = false;

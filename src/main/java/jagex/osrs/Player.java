@@ -158,10 +158,10 @@ public final class Player extends class64 {
             return null;
         } else {
             class275 var2 = super.field971 != -1 && super.field998 == 0 ? class29
-                .method532(super.field971, 608224247) : null;
+                .method532(super.field971) : null;
             class275 var3 =
                 super.field972 != -1 && !this.field624 && (super.field944 != super.field972
-                    || var2 == null) ? class29.method532(super.field972, 1023631636) : null;
+                    || var2 == null) ? class29.method532(super.field972) : null;
             class121 var4 = this.field630
                 .method4670(var2, super.field986, var3, super.field969, (byte) 9);
             if (var4 == null) {
@@ -280,7 +280,7 @@ public final class Player extends class64 {
     }
 
     final void method1180(int var1, int var2, byte var3, byte var4) {
-        if (super.field971 != -1 && class29.method532(super.field971, 1190724859).field3632 == 1) {
+        if (super.field971 != -1 && class29.method532(super.field971).field3632 == 1) {
             super.field971 = -1;
         }
 
@@ -308,7 +308,7 @@ public final class Player extends class64 {
 
     final void decode(Buffer var1) {
         var1.offset = 0;
-        int var3 = var1.getUByte();
+        int var3 = var1.readUint8();
         this.field629 = var1.method3931(2042493487);
         this.field609 = var1.method3931(2098655484);
         int var4 = -1;
@@ -318,11 +318,11 @@ public final class Player extends class64 {
         int var7;
         int var8;
         for (int var6 = 0; var6 < 12; ++var6) {
-            var7 = var1.getUByte();
+            var7 = var1.readUint8();
             if (var7 == 0) {
                 var5[var6] = 0;
             } else {
-                var8 = var1.getUByte();
+                var8 = var1.readUint8();
                 var5[var6] = var8 + (var7 << 8);
                 if (var6 == 0 && var5[0] == 65535) {
                     var4 = var1.readUint16();
@@ -330,7 +330,7 @@ public final class Player extends class64 {
                 }
 
                 if (var5[var6] >= 512) {
-                    int var9 = class84.method2125(var5[var6] - 512, -205103429).field3540;
+                    int var9 = ItemConfig.get(var5[var6] - 512).field3540;
                     if (var9 != 0) {
                         this.field622 = var9;
                     }
@@ -341,7 +341,7 @@ public final class Player extends class64 {
         int[] var10 = new int[5];
 
         for (var7 = 0; var7 < 5; ++var7) {
-            var8 = var1.getUByte();
+            var8 = var1.readUint8();
             if (var8 < 0 || var8 >= class256.field3306[var7].length) {
                 var8 = 0;
             }
@@ -385,16 +385,16 @@ public final class Player extends class64 {
             super.field951 = -1;
         }
 
-        this.field625 = new class293(var1.method3778(-1302426604), client.field920);
+        this.field625 = new class293(var1.getString(), client.field920);
         this.method1174((byte) -9);
         this.method1186((byte) 3);
         if (this == class69.localPlayer) {
             class154.field1995 = this.field625.method5706(-165222639);
         }
 
-        this.field611 = var1.getUByte();
+        this.field611 = var1.readUint8();
         this.field617 = var1.readUint16();
-        this.field626 = var1.getUByte() == 1;
+        this.field626 = var1.readUint8() == 1;
         if (client.field645 == 0 && client.rights >= 2) {
             this.field626 = false;
         }

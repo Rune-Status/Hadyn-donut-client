@@ -79,7 +79,7 @@ final class class3 implements Comparator {
 
         client.field907 = var3 * var7 / 334;
         if (var2 != client.field644 || var3 != client.field764) {
-            class57.method1122(var2, var3, -1174946118);
+            ScriptCall.method1122(var2, var3, -1174946118);
         }
 
         client.field657 = var0;

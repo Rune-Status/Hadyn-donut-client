@@ -39,7 +39,7 @@ public class class156 implements Runnable {
         if (!var2 || var0 != class123.field1727 || ArchiveCache.field2075 != var1) {
             class123.field1727 = var0;
             ArchiveCache.field2075 = var1;
-            class16.method202(25, -1194677662);
+            client.setState(25);
             class58.method1132("Loading - please wait.", true, 1433030338);
             int var4 = class49.sceneX;
             int var5 = class11.sceneZ;
@@ -104,16 +104,16 @@ public class class156 implements Runnable {
 
                     for (int var18 = 0; var18 < 4; ++var18) {
                         if (var16 >= 0 && var17 >= 0 && var16 < 104 && var17 < 104) {
-                            client.field829[var18][var14][var15] = client.field829[var18][var16][var17];
+                            client.itemStacks[var18][var14][var15] = client.itemStacks[var18][var16][var17];
                         } else {
-                            client.field829[var18][var14][var15] = null;
+                            client.itemStacks[var18][var14][var15] = null;
                         }
                     }
                 }
             }
 
-            for (class63 var20 = (class63) client.field688.method4298(); var20 != null;
-                 var20 = (class63) client.field688.method4283()) {
+            for (class63 var20 = (class63) client.field688.getFirst(); var20 != null;
+                 var20 = (class63) client.field688.getNext()) {
                 var20.field922 -= var6;
                 var20.field925 -= var7;
                 if (var20.field922 < 0 || var20.field925 < 0 || var20.field922 >= 104

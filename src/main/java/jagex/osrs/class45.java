@@ -157,13 +157,13 @@ public class class45 {
 
                 if (var33 || !var10.field2685 || var13 < var15 && var14 < var16) {
                     if (var10.field2685) {
-                        class57 var27;
+                        ScriptCall var27;
                         if (var10.field2807) {
                             if (class48.field473 >= var13 && class48.field464 * -976212263 >= var14
                                 && class48.field473 < var15
                                 && class48.field464 * -976212263 < var16) {
-                                for (var27 = (class57) client.field842.method4298(); var27 != null;
-                                     var27 = (class57) client.field842.method4283()) {
+                                for (var27 = (ScriptCall) client.field842.getFirst(); var27 != null;
+                                     var27 = (ScriptCall) client.field842.getNext()) {
                                     if (var27.field563) {
                                         var27.unlink();
                                         var27.field570.field2798 = false;
@@ -182,9 +182,9 @@ public class class45 {
                         } else if (var10.field2746 && class48.field473 >= var13
                             && class48.field464 * -976212263 >= var14 && class48.field473 < var15
                             && class48.field464 * -976212263 < var16) {
-                            for (var27 = (class57) client.field842.method4298(); var27 != null;
-                                 var27 = (class57) client.field842.method4283()) {
-                                if (var27.field563 && var27.field570.field2774 == var27.field575) {
+                            for (var27 = (ScriptCall) client.field842.getFirst(); var27 != null;
+                                 var27 = (ScriptCall) client.field842.getNext()) {
+                                if (var27.field563 && var27.field570.field2774 == var27.arguments) {
                                     var27.unlink();
                                 }
                             }
@@ -340,7 +340,7 @@ public class class45 {
                             }
 
                             if (client.field816 != null && var10 != client.field816 && var34
-                                && class186
+                                && Time
                                 .method4010(class254.method5000(var10, 2110400581), (short) 256)) {
                                 client.field811 = var10;
                             }
@@ -352,14 +352,14 @@ public class class45 {
                             }
 
                             if (var10.field2753) {
-                                class57 var28;
+                                ScriptCall var28;
                                 if (var34 && client.field841 != 0 && var10.field2774 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field563 = true;
                                     var28.field570 = var10;
                                     var28.field566 = client.field841;
-                                    var28.field575 = var10.field2774;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2774;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (client.field816 != null || class66.field1025 != null
@@ -372,93 +372,93 @@ public class class45 {
                                 if (!var10.field2669 && var22) {
                                     var10.field2669 = true;
                                     if (var10.field2656 != null) {
-                                        var28 = new class57();
+                                        var28 = new ScriptCall();
                                         var28.field563 = true;
                                         var28.field570 = var10;
                                         var28.field565 = class48.field478 - var11;
                                         var28.field566 = class48.field467 - var12;
-                                        var28.field575 = var10.field2656;
-                                        client.field842.method4276(var28);
+                                        var28.arguments = var10.field2656;
+                                        client.field842.addLast(var28);
                                     }
                                 }
 
                                 if (var10.field2669 && var35 && var10.field2803 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field563 = true;
                                     var28.field570 = var10;
                                     var28.field565 = class48.field473 - var11;
                                     var28.field566 = class48.field464 * -976212263 - var12;
-                                    var28.field575 = var10.field2803;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2803;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (var10.field2669 && !var35) {
                                     var10.field2669 = false;
                                     if (var10.field2756 != null) {
-                                        var28 = new class57();
+                                        var28 = new ScriptCall();
                                         var28.field563 = true;
                                         var28.field570 = var10;
                                         var28.field565 = class48.field473 - var11;
                                         var28.field566 = class48.field464 * -976212263 - var12;
-                                        var28.field575 = var10.field2756;
-                                        client.field844.method4276(var28);
+                                        var28.arguments = var10.field2756;
+                                        client.field844.addLast(var28);
                                     }
                                 }
 
                                 if (var35 && var10.field2758 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field563 = true;
                                     var28.field570 = var10;
                                     var28.field565 = class48.field473 - var11;
                                     var28.field566 = class48.field464 * -976212263 - var12;
-                                    var28.field575 = var10.field2758;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2758;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (!var10.field2798 && var34) {
                                     var10.field2798 = true;
                                     if (var10.field2759 != null) {
-                                        var28 = new class57();
+                                        var28 = new ScriptCall();
                                         var28.field563 = true;
                                         var28.field570 = var10;
                                         var28.field565 = class48.field473 - var11;
                                         var28.field566 = class48.field464 * -976212263 - var12;
-                                        var28.field575 = var10.field2759;
-                                        client.field842.method4276(var28);
+                                        var28.arguments = var10.field2759;
+                                        client.field842.addLast(var28);
                                     }
                                 }
 
                                 if (var10.field2798 && var34 && var10.field2760 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field563 = true;
                                     var28.field570 = var10;
                                     var28.field565 = class48.field473 - var11;
                                     var28.field566 = class48.field464 * -976212263 - var12;
-                                    var28.field575 = var10.field2760;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2760;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (var10.field2798 && !var34) {
                                     var10.field2798 = false;
                                     if (var10.field2761 != null) {
-                                        var28 = new class57();
+                                        var28 = new ScriptCall();
                                         var28.field563 = true;
                                         var28.field570 = var10;
                                         var28.field565 = class48.field473 - var11;
                                         var28.field566 = class48.field464 * -976212263 - var12;
-                                        var28.field575 = var10.field2761;
-                                        client.field844.method4276(var28);
+                                        var28.arguments = var10.field2761;
+                                        client.field844.addLast(var28);
                                     }
                                 }
 
                                 if (var10.field2658 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field570 = var10;
-                                    var28.field575 = var10.field2658;
-                                    client.field843.method4276(var28);
+                                    var28.arguments = var10.field2658;
+                                    client.field843.addLast(var28);
                                 }
 
-                                class57 var29;
+                                ScriptCall var29;
                                 int var36;
                                 int var37;
                                 if (var10.field2766 != null && client.field830 > var10.field2801) {
@@ -472,19 +472,19 @@ public class class45 {
                                             for (var37 = 0; var37 < var10.field2767.length;
                                                  ++var37) {
                                                 if (var24 == var10.field2767[var37]) {
-                                                    var29 = new class57();
+                                                    var29 = new ScriptCall();
                                                     var29.field570 = var10;
-                                                    var29.field575 = var10.field2766;
-                                                    client.field842.method4276(var29);
+                                                    var29.arguments = var10.field2766;
+                                                    client.field842.addLast(var29);
                                                     break label873;
                                                 }
                                             }
                                         }
                                     } else {
-                                        var28 = new class57();
+                                        var28 = new ScriptCall();
                                         var28.field570 = var10;
-                                        var28.field575 = var10.field2766;
-                                        client.field842.method4276(var28);
+                                        var28.arguments = var10.field2766;
+                                        client.field842.addLast(var28);
                                     }
 
                                     var10.field2801 = client.field830;
@@ -501,19 +501,19 @@ public class class45 {
                                             for (var37 = 0; var37 < var10.field2769.length;
                                                  ++var37) {
                                                 if (var24 == var10.field2769[var37]) {
-                                                    var29 = new class57();
+                                                    var29 = new ScriptCall();
                                                     var29.field570 = var10;
-                                                    var29.field575 = var10.field2660;
-                                                    client.field842.method4276(var29);
+                                                    var29.arguments = var10.field2660;
+                                                    client.field842.addLast(var29);
                                                     break label849;
                                                 }
                                             }
                                         }
                                     } else {
-                                        var28 = new class57();
+                                        var28 = new ScriptCall();
                                         var28.field570 = var10;
-                                        var28.field575 = var10.field2660;
-                                        client.field842.method4276(var28);
+                                        var28.arguments = var10.field2660;
+                                        client.field842.addLast(var28);
                                     }
 
                                     var10.field2802 = client.field832;
@@ -530,75 +530,75 @@ public class class45 {
                                             for (var37 = 0; var37 < var10.field2771.length;
                                                  ++var37) {
                                                 if (var24 == var10.field2771[var37]) {
-                                                    var29 = new class57();
+                                                    var29 = new ScriptCall();
                                                     var29.field570 = var10;
-                                                    var29.field575 = var10.field2667;
-                                                    client.field842.method4276(var29);
+                                                    var29.arguments = var10.field2667;
+                                                    client.field842.addLast(var29);
                                                     break label825;
                                                 }
                                             }
                                         }
                                     } else {
-                                        var28 = new class57();
+                                        var28 = new ScriptCall();
                                         var28.field570 = var10;
-                                        var28.field575 = var10.field2667;
-                                        client.field842.method4276(var28);
+                                        var28.arguments = var10.field2667;
+                                        client.field842.addLast(var28);
                                     }
 
                                     var10.field2735 = client.field834;
                                 }
 
                                 if (client.field835 > var10.field2800 && var10.field2775 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field570 = var10;
-                                    var28.field575 = var10.field2775;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2775;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (client.field836 > var10.field2800 && var10.field2777 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field570 = var10;
-                                    var28.field575 = var10.field2777;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2777;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (client.field837 > var10.field2800 && var10.field2747 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field570 = var10;
-                                    var28.field575 = var10.field2747;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2747;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (client.field858 > var10.field2800 && var10.field2783 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field570 = var10;
-                                    var28.field575 = var10.field2783;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2783;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (client.field839 > var10.field2800 && var10.field2796 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field570 = var10;
-                                    var28.field575 = var10.field2796;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2796;
+                                    client.field842.addLast(var28);
                                 }
 
                                 if (client.field685 > var10.field2800 && var10.field2779 != null) {
-                                    var28 = new class57();
+                                    var28 = new ScriptCall();
                                     var28.field570 = var10;
-                                    var28.field575 = var10.field2779;
-                                    client.field842.method4276(var28);
+                                    var28.arguments = var10.field2779;
+                                    client.field842.addLast(var28);
                                 }
 
                                 var10.field2800 = client.field828;
                                 if (var10.field2666 != null) {
                                     for (var36 = 0; var36 < client.field865; ++var36) {
-                                        class57 var32 = new class57();
+                                        ScriptCall var32 = new ScriptCall();
                                         var32.field570 = var10;
                                         var32.field569 = client.field867[var36];
                                         var32.field562 = client.field846[var36];
-                                        var32.field575 = var10.field2666;
-                                        client.field842.method4276(var32);
+                                        var32.arguments = var10.field2666;
+                                        client.field842.addLast(var32);
                                     }
                                 }
                             }
@@ -653,9 +653,9 @@ public class class45 {
                                     && class48.field464 * -976212263 >= var14
                                     && class48.field473 < var15
                                     && class48.field464 * -976212263 < var16 && !client.field833) {
-                                    for (class57 var31 = (class57) client.field842.method4298();
+                                    for (ScriptCall var31 = (ScriptCall) client.field842.getFirst();
                                          var31 != null;
-                                         var31 = (class57) client.field842.method4283()) {
+                                         var31 = (ScriptCall) client.field842.getNext()) {
                                         if (var31.field563) {
                                             var31.unlink();
                                             var31.field570.field2798 = false;

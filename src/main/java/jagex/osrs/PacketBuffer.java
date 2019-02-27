@@ -10,24 +10,24 @@ public final class PacketBuffer extends Buffer {
             33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1};
     }
 
-    IssacRandom field2446;
+    IssacRandom random;
     int bitOffset;
 
     public PacketBuffer(int var1) {
         super(var1);
     }
 
-    public boolean method4048(byte var1) {
-        int var2 = super.bytes[super.offset] - this.field2446.method4084((byte) -38) & 255;
+    public boolean isPacketIdShort() {
+        int var2 = super.bytes[super.offset] - this.random.method4084((byte) -38) & 255;
         return var2 >= 128;
     }
 
     public void method4046(IssacRandom var1, short var2) {
-        this.field2446 = var1;
+        this.random = var1;
     }
 
     public void method4047(int var1, byte var2) {
-        super.bytes[++super.offset - 1] = (byte) (var1 + this.field2446
+        super.bytes[++super.offset - 1] = (byte) (var1 + this.random
             .next());
     }
 
@@ -63,25 +63,23 @@ public final class PacketBuffer extends Buffer {
     }
 
     public int readEncipheredUInt8(byte var1) {
-        return super.bytes[++super.offset - 1] - this.field2446.next() & 255;
+        return super.bytes[++super.offset - 1] - this.random.next() & 255;
     }
 
-    public int readEncipheredShort(int var1) {
-        int var2 =
-            super.bytes[++super.offset - 1] - this.field2446.next() & 255;
-        return var2 < 128 ? var2 : (var2 - 128 << 8) + (
-            super.bytes[++super.offset - 1] - this.field2446.next() & 255);
+    public int readEncipheredShort() {
+        int v = super.bytes[++super.offset - 1] - this.random.next() & 255;
+        return v < 128 ? v :
+            (v - 128 << 8) + (super.bytes[++super.offset - 1] - this.random.next() & 255);
     }
 
-    public void method4058(byte[] var1, int var2, int var3, int var4) {
+    public void readEncipheredBytes(byte[] var1, int var2, int var3) {
         for (int var5 = 0; var5 < var3; ++var5) {
-            var1[var5 + var2] = (byte) (super.bytes[++super.offset - 1] - this.field2446
-                .next());
+            var1[var5 + var2] = (byte) (super.bytes[++super.offset - 1] - this.random.next());
         }
 
     }
 
     public void initializeRandom(int[] var1, byte var2) {
-        this.field2446 = new IssacRandom(var1);
+        this.random = new IssacRandom(var1);
     }
 }

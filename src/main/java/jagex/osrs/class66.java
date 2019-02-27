@@ -33,10 +33,11 @@ public class class66 {
 
     }
 
-    public static class173[] method1733(int var0) {
-        return new class173[]{class173.field2323, class173.field2316, class173.field2318,
-            class173.field2319, class173.field2320, class173.field2321, class173.field2322,
-            class173.field2317, class173.field2329, class173.field2325};
+    public static EntityPacket[] method1733(int var0) {
+        return new EntityPacket[]{
+            EntityPacket.UPDATE_ITEM_STACK, EntityPacket.field2316, EntityPacket.field2318,
+            EntityPacket.field2319, EntityPacket.field2320, EntityPacket.field2321, EntityPacket.field2322,
+            EntityPacket.REMOVE_ITEM_STACK, EntityPacket.CREATE_ITEM_STACK, EntityPacket.field2325};
     }
 
     static final void method1696(int var0) {
@@ -229,16 +230,16 @@ public class class66 {
                     }
 
                     if (var19 == 3) {
-                        class207 var34 = client.field829[class60.level][var16][var18];
+                        Deque var34 = client.itemStacks[class60.level][var16][var18];
                         if (var34 != null) {
-                            for (class81 var38 = (class81) var34.method4274(); var38 != null;
-                                 var38 = (class81) var34.method4295()) {
-                                class271 var36 = class84.method2125(var38.field1213, -205103429);
+                            for (ItemStack var38 = (ItemStack) var34.method4274(); var38 != null;
+                                 var38 = (ItemStack) var34.method4295()) {
+                                ItemConfig var36 = ItemConfig.get(var38.id);
                                 if (client.field796 == 1) {
                                     class79.method2039("Use",
                                                        client.field766 + " " + "->" + " " + class128
                                                            .method3233(16748608, 1208596387)
-                                                           + var36.field3515, 16, var38.field1213,
+                                                           + var36.field3515, 16, var38.id,
                                                        var16, var18, 663926568);
                                 } else if (client.field798) {
                                     if ((class297.field3740 & 1) == 1) {
@@ -247,7 +248,7 @@ public class class66 {
                                                                + class128
                                                                .method3233(16748608, 647318773)
                                                                + var36.field3515, 17,
-                                                           var38.field1213, var16, var18,
+                                                           var38.id, var16, var18,
                                                            730743665);
                                     }
                                 } else {
@@ -278,19 +279,19 @@ public class class66 {
 
                                             class79.method2039(var30[var31], class128
                                                                    .method3233(16748608, 1129836141) + var36.field3515,
-                                                               var26, var38.field1213, var16, var18,
+                                                               var26, var38.id, var16, var18,
                                                                -880668230);
                                         } else if (var31 == 2) {
                                             class79.method2039("Take", class128
                                                                    .method3233(16748608, 624263243) + var36.field3515,
-                                                               20, var38.field1213, var16, var18,
+                                                               20, var38.id, var16, var18,
                                                                611667838);
                                         }
                                     }
 
                                     class79.method2039("Examine",
                                                        class128.method3233(16748608, 383506485)
-                                                           + var36.field3515, 1004, var38.field1213,
+                                                           + var36.field3515, 1004, var38.id,
                                                        var16, var18, -1135588096);
                                 }
                             }

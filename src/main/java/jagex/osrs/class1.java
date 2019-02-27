@@ -28,7 +28,7 @@ public class class1 {
 
     public class1(Buffer var1, boolean var2) {
         int var3 = var1.readUint16();
-        boolean var4 = var1.getUByte() == 1;
+        boolean var4 = var1.readUint8() == 1;
         byte var5;
         if (var4) {
             var5 = 1;

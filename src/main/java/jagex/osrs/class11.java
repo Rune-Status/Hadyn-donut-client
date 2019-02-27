@@ -61,7 +61,7 @@ public class class11 {
         } else {
             var3 = buffer.method3808(-1577602496);
             var4 = buffer.method3792(323800451);
-            boolean var16 = buffer.getUByte() == 1;
+            boolean var16 = buffer.readUint8() == 1;
             var6 = buffer.readUint16();
             buffer.startBitAccess();
 
@@ -149,9 +149,9 @@ public class class11 {
                     var4 = class66.field1017[var3] = new class66();
                     var4.field1015 = var2.readUint16();
                     var4.field1008 = var2.getInt();
-                    var4.field1019 = var2.method3778(-498335999);
-                    var4.field1022 = var2.method3778(-1590132359);
-                    var4.field1021 = var2.getUByte();
+                    var4.field1019 = var2.getString();
+                    var4.field1022 = var2.getString();
+                    var4.field1021 = var2.readUint8();
                     var4.field1020 = var2.method3814((byte) -1);
                 }
 

@@ -27,7 +27,7 @@ public final class class71 extends class129 {
         int var8 = class250.method4918(this.field1092, 1271109313).field3348;
         if (var8 != -1) {
             this.field1093 = false;
-            this.field1090 = class29.method532(var8, 1818635637);
+            this.field1090 = class29.method532(var8);
         } else {
             this.field1093 = true;
         }
@@ -97,8 +97,8 @@ public final class class71 extends class129 {
                         client.field797 = var16;
                         class13.field104 = var0;
                         if (var0.field2762[var16] > 0) {
-                            class271 var9 = class84
-                                .method2125(var0.field2762[var16] - 1, -205103429);
+                            ItemConfig var9 = ItemConfig
+                                .get(var0.field2762[var16] - 1);
                             if (client.field796 == 1 && HandshakePacket
                                 .method3662(class254.method5000(var0, 2110168672), (byte) 8)) {
                                 if (var0.field2770 != class88.field1276

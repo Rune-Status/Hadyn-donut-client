@@ -17,7 +17,7 @@ public class class277 {
                 var4 = var4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             } else {
                 String var5 = var4 + "; Expires=";
-                long var7 = class120.method2866((short) 3133) + 94608000000L;
+                long var7 = Time.currentTimeMillis() + 94608000000L;
                 class194.field2463.setTime(new Date(var7));
                 int var9 = class194.field2463.get(7);
                 int var10 = class194.field2463.get(5);

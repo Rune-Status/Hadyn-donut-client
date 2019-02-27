@@ -30,8 +30,8 @@ public final class class21 {
     }
 
     static void method322(int var0, int var1, int var2, int var3, int var4) {
-        for (class69 var5 = (class69) class69.field1051.method4298(); var5 != null;
-             var5 = (class69) class69.field1051.method4283()) {
+        for (class69 var5 = (class69) class69.field1051.getFirst(); var5 != null;
+             var5 = (class69) class69.field1051.getNext()) {
             if (var5.field1054 != -1 || var5.field1058 != null) {
                 int var6 = 0;
                 if (var1 > var5.field1062) {
@@ -108,24 +108,24 @@ public final class class21 {
 
     static int method319(int var0, class86 var1, boolean var2, int var3) {
         if (var0 == 5306) {
-            class70.field1070[++class60.field600 - 1] = class17.getWindowMode();
+            ScriptExecutor.field1070[++class60.field600 - 1] = class17.getWindowMode();
             return 1;
         } else {
             int var4;
             if (var0 == 5307) {
-                var4 = class70.field1070[--class60.field600];
+                var4 = ScriptExecutor.field1070[--class60.field600];
                 if (var4 == 1 || var4 == 2) {
                     class27.method513(var4);
                 }
 
                 return 1;
             } else if (var0 == 5308) {
-                class70.field1070[++class60.field600 - 1] = GameApplet.field435.field1031;
+                ScriptExecutor.field1070[++class60.field600 - 1] = GameApplet.field435.field1031;
                 return 1;
             } else if (var0 != 5309) {
                 return 2;
             } else {
-                var4 = class70.field1070[--class60.field600];
+                var4 = ScriptExecutor.field1070[--class60.field600];
                 if (var4 == 1 || var4 == 2) {
                     GameApplet.field435.field1031 = var4;
                     Player.writePreferences();

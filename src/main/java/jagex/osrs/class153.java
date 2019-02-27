@@ -30,9 +30,9 @@ public class class153 implements Runnable {
         for (int var2 = 0; var2 < class83.field1227; ++var2) {
             int var3 = class83.field1234[var2];
             Player var4 = client.players[var3];
-            int var5 = var0.getUByte();
+            int var5 = var0.readUint8();
             if ((var5 & 8) != 0) {
-                var5 += var0.getUByte() << 8;
+                var5 += var0.readUint8() << 8;
             }
 
             byte var6 = -1;
@@ -77,7 +77,7 @@ public class class153 implements Runnable {
                         if (var11 != 32767) {
                             var12 = var0.method3783(-646327830);
                             var13 = var0.method3883((byte) 54);
-                            var14 = var11 > 0 ? var0.getUByte() : var13;
+                            var14 = var11 > 0 ? var0.readUint8() : var13;
                             var4.method1677(var10, client.field655, var11, var12, var13, var14,
                                             -962990836);
                         } else {
@@ -133,7 +133,7 @@ public class class153 implements Runnable {
             }
 
             if ((var5 & 32) != 0) {
-                var4.field968 = var0.method3778(-1559420360);
+                var4.field968 = var0.getString();
                 if (var4.field968.charAt(0) == '~') {
                     var4.field968 = var4.field968.substring(1);
                     class59.method1163(2, var4.field625.method5706(-165222639), var4.field968,
@@ -180,10 +180,10 @@ public class class153 implements Runnable {
             if ((var5 & 16) != 0) {
                 var7 = var0.method3808(-1767020862);
                 class244 var21 = (class244) class43
-                    .method791(class6.method80(-1062474475), var0.getUByte(),
+                    .method791(class6.method80(-1062474475), var0.readUint8(),
                                1443720514);
                 boolean var19 = var0.method3799(-616675794) == 1;
-                var10 = var0.getUByte();
+                var10 = var0.readUint8();
                 var11 = var0.offset;
                 if (var4.field625 != null && var4.field630 != null) {
                     boolean var20 = false;
@@ -227,7 +227,7 @@ public class class153 implements Runnable {
 
             if ((var5 & 256) != 0) {
                 for (var7 = 0; var7 < 3; ++var7) {
-                    var4.field627[var7] = var0.method3778(-1603824245);
+                    var4.field627[var7] = var0.getString();
                 }
             }
 
@@ -237,7 +237,7 @@ public class class153 implements Runnable {
                     var7 = -1;
                 }
 
-                var8 = var0.getUByte();
+                var8 = var0.readUint8();
                 class34.method617(var4, var7, var8, 1513609761);
             }
 
@@ -263,8 +263,8 @@ public class class153 implements Runnable {
         int var4;
         if (var0 == 5504) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            int var5 = class70.field1070[class60.field600 + 1];
+            var4 = ScriptExecutor.field1070[class60.field600];
+            int var5 = ScriptExecutor.field1070[class60.field600 + 1];
             if (!client.field889) {
                 client.field712 = var4;
                 client.field658 = var5;
@@ -272,13 +272,13 @@ public class class153 implements Runnable {
 
             return 1;
         } else if (var0 == 5505) {
-            class70.field1070[++class60.field600 - 1] = client.field712;
+            ScriptExecutor.field1070[++class60.field600 - 1] = client.field712;
             return 1;
         } else if (var0 == 5506) {
-            class70.field1070[++class60.field600 - 1] = client.field658;
+            ScriptExecutor.field1070[++class60.field600 - 1] = client.field658;
             return 1;
         } else if (var0 == 5530) {
-            var4 = class70.field1070[--class60.field600];
+            var4 = ScriptExecutor.field1070[--class60.field600];
             if (var4 < 0) {
                 var4 = 0;
             }
@@ -286,7 +286,7 @@ public class class153 implements Runnable {
             client.field719 = var4;
             return 1;
         } else if (var0 == 5531) {
-            class70.field1070[++class60.field600 - 1] = client.field719;
+            ScriptExecutor.field1070[++class60.field600 - 1] = client.field719;
             return 1;
         } else {
             return 2;

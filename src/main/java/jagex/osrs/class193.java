@@ -32,7 +32,7 @@ public class class193 {
                     var8 += var10 - 1;
                     int var11 = var8 & 63;
                     int var12 = var8 >> 6 & 63;
-                    int var13 = var5.getUByte() >> 2;
+                    int var13 = var5.readUint8() >> 2;
                     int var14 = var12 + var1;
                     int var15 = var11 + var2;
                     if (var14 > 0 && var15 > 0 && var14 < 103 && var15 < 103) {
@@ -54,7 +54,7 @@ public class class193 {
                     break;
                 }
 
-                var5.getUByte();
+                var5.readUint8();
             }
         }
     }

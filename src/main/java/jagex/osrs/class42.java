@@ -38,17 +38,17 @@ public final class class42 extends Canvas {
     }
 
     static int method786(int var0, class86 var1, boolean var2, byte var3) {
-        class232 var4 = class18.method213(class70.field1070[--class60.field600], -531497740);
+        class232 var4 = class18.method213(ScriptExecutor.field1070[--class60.field600], -531497740);
         if (var0 == 2800) {
-            class70.field1070[++class60.field600 - 1] = class9
+            ScriptExecutor.field1070[++class60.field600 - 1] = class9
                 .method98(class254.method5000(var4, 2099543406), (byte) -84);
             return 1;
         } else if (var0 != 2801) {
             if (var0 == 2802) {
                 if (var4.field2697 == null) {
-                    class70.field1065[++class70.field1072 - 1] = "";
+                    ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = "";
                 } else {
-                    class70.field1065[++class70.field1072 - 1] = var4.field2697;
+                    ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4.field2697;
                 }
 
                 return 1;
@@ -56,13 +56,13 @@ public final class class42 extends Canvas {
                 return 2;
             }
         } else {
-            int var5 = class70.field1070[--class60.field600];
+            int var5 = ScriptExecutor.field1070[--class60.field600];
             --var5;
             if (var4.field2731 != null && var5 < var4.field2731.length
                 && var4.field2731[var5] != null) {
-                class70.field1065[++class70.field1072 - 1] = var4.field2731[var5];
+                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4.field2731[var5];
             } else {
-                class70.field1065[++class70.field1072 - 1] = "";
+                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = "";
             }
 
             return 1;

@@ -28,7 +28,7 @@ public class class259 extends class208 {
 
     void method5080(Buffer var1, int var2) {
         while (true) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 == 0) {
                 return;
             }

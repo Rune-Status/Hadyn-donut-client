@@ -123,7 +123,7 @@ public class class270 extends class208 {
         int var4;
         int var5;
         if (var2 == 1) {
-            var4 = var1.getUByte();
+            var4 = var1.readUint8();
             if (var4 > 0) {
                 if (this.field3459 != null && !field3454) {
                     var1.offset += var4 * 3;
@@ -133,14 +133,14 @@ public class class270 extends class208 {
 
                     for (var5 = 0; var5 < var4; ++var5) {
                         this.field3459[var5] = var1.readUint16();
-                        this.field3460[var5] = var1.getUByte();
+                        this.field3460[var5] = var1.readUint8();
                     }
                 }
             }
         } else if (var2 == 2) {
-            this.field3461 = var1.method3778(-478007038);
+            this.field3461 = var1.getString();
         } else if (var2 == 5) {
-            var4 = var1.getUByte();
+            var4 = var1.readUint8();
             if (var4 > 0) {
                 if (this.field3459 != null && !field3454) {
                     var1.offset += var4 * 2;
@@ -154,16 +154,16 @@ public class class270 extends class208 {
                 }
             }
         } else if (var2 == 14) {
-            this.field3501 = var1.getUByte();
+            this.field3501 = var1.readUint8();
         } else if (var2 == 15) {
-            this.field3475 = var1.getUByte();
+            this.field3475 = var1.readUint8();
         } else if (var2 == 17) {
             this.field3495 = 0;
             this.field3468 = false;
         } else if (var2 == 18) {
             this.field3468 = false;
         } else if (var2 == 19) {
-            this.field3470 = var1.getUByte();
+            this.field3470 = var1.readUint8();
         } else if (var2 == 21) {
             this.field3488 = 0;
         } else if (var2 == 22) {
@@ -178,18 +178,18 @@ public class class270 extends class208 {
         } else if (var2 == 27) {
             this.field3495 = 1;
         } else if (var2 == 28) {
-            this.field3458 = var1.getUByte();
+            this.field3458 = var1.readUint8();
         } else if (var2 == 29) {
             this.field3476 = var1.method3931(2133571664);
         } else if (var2 == 39) {
             this.field3477 = var1.method3931(2038290378) * 25;
         } else if (var2 >= 30 && var2 < 35) {
-            this.field3478[var2 - 30] = var1.method3778(-201841220);
+            this.field3478[var2 - 30] = var1.getString();
             if (this.field3478[var2 - 30].equalsIgnoreCase("Hidden")) {
                 this.field3478[var2 - 30] = null;
             }
         } else if (var2 == 40) {
-            var4 = var1.getUByte();
+            var4 = var1.readUint8();
             this.field3462 = new short[var4];
             this.field3463 = new short[var4];
 
@@ -198,7 +198,7 @@ public class class270 extends class208 {
                 this.field3463[var5] = (short) var1.readUint16();
             }
         } else if (var2 == 41) {
-            var4 = var1.getUByte();
+            var4 = var1.readUint8();
             this.field3451 = new short[var4];
             this.field3465 = new short[var4];
 
@@ -219,7 +219,7 @@ public class class270 extends class208 {
         } else if (var2 == 68) {
             this.field3466 = var1.readUint16();
         } else if (var2 == 69) {
-            var1.getUByte();
+            var1.readUint8();
         } else if (var2 == 70) {
             this.field3486 = var1.method3814((byte) -1);
         } else if (var2 == 71) {
@@ -231,23 +231,23 @@ public class class270 extends class208 {
         } else if (var2 == 74) {
             this.field3490 = true;
         } else if (var2 == 75) {
-            this.field3464 = var1.getUByte();
+            this.field3464 = var1.readUint8();
         } else if (var2 != 77 && var2 != 92) {
             if (var2 == 78) {
                 this.field3491 = var1.readUint16();
-                this.field3496 = var1.getUByte();
+                this.field3496 = var1.readUint8();
             } else if (var2 == 79) {
                 this.field3497 = var1.readUint16();
                 this.field3498 = var1.readUint16();
-                this.field3496 = var1.getUByte();
-                var4 = var1.getUByte();
+                this.field3496 = var1.readUint8();
+                var4 = var1.readUint8();
                 this.field3499 = new int[var4];
 
                 for (var5 = 0; var5 < var4; ++var5) {
                     this.field3499[var5] = var1.readUint16();
                 }
             } else if (var2 == 81) {
-                this.field3488 = var1.getUByte() * 256;
+                this.field3488 = var1.readUint8() * 256;
             } else if (var2 == 82) {
                 this.field3479 = var1.readUint16();
             } else if (var2 == 249) {
@@ -272,7 +272,7 @@ public class class270 extends class208 {
                 }
             }
 
-            var5 = var1.getUByte();
+            var5 = var1.readUint8();
             this.field3480 = new int[var5 + 2];
 
             for (int var6 = 0; var6 <= var5; ++var6) {
@@ -445,7 +445,7 @@ public class class270 extends class208 {
 
     void method5271(Buffer var1, int var2) {
         while (true) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 == 0) {
                 return;
             }

@@ -12,13 +12,13 @@ public class class113 implements class133 {
     int field1506;
     double field1505;
     class118[] field1508;
-    class207 field1502;
+    Deque field1502;
     int field1503;
     int field1510;
     class249 field1507;
 
     public class113(class249 var1, class249 var2, int var3, double var4, int var6) {
-        this.field1502 = new class207();
+        this.field1502 = new Deque();
         this.field1503 = 0;
         this.field1505 = 1.0D;
         this.field1506 = 128;
@@ -93,7 +93,7 @@ public class class113 implements class133 {
             }
         }
 
-        this.field1502 = new class207();
+        this.field1502 = new Deque();
         this.field1503 = this.field1510;
     }
 
@@ -105,7 +105,7 @@ public class class113 implements class133 {
         class118 var3 = this.field1508[var1];
         if (var3 != null) {
             if (var3.field1592 != null) {
-                this.field1502.method4277(var3);
+                this.field1502.addFirst(var3);
                 var3.field1589 = true;
                 return var3.field1592;
             }
@@ -119,7 +119,7 @@ public class class113 implements class133 {
                     --this.field1503;
                 }
 
-                this.field1502.method4277(var3);
+                this.field1502.addFirst(var3);
                 var3.field1589 = true;
                 return var3.field1592;
             }

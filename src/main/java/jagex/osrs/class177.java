@@ -36,7 +36,7 @@ public class class177 {
         }
 
         if (class3.field24 != null) {
-            long var10 = class120.method2866((short) 3133);
+            long var10 = Time.currentTimeMillis();
             long var4 = class3.field24.getCollectionTime();
             if (GameApplet.field460 != -1L) {
                 long var6 = var4 - GameApplet.field460;
@@ -66,24 +66,24 @@ public class class177 {
     }
 
     static int method3699(int var0, class86 var1, boolean var2, int var3) {
-        class232 var4 = class18.method213(class70.field1070[--class60.field600], -1620576794);
+        class232 var4 = class18.method213(ScriptExecutor.field1070[--class60.field600], -1620576794);
         if (var0 == 2500) {
-            class70.field1070[++class60.field600 - 1] = var4.field2680;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2680;
             return 1;
         } else if (var0 == 2501) {
-            class70.field1070[++class60.field600 - 1] = var4.field2772;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2772;
             return 1;
         } else if (var0 == 2502) {
-            class70.field1070[++class60.field600 - 1] = var4.field2682;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2682;
             return 1;
         } else if (var0 == 2503) {
-            class70.field1070[++class60.field600 - 1] = var4.field2683;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2683;
             return 1;
         } else if (var0 == 2504) {
-            class70.field1070[++class60.field600 - 1] = var4.field2704 ? 1 : 0;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2704 ? 1 : 0;
             return 1;
         } else if (var0 == 2505) {
-            class70.field1070[++class60.field600 - 1] = var4.field2700;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2700;
             return 1;
         } else {
             return 2;

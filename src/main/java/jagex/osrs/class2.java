@@ -10,8 +10,8 @@ public class class2 {
     String field18;
 
     class2(Buffer var1, byte var2, int var3) {
-        this.field18 = var1.method3778(-1758603792);
-        this.field20 = var1.method3778(-659653692);
+        this.field18 = var1.getString();
+        this.field20 = var1.getString();
         this.field17 = var1.readUint16();
         this.field16 = var1.method3775((byte) 127);
         int var4 = var1.getInt();
@@ -36,11 +36,11 @@ public class class2 {
 
     static void method24(int var0) {
         client.field690.method2194();
-        client.field690.field1283.offset = 0;
-        client.field690.packetDescriptor = null;
-        client.field690.field1295 = null;
-        client.field690.field1284 = null;
-        client.field690.field1278 = null;
+        client.field690.buffer.offset = 0;
+        client.field690.currentPacket = null;
+        client.field690.lastPacket = null;
+        client.field690.secondPacket = null;
+        client.field690.thirdPacket = null;
         client.field690.packetLength = 0;
         client.field690.field1287 = 0;
         client.field662 = 0;
@@ -65,13 +65,13 @@ public class class2 {
         }
 
         class12.method125(2097878590);
-        class16.method202(30, -1194677662);
+        client.setState(30);
 
         for (var1 = 0; var1 < 100; ++var1) {
             client.field848[var1] = true;
         }
 
-        class70.method1948(402508794);
+        ScriptExecutor.method1948(402508794);
     }
 
     public String method18(int var1) {

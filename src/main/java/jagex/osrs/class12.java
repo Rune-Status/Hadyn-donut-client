@@ -48,7 +48,7 @@ public class class12 {
 
     public static void method141(Buffer var0, int var1, byte var2) {
         class317 var3 = new class317();
-        var3.field3844 = var0.getUByte();
+        var3.field3844 = var0.readUint8();
         var3.field3845 = var0.getInt();
         var3.field3849 = new int[var3.field3844];
         var3.field3846 = new int[var3.field3844];
@@ -59,22 +59,22 @@ public class class12 {
 
         for (int var4 = 0; var4 < var3.field3844; ++var4) {
             try {
-                int var5 = var0.getUByte();
+                int var5 = var0.readUint8();
                 String var6;
                 String var7;
                 int var8;
                 if (var5 != 0 && var5 != 1 && var5 != 2) {
                     if (var5 == 3 || var5 == 4) {
-                        var6 = var0.method3778(-1872632223);
-                        var7 = var0.method3778(-1386424194);
-                        var8 = var0.getUByte();
+                        var6 = var0.getString();
+                        var7 = var0.getString();
+                        var8 = var0.readUint8();
                         String[] var9 = new String[var8];
 
                         for (int var10 = 0; var10 < var8; ++var10) {
-                            var9[var10] = var0.method3778(495864064);
+                            var9[var10] = var0.getString();
                         }
 
-                        String var21 = var0.method3778(-333615464);
+                        String var21 = var0.getString();
                         byte[][] var11 = new byte[var8][];
                         int var13;
                         if (var5 == 3) {
@@ -124,8 +124,8 @@ public class class12 {
                         var3.field3850[var4] = var11;
                     }
                 } else {
-                    var6 = var0.method3778(-26260928);
-                    var7 = var0.method3778(-259103646);
+                    var6 = var0.getString();
+                    var7 = var0.getString();
                     var8 = 0;
                     if (var5 == 1) {
                         var8 = var0.getInt();
@@ -252,20 +252,20 @@ public class class12 {
             var8 = 383;
         }
 
-        if (class57.field576 < var8) {
-            class57.field576 =
-                (var8 - class57.field576) * class253.field3289 / 1000 + class57.field576
+        if (ScriptCall.field576 < var8) {
+            ScriptCall.field576 =
+                (var8 - ScriptCall.field576) * class253.field3289 / 1000 + ScriptCall.field576
                     + class66.field1026;
-            if (class57.field576 > var8) {
-                class57.field576 = var8;
+            if (ScriptCall.field576 > var8) {
+                ScriptCall.field576 = var8;
             }
         }
 
-        if (class57.field576 > var8) {
-            class57.field576 -=
-                class253.field3289 * (class57.field576 - var8) / 1000 + class66.field1026;
-            if (class57.field576 < var8) {
-                class57.field576 = var8;
+        if (ScriptCall.field576 > var8) {
+            ScriptCall.field576 -=
+                class253.field3289 * (ScriptCall.field576 - var8) / 1000 + class66.field1026;
+            if (ScriptCall.field576 < var8) {
+                ScriptCall.field576 = var8;
             }
         }
 

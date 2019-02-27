@@ -87,7 +87,7 @@ public class class13 {
 
     }
 
-    static final void method142(class232 var0, class271 var1, int var2, int var3, boolean var4,
+    static final void method142(class232 var0, ItemConfig var1, int var2, int var3, boolean var4,
                                 int var5) {
         String[] var6 = var1.field3541;
         byte var7 = -1;

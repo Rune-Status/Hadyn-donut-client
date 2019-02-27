@@ -25,7 +25,7 @@ public class class98 {
     }
 
     final void method2411(Buffer var1) {
-        this.field1385 = var1.getUByte();
+        this.field1385 = var1.readUint8();
         this.field1387 = var1.getInt();
         this.field1380 = var1.getInt();
         this.method2408(var1);
@@ -40,7 +40,7 @@ public class class98 {
     }
 
     final void method2408(Buffer var1) {
-        this.field1383 = var1.getUByte();
+        this.field1383 = var1.readUint8();
         this.field1384 = new int[this.field1383];
         this.field1382 = new int[this.field1383];
 

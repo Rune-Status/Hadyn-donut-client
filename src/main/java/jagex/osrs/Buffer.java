@@ -64,14 +64,13 @@ public class Buffer extends Node {
 
     public int method3783(int var1) {
         int var2 = this.bytes[this.offset] & 255;
-        return var2 < 128 ? this.getUByte() : this.readUint16() - 32768;
+        return var2 < 128 ? this.readUint8() : this.readUint16() - 32768;
     }
 
-    public String method3778(int var1) {
+    public String getString() {
         int var2 = this.offset;
 
         while (this.bytes[++this.offset - 1] != 0) {
-            ;
         }
 
         int var3 = this.offset - var2 - 1;
@@ -89,7 +88,7 @@ public class Buffer extends Node {
         this.bytes[++this.offset - 1] = (byte) var1;
     }
 
-    public int getUByte() {
+    public int readUint8() {
         return this.bytes[++this.offset - 1] & 255;
     }
 
@@ -274,17 +273,17 @@ public class Buffer extends Node {
             ++this.offset;
             return null;
         } else {
-            return this.method3778(-622847027);
+            return this.getString();
         }
     }
 
     public boolean method3776(byte var1) {
-        return (this.getUByte() & 1) == 1;
+        return (this.readUint8() & 1) == 1;
     }
 
     public int method3782(int var1) {
         int var2 = this.bytes[this.offset] & 255;
-        return var2 < 128 ? this.getUByte() - 64 : this.readUint16() - 49152;
+        return var2 < 128 ? this.readUint8() - 64 : this.readUint16() - 49152;
     }
 
     public void method3956(String var1, byte var2) {

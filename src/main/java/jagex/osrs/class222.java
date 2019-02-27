@@ -150,7 +150,7 @@ public class class222 {
     int method4540(int var1, int var2) {
         int var4;
         if (var2 == 255) {
-            int var7 = this.field2597.getUByte();
+            int var7 = this.field2597.readUint8();
             var4 = this.field2597.method3787((byte) 2);
             if (var7 == 47) {
                 this.field2597.offset += var4;
@@ -171,11 +171,11 @@ public class class222 {
             byte var3 = field2594[var2 - 128];
             var4 = var2;
             if (var3 >= 1) {
-                var4 = var2 | this.field2597.getUByte() << 8;
+                var4 = var2 | this.field2597.readUint8() << 8;
             }
 
             if (var3 >= 2) {
-                var4 |= this.field2597.getUByte() << 16;
+                var4 |= this.field2597.readUint8() << 16;
             }
 
             return var4;

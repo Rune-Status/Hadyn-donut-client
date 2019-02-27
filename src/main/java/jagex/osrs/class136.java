@@ -57,10 +57,10 @@ public final class class136 {
         }
 
         if (var3 && var0.field2782 != null && (var5 != var0.field2682 || var6 != var0.field2683)) {
-            class57 var7 = new class57();
+            ScriptCall var7 = new ScriptCall();
             var7.field570 = var0;
-            var7.field575 = var0.field2782;
-            client.field842.method4276(var7);
+            var7.arguments = var0.field2782;
+            client.field842.addLast(var7);
         }
 
     }

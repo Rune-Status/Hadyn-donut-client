@@ -36,26 +36,25 @@ public class class138 {
         class144.field1947 = class139.field1928;
     }
 
-    public static void method3291(String var0, boolean var1, boolean var2, short var3) {
+    public static void openUrl(String url, boolean var1, boolean var2, short var3) {
         if (var1) {
             if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Action.BROWSE)) {
                 try {
-                    Desktop.getDesktop().browse(new URI(var0));
+                    Desktop.getDesktop().browse(new URI(url));
                     return;
                 } catch (Exception var5) {
-                    ;
                 }
             }
 
             if (class45.field420.startsWith("win")) {
-                class242.method4796(var0, 0, "openjs", -1270490048);
+                class242.method4796(url, 0, "openjs", -1270490048);
             } else if (class45.field420.startsWith("mac")) {
-                class242.method4796(var0, 1, "openjs", 1635854307);
+                class242.method4796(url, 1, "openjs", 1635854307);
             } else {
-                class242.method4796(var0, 2, "openjs", 879705095);
+                class242.method4796(url, 2, "openjs", 879705095);
             }
         } else {
-            class242.method4796(var0, 3, "openjs", 31177252);
+            class242.method4796(url, 3, "openjs", 31177252);
         }
 
     }

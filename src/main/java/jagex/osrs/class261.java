@@ -25,7 +25,7 @@ public class class261 extends class208 {
             var0.field955 = 0;
         } else {
             if (var0.field971 != -1 && var0.field998 == 0) {
-                class275 var2 = class29.method532(var0.field971, -126550678);
+                class275 var2 = class29.method532(var0.field971);
                 if (var0.field959 > 0 && var2.field3622 == 0) {
                     ++var0.field955;
                     return;
@@ -261,7 +261,7 @@ public class class261 extends class208 {
 
     void method5126(Buffer var1, int var2, byte var3) {
         while (true) {
-            int var4 = var1.getUByte();
+            int var4 = var1.readUint8();
             if (var4 == 0) {
                 return;
             }

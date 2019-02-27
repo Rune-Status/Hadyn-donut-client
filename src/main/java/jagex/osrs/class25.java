@@ -47,8 +47,8 @@ public class class25 {
     }
 
     static final void method476(int var0) {
-        for (class63 var1 = (class63) client.field688.method4298(); var1 != null;
-             var1 = (class63) client.field688.method4283()) {
+        for (class63 var1 = (class63) client.field688.getFirst(); var1 != null;
+             var1 = (class63) client.field688.getNext()) {
             if (var1.field933 > 0) {
                 --var1.field933;
             }
@@ -91,10 +91,10 @@ public class class25 {
                 for (int var3 = 0; var3 < var2.length; ++var3) {
                     class232 var4 = var2[var3];
                     if (var4.field2754 != null) {
-                        class57 var5 = new class57();
+                        ScriptCall var5 = new ScriptCall();
                         var5.field570 = var4;
-                        var5.field575 = var4.field2754;
-                        client.method1655(var5, 5000000, 1700616346);
+                        var5.arguments = var4.field2754;
+                        ScriptExecutor.execute(var5, 5000000);
                     }
                 }
 

@@ -60,12 +60,12 @@ public class class23 {
                     }
                 }
 
-                class57 var6;
+                ScriptCall var6;
                 if (var1 == 0 && var4.field2789 != null) {
-                    var6 = new class57();
+                    var6 = new ScriptCall();
                     var6.field570 = var4;
-                    var6.field575 = var4.field2789;
-                    class53.method1076(var6, -856957438);
+                    var6.arguments = var4.field2789;
+                    ScriptExecutor.execute(var6);
                 }
 
                 if (var1 == 1 && var4.field2781 != null) {
@@ -78,10 +78,10 @@ public class class23 {
                         }
                     }
 
-                    var6 = new class57();
+                    var6 = new ScriptCall();
                     var6.field570 = var4;
-                    var6.field575 = var4.field2781;
-                    class53.method1076(var6, -2007353271);
+                    var6.arguments = var4.field2781;
+                    ScriptExecutor.execute(var6);
                 }
             }
         }
@@ -164,7 +164,7 @@ public class class23 {
                     var23.method1832(1885045120);
                 }
 
-                class69.field1051.method4276(var23);
+                class69.field1051.addLast(var23);
                 if (var23.field1058 != null) {
                     var23.field1055 =
                         var23.field1056 + (int) (Math.random() * (double) (var23.field1057

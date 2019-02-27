@@ -22,7 +22,7 @@ public class class97 {
 
     protected class97() {
         this.field1364 = 32;
-        this.field1361 = class120.method2866((short) 3133);
+        this.field1361 = Time.currentTimeMillis();
         this.field1369 = 0L;
         this.field1370 = 0;
         this.field1371 = 0;
@@ -487,14 +487,14 @@ public class class97 {
                                         }
 
                                         if (var11.field2685 && var11.field2793 != -1) {
-                                            class271 var48 = class84
-                                                .method2125(var11.field2793, -205103429);
+                                            ItemConfig var48 = ItemConfig
+                                                .get(var11.field2793);
                                             var45 = var48.field3515;
                                             if (var45 == null) {
                                                 var45 = "null";
                                             }
 
-                                            if ((var48.field3523 == 1 || var11.field2794 != 1)
+                                            if ((var48.stackable == 1 || var11.field2794 != 1)
                                                 && var11.field2794 != -1) {
                                                 var45 =
                                                     class128.method3233(16748608, 1260690938)
@@ -599,7 +599,7 @@ public class class97 {
                                         }
                                     }
                                 } else {
-                                    class271 var33;
+                                    ItemConfig var33;
                                     if (var11.field2808 == 6) {
                                         boolean var37 = class18.method239(var11, -1755473021);
                                         if (var37) {
@@ -611,8 +611,8 @@ public class class97 {
                                         class121 var42 = null;
                                         var23 = 0;
                                         if (var11.field2793 != -1) {
-                                            var33 = class84
-                                                .method2125(var11.field2793, -205103429);
+                                            var33 = ItemConfig
+                                                .get(var11.field2793);
                                             if (var33 != null) {
                                                 var33 = var33
                                                     .method5373(var11.field2794, -1362689437);
@@ -642,7 +642,7 @@ public class class97 {
                                             }
                                         } else {
                                             class275 var46 = class29
-                                                .method532(var21, -1997591994);
+                                                .method532(var21);
                                             var42 = var11
                                                 .method4710(var46, var11.field2795, var37,
                                                             class69.localPlayer.field630,
@@ -703,11 +703,11 @@ public class class97 {
                                                 for (var23 = 0; var23 < var11.field2678;
                                                      ++var23) {
                                                     if (var11.field2762[var21] > 0) {
-                                                        var33 = class84.method2125(
-                                                            var11.field2762[var21] - 1,
-                                                            -205103429);
+                                                        var33 = ItemConfig.get(
+                                                            var11.field2762[var21] - 1
+                                                        );
                                                         String var35;
-                                                        if (var33.field3523 != 1
+                                                        if (var33.stackable != 1
                                                             && var11.field2792[var21] == 1) {
                                                             var35 = class128
                                                                 .method3233(16748608,
@@ -862,7 +862,7 @@ public class class97 {
 
     public final synchronized void method2346(byte var1) {
         if (this.field1362 != null) {
-            long var2 = class120.method2866((short) 3133);
+            long var2 = Time.currentTimeMillis();
 
             try {
                 if (0L != this.field1369) {
@@ -961,7 +961,7 @@ public class class97 {
             this.vmethod2358(1925463504);
         } catch (Exception var3) {
             this.vmethod2357(-1615379202);
-            this.field1369 = class120.method2866((short) 3133) + 2000L;
+            this.field1369 = Time.currentTimeMillis() + 2000L;
         }
 
     }
@@ -1131,7 +1131,7 @@ public class class97 {
             this.field1363.vmethod4620(var1, 0, var2);
         }
 
-        this.field1361 = class120.method2866((short) 3133);
+        this.field1361 = Time.currentTimeMillis();
     }
 
     protected void vmethod2356() throws Exception {

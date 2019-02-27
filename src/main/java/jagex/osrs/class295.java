@@ -113,7 +113,7 @@ public class class295 extends class287 {
     }
 
     public final void method5743(Buffer var1, byte var2) {
-        class293 var3 = new class293(var1.method3778(-957565397), this.field3727);
+        class293 var3 = new class293(var1.getString(), this.field3727);
         int var4 = var1.readUint16();
         byte var5 = var1.method3931(2011849020);
         boolean var6 = false;
@@ -132,7 +132,7 @@ public class class295 extends class287 {
                 this.method5641(var7, 1393453698);
             }
         } else {
-            var1.method3778(-545297136);
+            var1.getString();
             var7 = (class283) this.method5590(var3, -266772152);
             if (var7 == null) {
                 if (this.method5586((byte) 1) > super.field3704) {
@@ -150,22 +150,22 @@ public class class295 extends class287 {
     }
 
     public final void method5742(Buffer var1, int var2) {
-        this.method5764(var1.method3778(-1882337002), -48607896);
+        this.method5764(var1.getString(), -48607896);
         long var3 = var1.method3775((byte) 127);
         this.method5740(class165.method3610(var3), -737489793);
         this.field3731 = var1.method3931(2040252202);
-        int var5 = var1.getUByte();
+        int var5 = var1.readUint8();
         if (var5 != 255) {
             this.method5585(-591560482);
 
             for (int var6 = 0; var6 < var5; ++var6) {
                 class283 var7 = (class283) this
-                    .method5663(new class293(var1.method3778(-281058956), this.field3727),
+                    .method5663(new class293(var1.getString(), this.field3727),
                                 1175028138);
                 int var8 = var1.readUint16();
                 var7.method5678(var8, ++this.field3729 - 1, 213782216);
                 var7.field3710 = var1.method3931(2092273478);
-                var1.method3778(-1226634212);
+                var1.getString();
                 this.method5746(var7, (byte) 14);
             }
 

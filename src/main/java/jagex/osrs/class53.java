@@ -12,10 +12,6 @@ public class class53 {
         this.field529 = var1.method4841((byte) 41);
     }
 
-    public static void method1076(class57 var0, int var1) {
-        client.method1655(var0, 500000, 296778373);
-    }
-
     static final void method1077(class232[] var0, int var1, byte var2) {
         for (int var3 = 0; var3 < var0.length; ++var3) {
             class232 var4 = var0[var3];
@@ -52,7 +48,7 @@ public class class53 {
                         }
 
                         if (var6 != -1) {
-                            class275 var7 = class29.method532(var6, -505413349);
+                            class275 var7 = class29.method532(var6);
 
                             for (var4.field2750 += client.field705;
                                  var4.field2750 > var7.field3630[var4.field2795];
@@ -88,7 +84,7 @@ public class class53 {
     static final void method1082(boolean var0, PacketBuffer var1, byte var2) {
         client.field850 = 0;
         client.field779 = 0;
-        PacketBuffer var3 = client.field690.field1283;
+        PacketBuffer var3 = client.field690.buffer;
         var3.startBitAccess();
         int var4 = var3.readBits(8);
         int var5;
@@ -225,7 +221,7 @@ public class class53 {
             for (var15 = 0; var15 < client.field779; ++var15) {
                 var4 = client.field689[var15];
                 var16 = client.field806[var4];
-                var6 = var1.getUByte();
+                var6 = var1.readUint8();
                 if ((var6 & 1) != 0) {
                     var16.field965 = var1.method3807(728802659);
                     if (var16.field965 == 65535) {
@@ -252,7 +248,7 @@ public class class53 {
 
                     var8 = var1.method3891((byte) 0);
                     if (var17 == var16.field971 && var17 != -1) {
-                        var9 = class29.method532(var17, 2090578347).field3615;
+                        var9 = class29.method532(var17).field3615;
                         if (var9 == 1) {
                             var16.field986 = 0;
                             var16.field989 = 0;
@@ -264,8 +260,8 @@ public class class53 {
                             var16.field975 = 0;
                         }
                     } else if (var17 == -1 || var16.field971 == -1
-                        || class29.method532(var17, -506814260).field3627 >= class29
-                        .method532(var16.field971, 1589949731).field3627) {
+                        || class29.method532(var17).field3627 >= class29
+                        .method532(var16.field971).field3627) {
                         var16.field971 = var17;
                         var16.field986 = 0;
                         var16.field989 = 0;
@@ -321,7 +317,7 @@ public class class53 {
                             var11 = var1.method3783(-1399177794);
                             if (var11 != 32767) {
                                 var12 = var1.method3783(-1247300896);
-                                var13 = var1.getUByte();
+                                var13 = var1.readUint8();
                                 int var14 = var11 > 0 ? var1.method3891((byte) 0) : var13;
                                 var16.method1677(var10, client.field655, var11, var12, var13, var14,
                                                  -49087894);
@@ -349,7 +345,7 @@ public class class53 {
                 }
 
                 if ((var6 & 2) != 0) {
-                    var16.field968 = var1.method3778(-1133013925);
+                    var16.field968 = var1.getString();
                     var16.field981 = 100;
                 }
             }

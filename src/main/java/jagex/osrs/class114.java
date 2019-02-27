@@ -122,7 +122,7 @@ public final class class114 {
 
                         var19 = new String(var10.bytes, 0, var10.offset);
                         if (Player.method1218(var19, -1938910227)) {
-                            class138.method3291(var19, true, false, (short) 2500);
+                            class138.openUrl(var19, true, false, (short) 2500);
                             return 2;
                         } else {
                             return 5;

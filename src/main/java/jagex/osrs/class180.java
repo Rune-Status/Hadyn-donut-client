@@ -49,7 +49,7 @@ public class class180 {
         class23.field232.method4216(5);
     }
 
-    public static void method3732(int var0, int var1) {
+    public static void method3732(int var0) {
         class219.field2529 = 1;
         class137.field1911 = null;
         class219.field2533 = -1;

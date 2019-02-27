@@ -3,11 +3,11 @@ package jagex.osrs;
 public class class72 extends Node {
 
     static int field1100;
-    class205 field1099;
+    IterableDeque field1099;
     class263 field1097;
 
     class72(class263 var1) {
-        this.field1099 = new class205();
+        this.field1099 = new IterableDeque();
         this.field1097 = var1;
     }
 
@@ -48,7 +48,7 @@ public class class72 extends Node {
             }
 
         } else {
-            class205.method4245(new class65(var1, var2, var3, var4), var6);
+            IterableDeque.method4245(new class65(var1, var2, var3, var4), var6);
             if (var7 >= 4) {
                 this.field1099.method4250().unlink();
             }

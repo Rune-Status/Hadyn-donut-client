@@ -5,72 +5,72 @@ import java.io.IOException;
 public class class89 {
 
     public IssacRandom random;
-    class159 field1291;
-    class205 field1279;
-    PacketBuffer field1283;
+    AbstractSocket field1291;
+    IterableDeque field1279;
+    PacketBuffer buffer;
     int field1290;
     Buffer field1281;
-    InboundPacketDescriptor packetDescriptor;
-    boolean field1286;
+    InboundPacketDescriptor currentPacket;
+    boolean readFirstByte;
     int packetLength;
-    InboundPacketDescriptor field1284;
-    InboundPacketDescriptor field1278;
+    InboundPacketDescriptor secondPacket;
+    InboundPacketDescriptor thirdPacket;
     int field1287;
     int field1288;
-    InboundPacketDescriptor field1295;
+    InboundPacketDescriptor lastPacket;
 
     class89() {
-        this.field1279 = new class205();
+        this.field1279 = new IterableDeque();
         this.field1290 = 0;
         this.field1281 = new Buffer(5000);
-        this.field1283 = new PacketBuffer(40000);
-        this.packetDescriptor = null;
+        this.buffer = new PacketBuffer(40000);
+        this.currentPacket = null;
         this.packetLength = 0;
-        this.field1286 = true;
+        this.readFirstByte = true;
         this.field1287 = 0;
         this.field1288 = 0;
     }
 
     public static void method2200(byte var0) {
-        class271.field3507.method4199();
-        class271.field3508.method4199();
-        class271.field3546.method4199();
+        ItemConfig.field3507.method4199();
+        ItemConfig.field3508.method4199();
+        ItemConfig.field3546.method4199();
     }
 
     static int method2210(int var0, class86 var1, boolean var2, byte var3) {
         class232 var4;
         if (var0 == 2700) {
-            var4 = class18.method213(class70.field1070[--class60.field600], -1437668443);
-            class70.field1070[++class60.field600 - 1] = var4.field2793;
+            var4 = class18.method213(ScriptExecutor.field1070[--class60.field600], -1437668443);
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2793;
             return 1;
         } else if (var0 == 2701) {
-            var4 = class18.method213(class70.field1070[--class60.field600], -1652307533);
+            var4 = class18.method213(ScriptExecutor.field1070[--class60.field600], -1652307533);
             if (var4.field2793 != -1) {
-                class70.field1070[++class60.field600 - 1] = var4.field2794;
+                ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2794;
             } else {
-                class70.field1070[++class60.field600 - 1] = 0;
+                ScriptExecutor.field1070[++class60.field600 - 1] = 0;
             }
 
             return 1;
         } else if (var0 == 2702) {
-            int var6 = class70.field1070[--class60.field600];
+            int var6 = ScriptExecutor.field1070[--class60.field600];
             class56 var5 = (class56) client.field804.method4224((long) var6);
             if (var5 != null) {
-                class70.field1070[++class60.field600 - 1] = 1;
+                ScriptExecutor.field1070[++class60.field600 - 1] = 1;
             } else {
-                class70.field1070[++class60.field600 - 1] = 0;
+                ScriptExecutor.field1070[++class60.field600 - 1] = 0;
             }
 
             return 1;
         } else if (var0 == 2706) {
-            class70.field1070[++class60.field600 - 1] = client.field803;
+            ScriptExecutor.field1070[++class60.field600 - 1] = client.field803;
             return 1;
         } else {
             return 2;
         }
     }
 
-    class159 method2192(byte var1) {
+    AbstractSocket getSocket() {
         return this.field1291;
     }
 
@@ -123,7 +123,7 @@ public class class89 {
 
     }
 
-    void method2189(class159 var1, int var2) {
+    void method2189(AbstractSocket var1, int var2) {
         this.field1291 = var1;
     }
 }

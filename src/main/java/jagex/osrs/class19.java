@@ -19,11 +19,11 @@ public class class19 {
 
     static final void method241(int var0) {
         if (client.field725 > 0) {
-            class74.method1987(230086653);
+            class74.logout();
         } else {
             client.field904.method5502(-1898107601);
-            class16.method202(40, -1194677662);
-            class52.field524 = client.field690.method2192((byte) -115);
+            client.setState(40);
+            class52.field524 = client.field690.getSocket();
             client.field690.method2191((byte) -10);
         }
     }

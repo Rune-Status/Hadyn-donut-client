@@ -606,12 +606,12 @@ public class class115 extends class129 {
         var4.offset = var1.length - 18;
         int var9 = var4.readUint16();
         int var10 = var4.readUint16();
-        int var11 = var4.getUByte();
-        int var12 = var4.getUByte();
-        int var13 = var4.getUByte();
-        int var14 = var4.getUByte();
-        int var15 = var4.getUByte();
-        int var16 = var4.getUByte();
+        int var11 = var4.readUint8();
+        int var12 = var4.readUint8();
+        int var13 = var4.readUint8();
+        int var14 = var4.readUint8();
+        int var15 = var4.readUint8();
+        int var16 = var4.readUint8();
         int var17 = var4.readUint16();
         int var18 = var4.readUint16();
         int var19 = var4.readUint16();
@@ -712,7 +712,7 @@ public class class115 extends class129 {
         int var41;
         int var42;
         for (var38 = 0; var38 < var9; ++var38) {
-            var39 = var4.getUByte();
+            var39 = var4.readUint8();
             var40 = 0;
             if ((var39 & 1) != 0) {
                 var40 = var5.method3782(1982278071);
@@ -735,7 +735,7 @@ public class class115 extends class129 {
             var36 = this.field1531[var38];
             var37 = this.field1524[var38];
             if (var16 == 1) {
-                this.field1541[var38] = var8.getUByte();
+                this.field1541[var38] = var8.readUint8();
             }
         }
 
@@ -748,7 +748,7 @@ public class class115 extends class129 {
         for (var38 = 0; var38 < var10; ++var38) {
             this.field1533[var38] = (short) var4.readUint16();
             if (var12 == 1) {
-                var39 = var5.getUByte();
+                var39 = var5.readUint8();
                 if ((var39 & 1) == 1) {
                     this.field1529[var38] = 1;
                     var2 = true;
@@ -778,7 +778,7 @@ public class class115 extends class129 {
             }
 
             if (var15 == 1) {
-                this.field1542[var38] = var8.getUByte();
+                this.field1542[var38] = var8.readUint8();
             }
         }
 
@@ -792,7 +792,7 @@ public class class115 extends class129 {
         int var43;
         int var44;
         for (var42 = 0; var42 < var10; ++var42) {
-            var43 = var5.getUByte();
+            var43 = var5.readUint8();
             if (var43 == 1) {
                 var38 = var4.method3782(1982278071) + var41;
                 var39 = var4.method3782(1982278071) + var38;
@@ -1092,13 +1092,13 @@ public class class115 extends class129 {
         var2.offset = var1.length - 23;
         int var9 = var2.readUint16();
         int var10 = var2.readUint16();
-        int var11 = var2.getUByte();
-        int var12 = var2.getUByte();
-        int var13 = var2.getUByte();
-        int var14 = var2.getUByte();
-        int var15 = var2.getUByte();
-        int var16 = var2.getUByte();
-        int var17 = var2.getUByte();
+        int var11 = var2.readUint8();
+        int var12 = var2.readUint8();
+        int var13 = var2.readUint8();
+        int var14 = var2.readUint8();
+        int var15 = var2.readUint8();
+        int var16 = var2.readUint8();
+        int var17 = var2.readUint8();
         int var18 = var2.readUint16();
         int var19 = var2.readUint16();
         int var20 = var2.readUint16();
@@ -1246,7 +1246,7 @@ public class class115 extends class129 {
         int var54;
         int var55;
         for (var51 = 0; var51 < var9; ++var51) {
-            var52 = var2.getUByte();
+            var52 = var2.readUint8();
             var53 = 0;
             if ((var52 & 1) != 0) {
                 var53 = var3.method3782(1982278071);
@@ -1269,7 +1269,7 @@ public class class115 extends class129 {
             var49 = this.field1531[var51];
             var50 = this.field1524[var51];
             if (var17 == 1) {
-                this.field1541[var51] = var6.getUByte();
+                this.field1541[var51] = var6.readUint8();
             }
         }
 
@@ -1296,7 +1296,7 @@ public class class115 extends class129 {
             }
 
             if (var15 == 1) {
-                this.field1542[var51] = var6.getUByte();
+                this.field1542[var51] = var6.readUint8();
             }
 
             if (var16 == 1) {
@@ -1304,7 +1304,7 @@ public class class115 extends class129 {
             }
 
             if (this.field1558 != null && this.field1534[var51] != -1) {
-                this.field1558[var51] = (byte) (var8.getUByte() - 1);
+                this.field1558[var51] = (byte) (var8.readUint8() - 1);
             }
         }
 
@@ -1317,7 +1317,7 @@ public class class115 extends class129 {
 
         int var56;
         for (var55 = 0; var55 < var10; ++var55) {
-            var56 = var3.getUByte();
+            var56 = var3.readUint8();
             if (var56 == 1) {
                 var51 = var2.method3782(1982278071) + var54;
                 var52 = var2.method3782(1982278071) + var51;
@@ -1375,7 +1375,7 @@ public class class115 extends class129 {
         }
 
         var2.offset = var26;
-        var55 = var2.getUByte();
+        var55 = var2.readUint8();
         if (var55 != 0) {
             new class128();
             var2.readUint16();

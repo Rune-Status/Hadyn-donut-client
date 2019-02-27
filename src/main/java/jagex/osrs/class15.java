@@ -549,8 +549,8 @@ public class class15 implements class190 {
                                     class6.field51 = var3;
                                     class37.method721(var17, 1238023037);
                                     client.field766 =
-                                        class128.method3233(16748608, 1839432392) + class84
-                                            .method2125(var3, -205103429).field3515 + class128
+                                        class128.method3233(16748608, 1839432392) + ItemConfig
+                                            .get(var3).field3515 + class128
                                             .method3233(16777215, 1739387188);
                                     if (client.field766 == null) {
                                         client.field766 = "null";
@@ -854,9 +854,9 @@ public class class15 implements class190 {
                                                     && var17.field2792[var0] >= 100000) {
                                                     class59.method1163(27, "",
                                                                        var17.field2792[var0] + " x "
-                                                                           + class84
-                                                                           .method2125(var3,
-                                                                                       -205103429).field3515,
+                                                                           + ItemConfig
+                                                                           .get(var3
+                                                                           ).field3515,
                                                                        -1483885983);
                                                 } else {
                                                     var10 = class131.method3243(class171.field2214,

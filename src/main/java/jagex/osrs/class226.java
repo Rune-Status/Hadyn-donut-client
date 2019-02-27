@@ -16,7 +16,7 @@ public class class226 extends class208 {
     }
 
     static final class199 method4634(Buffer var0, class199 var1, short var2) {
-        int var3 = var0.getUByte();
+        int var3 = var0.readUint8();
         int var4;
         if (var1 == null) {
             var4 = class3.method28(var3, -464680238);
@@ -24,11 +24,11 @@ public class class226 extends class208 {
         }
 
         for (var4 = 0; var4 < var3; ++var4) {
-            boolean var5 = var0.getUByte() == 1;
+            boolean var5 = var0.readUint8() == 1;
             int var6 = var0.method3773(857671803);
             Object var7;
             if (var5) {
-                var7 = new class197(var0.method3778(-1405118142));
+                var7 = new class197(var0.getString());
             } else {
                 var7 = new class213(var0.getInt());
             }

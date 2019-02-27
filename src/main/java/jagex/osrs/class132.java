@@ -7,7 +7,7 @@ public class class132 extends class208 {
     class119[] field1859;
 
     public class132(class249 var1, class249 var2, int var3, boolean var4) {
-        class207 var5 = new class207();
+        Deque var5 = new Deque();
         int var6 = var1.method4889(var3, 1064669026);
         this.field1859 = new class119[var6];
         int[] var7 = var1.method4839(var3, -1279246396);
@@ -17,8 +17,8 @@ public class class132 extends class208 {
             class126 var10 = null;
             int var11 = (var9[0] & 255) << 8 | var9[1] & 255;
 
-            for (class126 var12 = (class126) var5.method4298(); var12 != null;
-                 var12 = (class126) var5.method4283()) {
+            for (class126 var12 = (class126) var5.getFirst(); var12 != null;
+                 var12 = (class126) var5.getNext()) {
                 if (var11 == var12.field1763) {
                     var10 = var12;
                     break;
@@ -28,7 +28,7 @@ public class class132 extends class208 {
             if (var10 == null) {
                 byte[] var13 = var2.method4836(var11, 0, 1272633714);
                 var10 = new class126(var11, var13);
-                var5.method4276(var10);
+                var5.addLast(var10);
             }
 
             this.field1859[var7[var8]] = new class119(var9, var10);

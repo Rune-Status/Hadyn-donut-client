@@ -33,7 +33,7 @@ public final class class125 {
         var2.offset = var0.length - 7 - class324.field3893 * 8;
         class324.field3891 = var2.readUint16();
         class324.field3896 = var2.readUint16();
-        int var3 = (var2.getUByte() & 255) + 1;
+        int var3 = (var2.readUint8() & 255) + 1;
 
         int var4;
         for (var4 = 0; var4 < class324.field3893; ++var4) {
@@ -70,7 +70,7 @@ public final class class125 {
             int var7 = var5 * var6;
             byte[] var8 = new byte[var7];
             class324.field3897[var4] = var8;
-            int var9 = var2.getUByte();
+            int var9 = var2.readUint8();
             int var10;
             if (var9 == 0) {
                 for (var10 = 0; var10 < var7; ++var10) {
@@ -99,7 +99,7 @@ public final class class125 {
         class273.field3567.method4199();
         class89.method2200((byte) 15);
         class51.method1062(-1726630277);
-        class186.method4008(1409681026);
+        Time.method4008(1409681026);
         class265.field3396.method4199();
         class60.method1169(105487488);
         class269.field3429.method4199();

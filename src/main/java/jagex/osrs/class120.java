@@ -35,16 +35,6 @@ public final class class120 extends Node {
         this.field1617 = var3;
     }
 
-    public static synchronized long method2866(short var0) {
-        long var1 = System.currentTimeMillis();
-        if (var1 < class186.field2420) {
-            class186.field2419 += class186.field2420 - var1;
-        }
-
-        class186.field2420 = var1;
-        return class186.field2419 + var1;
-    }
-
     static String method2865(Buffer var0, int var1, short var2) {
         try {
             int var3 = var0.method3783(-1545915386);

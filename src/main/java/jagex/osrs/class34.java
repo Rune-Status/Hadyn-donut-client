@@ -55,8 +55,8 @@ public class class34 extends class16 {
 
         class117.method2851(false, -1542277702);
 
-        for (class80 var29 = (class80) client.field773.method4298(); var29 != null;
-             var29 = (class80) client.field773.method4283()) {
+        for (class80 var29 = (class80) client.field773.getFirst(); var29 != null;
+             var29 = (class80) client.field773.getNext()) {
             if (var29.field1183 == class60.level && client.field655 <= var29.field1189) {
                 if (client.field655 >= var29.field1188) {
                     if (var29.field1192 > 0) {
@@ -98,8 +98,8 @@ public class class34 extends class16 {
             }
         }
 
-        for (class71 var37 = (class71) client.field711.method4298(); var37 != null;
-             var37 = (class71) client.field711.method4283()) {
+        for (class71 var37 = (class71) client.field711.getFirst(); var37 != null;
+             var37 = (class71) client.field711.getNext()) {
             if (var37.field1086 == class60.level && !var37.field1093) {
                 if (client.field655 >= var37.field1085) {
                     var37.method1954(client.field705, (byte) 0);
@@ -184,7 +184,7 @@ public class class34 extends class16 {
             class157.field2036 = var7 - var15;
             Buffer.field2409 = var8 - var16;
             class50.field508 = var9 - var17;
-            class57.field576 = var5;
+            ScriptCall.field576 = var5;
             class15.field143 = var30;
             if (client.field718 == 1 && client.rights >= 2 && client.field655 % 50 == 0 && (
                 class9.field68 >> 7 != class69.localPlayer.x >> 7
@@ -204,7 +204,7 @@ public class class34 extends class16 {
                 label804:
                 {
                     var7 = 3;
-                    if (class57.field576 < 310) {
+                    if (ScriptCall.field576 < 310) {
                         if (client.field718 == 1) {
                             var8 = class9.field68 >> 7;
                             var9 = class9.field70 >> 7;
@@ -341,7 +341,7 @@ public class class34 extends class16 {
         var30 = class157.field2036;
         var7 = Buffer.field2409;
         var8 = class50.field508;
-        var9 = class57.field576;
+        var9 = ScriptCall.field576;
         var10 = class15.field143;
 
         for (var11 = 0; var11 < 5; ++var11) {
@@ -367,13 +367,13 @@ public class class34 extends class16 {
                 }
 
                 if (var11 == 4) {
-                    class57.field576 += var12;
-                    if (class57.field576 < 128) {
-                        class57.field576 = 128;
+                    ScriptCall.field576 += var12;
+                    if (ScriptCall.field576 < 128) {
+                        ScriptCall.field576 = 128;
                     }
 
-                    if (class57.field576 > 383) {
-                        class57.field576 = 383;
+                    if (ScriptCall.field576 > 383) {
+                        ScriptCall.field576 = 383;
                     }
                 }
             }
@@ -404,7 +404,7 @@ public class class34 extends class16 {
         var13 = class124.field1741;
         class124.field1741 = client.field907;
         class243.field3173
-            .method3098(class157.field2036, Buffer.field2409, class50.field508, class57.field576,
+            .method3098(class157.field2036, Buffer.field2409, class50.field508, ScriptCall.field576,
                         class15.field143, var5);
         class124.field1741 = var13;
         class160.method3502((byte) 100);
@@ -596,7 +596,7 @@ public class class34 extends class16 {
         class157.field2036 = var30;
         Buffer.field2409 = var7;
         class50.field508 = var8;
-        class57.field576 = var9;
+        ScriptCall.field576 = var9;
         class15.field143 = var10;
         if (client.field654 && class50.method1058(true, false, (byte) 30) == 0) {
             client.field654 = false;
@@ -652,7 +652,7 @@ public class class34 extends class16 {
 
     static void method617(Player var0, int var1, int var2, int var3) {
         if (var0.field971 == var1 && var1 != -1) {
-            int var4 = class29.method532(var1, 1921248409).field3615;
+            int var4 = class29.method532(var1).field3615;
             if (var4 == 1) {
                 var0.field986 = 0;
                 var0.field989 = 0;
@@ -664,8 +664,8 @@ public class class34 extends class16 {
                 var0.field975 = 0;
             }
         } else if (var1 == -1 || var0.field971 == -1
-            || class29.method532(var1, 1066284684).field3627 >= class29
-            .method532(var0.field971, -767601180).field3627) {
+            || class29.method532(var1).field3627 >= class29
+            .method532(var0.field971).field3627) {
             var0.field971 = var1;
             var0.field986 = 0;
             var0.field989 = 0;
@@ -690,34 +690,34 @@ public class class34 extends class16 {
     }
 
     void method631(Buffer var1, Buffer var2, int var3) {
-        int var4 = var2.getUByte();
+        int var4 = var2.readUint8();
         if (var4 != class25.field252.field254) {
             throw new IllegalStateException("");
         } else {
-            super.field150 = var2.getUByte();
-            super.field148 = var2.getUByte();
+            super.field150 = var2.readUint8();
+            super.field148 = var2.readUint8();
             super.field146 = var2.readUint16();
             super.field151 = var2.readUint16();
-            this.field333 = var2.getUByte();
-            this.field336 = var2.getUByte();
+            this.field333 = var2.readUint8();
+            this.field336 = var2.readUint8();
             super.field147 = var2.readUint16();
             super.field149 = var2.readUint16();
-            this.field330 = var2.getUByte();
-            this.field329 = var2.getUByte();
+            this.field330 = var2.readUint8();
+            this.field329 = var2.readUint8();
             super.field148 = Math.min(super.field148, 4);
             super.field152 = new short[1][64][64];
             super.field153 = new short[super.field148][64][64];
             super.field154 = new byte[super.field148][64][64];
             super.field155 = new byte[super.field148][64][64];
             super.field156 = new class19[super.field148][64][64][];
-            var4 = var1.getUByte();
+            var4 = var1.readUint8();
             if (var4 != class24.field245.field247) {
                 throw new IllegalStateException("");
             } else {
-                int var5 = var1.getUByte();
-                int var6 = var1.getUByte();
-                int var7 = var1.getUByte();
-                int var8 = var1.getUByte();
+                int var5 = var1.readUint8();
+                int var6 = var1.readUint8();
+                int var7 = var1.readUint8();
+                int var8 = var1.readUint8();
                 if (var5 == super.field147 && var6 == super.field149 && var7 == this.field330
                     && var8 == this.field329) {
                     for (int var9 = 0; var9 < 8; ++var9) {

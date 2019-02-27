@@ -64,7 +64,7 @@ public class class33 extends class20 {
         for (int var5 = 0; var5 < var4; ++var5) {
             int var6 = var1.method3898((byte) -111);
             class228 var7 = new class228(var1.getInt());
-            boolean var8 = var1.getUByte() == 1;
+            boolean var8 = var1.readUint8() == 1;
             if (var2 || !var8) {
                 this.field326.add(new class13(var6, var7));
             }

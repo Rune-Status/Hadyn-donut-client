@@ -21,7 +21,7 @@ public class class87 extends class129 {
         this.field1262 = var5;
         this.field1267 = var6;
         if (var7 != -1) {
-            this.field1268 = class29.method532(var7, -68537384);
+            this.field1268 = class29.method532(var7);
             this.field1269 = 0;
             this.field1270 = client.field655 - 1;
             if (this.field1268.field3615 == 0 && var9 != null && var9 instanceof class87) {
@@ -57,24 +57,24 @@ public class class87 extends class129 {
     }
 
     static int method2168(int var0, class86 var1, boolean var2, int var3) {
-        class232 var4 = var2 ? class10.field75 : class70.field1080;
+        class232 var4 = var2 ? class10.field75 : ScriptExecutor.field1080;
         if (var0 == 1500) {
-            class70.field1070[++class60.field600 - 1] = var4.field2680;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2680;
             return 1;
         } else if (var0 == 1501) {
-            class70.field1070[++class60.field600 - 1] = var4.field2772;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2772;
             return 1;
         } else if (var0 == 1502) {
-            class70.field1070[++class60.field600 - 1] = var4.field2682;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2682;
             return 1;
         } else if (var0 == 1503) {
-            class70.field1070[++class60.field600 - 1] = var4.field2683;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2683;
             return 1;
         } else if (var0 == 1504) {
-            class70.field1070[++class60.field600 - 1] = var4.field2704 ? 1 : 0;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2704 ? 1 : 0;
             return 1;
         } else if (var0 == 1505) {
-            class70.field1070[++class60.field600 - 1] = var4.field2700;
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4.field2700;
             return 1;
         } else {
             return 2;

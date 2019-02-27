@@ -22,7 +22,7 @@ public final class class73 extends class64 {
         ++client.field690.field1288;
         if (client.field690.field1288 >= 50 || var0) {
             client.field690.field1288 = 0;
-            if (!client.field692 && client.field690.method2192((byte) 37) != null) {
+            if (!client.field692 && client.field690.getSocket() != null) {
                 OutboundPacket var2 = class131
                     .method3243(class171.field2224, client.field690.random, (byte) 94);
                 client.field690.method2193(var2, -847126258);
@@ -42,10 +42,10 @@ public final class class73 extends class64 {
             return null;
         } else {
             class275 var2 = super.field971 != -1 && super.field998 == 0 ? class29
-                .method532(super.field971, -1552610333) : null;
+                .method532(super.field971) : null;
             class275 var3 =
                 super.field972 != -1 && (super.field944 != super.field972 || var2 == null) ? class29
-                    .method532(super.field972, -767183228) : null;
+                    .method532(super.field972) : null;
             class121 var4 = this.field1102
                 .method5414(var2, super.field986, var3, super.field969, 391625709);
             if (var4 == null) {
@@ -115,7 +115,7 @@ public final class class73 extends class64 {
             --var5;
         }
 
-        if (super.field971 != -1 && class29.method532(super.field971, 1830525594).field3632 == 1) {
+        if (super.field971 != -1 && class29.method532(super.field971).field3632 == 1) {
             super.field971 = -1;
         }
 
@@ -135,7 +135,7 @@ public final class class73 extends class64 {
     }
 
     final void method1982(int var1, int var2, boolean var3, int var4) {
-        if (super.field971 != -1 && class29.method532(super.field971, 962054886).field3632 == 1) {
+        if (super.field971 != -1 && class29.method532(super.field971).field3632 == 1) {
             super.field971 = -1;
         }
 

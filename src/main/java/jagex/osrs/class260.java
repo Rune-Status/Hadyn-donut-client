@@ -78,13 +78,13 @@ public class class260 extends class208 {
         if (var0 == 6200) {
             class60.field600 -= 2;
             client.field649 = (short) class297
-                .method5770(class70.field1070[class60.field600], -46607763);
+                .method5770(ScriptExecutor.field1070[class60.field600], -46607763);
             if (client.field649 <= 0) {
                 client.field649 = 256;
             }
 
             client.field896 = (short) class297
-                .method5770(class70.field1070[class60.field600 + 1], -771837646);
+                .method5770(ScriptExecutor.field1070[class60.field600 + 1], -771837646);
             if (client.field896 <= 0) {
                 client.field896 = 256;
             }
@@ -92,12 +92,12 @@ public class class260 extends class208 {
             return 1;
         } else if (var0 == 6201) {
             class60.field600 -= 2;
-            client.field897 = (short) class70.field1070[class60.field600];
+            client.field897 = (short) ScriptExecutor.field1070[class60.field600];
             if (client.field897 <= 0) {
                 client.field897 = 256;
             }
 
-            client.field898 = (short) class70.field1070[class60.field600 + 1];
+            client.field898 = (short) ScriptExecutor.field1070[class60.field600 + 1];
             if (client.field898 <= 0) {
                 client.field898 = 320;
             }
@@ -105,24 +105,24 @@ public class class260 extends class208 {
             return 1;
         } else if (var0 == 6202) {
             class60.field600 -= 4;
-            client.field899 = (short) class70.field1070[class60.field600];
+            client.field899 = (short) ScriptExecutor.field1070[class60.field600];
             if (client.field899 <= 0) {
                 client.field899 = 1;
             }
 
-            client.field684 = (short) class70.field1070[class60.field600 + 1];
+            client.field684 = (short) ScriptExecutor.field1070[class60.field600 + 1];
             if (client.field684 <= 0) {
                 client.field684 = 32767;
             } else if (client.field684 < client.field899) {
                 client.field684 = client.field899;
             }
 
-            client.field901 = (short) class70.field1070[class60.field600 + 2];
+            client.field901 = (short) ScriptExecutor.field1070[class60.field600 + 2];
             if (client.field901 <= 0) {
                 client.field901 = 1;
             }
 
-            client.field754 = (short) class70.field1070[class60.field600 + 3];
+            client.field754 = (short) ScriptExecutor.field1070[class60.field600 + 3];
             if (client.field754 <= 0) {
                 client.field754 = 32767;
             } else if (client.field754 < client.field901) {
@@ -134,22 +134,22 @@ public class class260 extends class208 {
             if (client.field815 != null) {
                 class3.method36(0, 0, client.field815.field2682, client.field815.field2683, false,
                                 1255618077);
-                class70.field1070[++class60.field600 - 1] = client.field644;
-                class70.field1070[++class60.field600 - 1] = client.field764;
+                ScriptExecutor.field1070[++class60.field600 - 1] = client.field644;
+                ScriptExecutor.field1070[++class60.field600 - 1] = client.field764;
             } else {
-                class70.field1070[++class60.field600 - 1] = -1;
-                class70.field1070[++class60.field600 - 1] = -1;
+                ScriptExecutor.field1070[++class60.field600 - 1] = -1;
+                ScriptExecutor.field1070[++class60.field600 - 1] = -1;
             }
 
             return 1;
         } else if (var0 == 6204) {
-            class70.field1070[++class60.field600 - 1] = client.field897;
-            class70.field1070[++class60.field600 - 1] = client.field898;
+            ScriptExecutor.field1070[++class60.field600 - 1] = client.field897;
+            ScriptExecutor.field1070[++class60.field600 - 1] = client.field898;
             return 1;
         } else if (var0 == 6205) {
-            class70.field1070[++class60.field600 - 1] = class252
+            ScriptExecutor.field1070[++class60.field600 - 1] = class252
                 .method4978(client.field649, (byte) 104);
-            class70.field1070[++class60.field600 - 1] = class252
+            ScriptExecutor.field1070[++class60.field600 - 1] = class252
                 .method4978(client.field896, (byte) 3);
             return 1;
         } else {
@@ -169,14 +169,14 @@ public class class260 extends class208 {
         } else if (var2 == 6) {
             this.field3350 = var1.readUint16();
         } else if (var2 == 7) {
-            this.field3356 = var1.getUByte();
+            this.field3356 = var1.readUint8();
         } else if (var2 == 8) {
-            this.field3355 = var1.getUByte();
+            this.field3355 = var1.readUint8();
         } else {
             int var4;
             int var5;
             if (var2 == 40) {
-                var4 = var1.getUByte();
+                var4 = var1.readUint8();
                 this.field3349 = new short[var4];
                 this.field3346 = new short[var4];
 
@@ -185,7 +185,7 @@ public class class260 extends class208 {
                     this.field3346[var5] = (short) var1.readUint16();
                 }
             } else if (var2 == 41) {
-                var4 = var1.getUByte();
+                var4 = var1.readUint8();
                 this.field3351 = new short[var4];
                 this.field3352 = new short[var4];
 
@@ -225,7 +225,7 @@ public class class260 extends class208 {
 
         class121 var6;
         if (this.field3348 != -1 && var1 != -1) {
-            var6 = class29.method532(this.field3348, -1526848362)
+            var6 = class29.method532(this.field3348)
                           .method5486(var3, var1, -358677299);
         } else {
             var6 = var3.method2881(true);
@@ -257,7 +257,7 @@ public class class260 extends class208 {
 
     void method5089(Buffer var1, int var2) {
         while (true) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 == 0) {
                 return;
             }

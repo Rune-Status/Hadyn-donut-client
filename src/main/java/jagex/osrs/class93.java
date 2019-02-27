@@ -10,7 +10,7 @@ public class class93 {
         this.field1306 = new class109[10];
 
         for (int var2 = 0; var2 < 10; ++var2) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 != 0) {
                 --var1.offset;
                 this.field1306[var2] = new class109();

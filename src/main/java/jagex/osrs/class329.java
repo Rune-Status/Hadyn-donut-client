@@ -300,7 +300,7 @@ public class class329 {
     final void method6325(int var1, int var2, boolean var3, byte var4) {
         this.field3968 = var1;
         this.field3980 = var2;
-        class120.method2866((short) 3133);
+        Time.currentTimeMillis();
         if (var3) {
             this.method6331((short) -24130);
         }
@@ -377,7 +377,7 @@ public class class329 {
     }
 
     public void method6374(int var1, int var2, class228 var3, class228 var4, int var5) {
-        class57 var6 = new class57();
+        ScriptCall var6 = new ScriptCall();
         class36 var7 = new class36(var2, var3, var4);
         var6.method1114(new Object[]{var7}, (byte) 1);
         switch (var1) {
@@ -397,7 +397,7 @@ public class class329 {
                 var6.method1116(14, -495667114);
         }
 
-        class53.method1076(var6, -1225442608);
+        ScriptExecutor.execute(var6);
     }
 
     public void method6337(int var1, int var2, int var3, int var4, int var5, int var6) {
@@ -558,13 +558,13 @@ public class class329 {
 
                 Iterator var13;
                 class28 var14;
-                class57 var15;
+                ScriptCall var15;
                 class36 var16;
                 for (var13 = var11.iterator(); var13.hasNext();
-                     class53.method1076(var15, -190791705)) {
+                     ScriptExecutor.execute(var15)) {
                     var14 = (class28) var13.next();
                     var12.add(var14);
-                    var15 = new class57();
+                    var15 = new ScriptCall();
                     var16 = new class36(var14.field285, var14.field279, var14.field277);
                     var15.method1114(
                         new Object[]{var16, Integer.valueOf(var1), Integer.valueOf(var2)},
@@ -581,13 +581,13 @@ public class class329 {
                 while (var13.hasNext()) {
                     var14 = (class28) var13.next();
                     if (!var12.contains(var14)) {
-                        var15 = new class57();
+                        var15 = new ScriptCall();
                         var16 = new class36(var14.field285, var14.field279, var14.field277);
                         var15.method1114(
                             new Object[]{var16, Integer.valueOf(var1), Integer.valueOf(var2)},
                             (byte) 1);
                         var15.method1116(16, 1836364318);
-                        class53.method1076(var15, -1243890360);
+                        ScriptExecutor.execute(var15);
                     }
                 }
 
@@ -655,7 +655,7 @@ public class class329 {
     }
 
     public void method6479(int var1, int var2, boolean var3, boolean var4, byte var5) {
-        long var6 = class120.method2866((short) 3133);
+        long var6 = Time.currentTimeMillis();
         this.method6322(var1, var2, var4, var6);
         if (!this.method6477(-1503482807) && (var4 || var3)) {
             if (var4) {

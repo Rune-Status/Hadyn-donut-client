@@ -32,115 +32,115 @@ public class class297 {
         int var5;
         if (var0 == 4000) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var5 + var4;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var5 + var4;
             return 1;
         } else if (var0 == 4001) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 - var5;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 - var5;
             return 1;
         } else if (var0 == 4002) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 * var5;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 * var5;
             return 1;
         } else if (var0 == 4003) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 / var5;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 / var5;
             return 1;
         } else if (var0 == 4004) {
-            var4 = class70.field1070[--class60.field600];
-            class70.field1070[++class60.field600 - 1] = (int) (Math.random() * (double) var4);
+            var4 = ScriptExecutor.field1070[--class60.field600];
+            ScriptExecutor.field1070[++class60.field600 - 1] = (int) (Math.random() * (double) var4);
             return 1;
         } else if (var0 == 4005) {
-            var4 = class70.field1070[--class60.field600];
-            class70.field1070[++class60.field600 - 1] = (int) (Math.random() * (double) (var4 + 1));
+            var4 = ScriptExecutor.field1070[--class60.field600];
+            ScriptExecutor.field1070[++class60.field600 - 1] = (int) (Math.random() * (double) (var4 + 1));
             return 1;
         } else if (var0 == 4006) {
             class60.field600 -= 5;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            int var6 = class70.field1070[class60.field600 + 2];
-            int var7 = class70.field1070[class60.field600 + 3];
-            int var8 = class70.field1070[class60.field600 + 4];
-            class70.field1070[++class60.field600 - 1] =
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            int var6 = ScriptExecutor.field1070[class60.field600 + 2];
+            int var7 = ScriptExecutor.field1070[class60.field600 + 3];
+            int var8 = ScriptExecutor.field1070[class60.field600 + 4];
+            ScriptExecutor.field1070[++class60.field600 - 1] =
                 var4 + (var5 - var4) * (var8 - var6) / (var7 - var6);
             return 1;
         } else if (var0 == 4007) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 + var5 * var4 / 100;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 + var5 * var4 / 100;
             return 1;
         } else if (var0 == 4008) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 | 1 << var5;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 | 1 << var5;
             return 1;
         } else if (var0 == 4009) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 & -1 - (1 << var5);
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 & -1 - (1 << var5);
             return 1;
         } else if (var0 == 4010) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = (var4 & 1 << var5) != 0 ? 1 : 0;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = (var4 & 1 << var5) != 0 ? 1 : 0;
             return 1;
         } else if (var0 == 4011) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 % var5;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 % var5;
             return 1;
         } else if (var0 == 4012) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
             if (var4 == 0) {
-                class70.field1070[++class60.field600 - 1] = 0;
+                ScriptExecutor.field1070[++class60.field600 - 1] = 0;
             } else {
-                class70.field1070[++class60.field600 - 1] = (int) Math
+                ScriptExecutor.field1070[++class60.field600 - 1] = (int) Math
                     .pow((double) var4, (double) var5);
             }
 
             return 1;
         } else if (var0 == 4013) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
             if (var4 == 0) {
-                class70.field1070[++class60.field600 - 1] = 0;
+                ScriptExecutor.field1070[++class60.field600 - 1] = 0;
                 return 1;
             } else {
                 switch (var5) {
                     case 0:
-                        class70.field1070[++class60.field600 - 1] = Integer.MAX_VALUE;
+                        ScriptExecutor.field1070[++class60.field600 - 1] = Integer.MAX_VALUE;
                         break;
                     case 1:
-                        class70.field1070[++class60.field600 - 1] = var4;
+                        ScriptExecutor.field1070[++class60.field600 - 1] = var4;
                         break;
                     case 2:
-                        class70.field1070[++class60.field600 - 1] = (int) Math.sqrt((double) var4);
+                        ScriptExecutor.field1070[++class60.field600 - 1] = (int) Math.sqrt((double) var4);
                         break;
                     case 3:
-                        class70.field1070[++class60.field600 - 1] = (int) Math.cbrt((double) var4);
+                        ScriptExecutor.field1070[++class60.field600 - 1] = (int) Math.cbrt((double) var4);
                         break;
                     case 4:
-                        class70.field1070[++class60.field600 - 1] = (int) Math
+                        ScriptExecutor.field1070[++class60.field600 - 1] = (int) Math
                             .sqrt(Math.sqrt((double) var4));
                         break;
                     default:
-                        class70.field1070[++class60.field600 - 1] = (int) Math
+                        ScriptExecutor.field1070[++class60.field600 - 1] = (int) Math
                             .pow((double) var4, 1.0D / (double) var5);
                 }
 
@@ -148,22 +148,22 @@ public class class297 {
             }
         } else if (var0 == 4014) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 & var5;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 & var5;
             return 1;
         } else if (var0 == 4015) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            class70.field1070[++class60.field600 - 1] = var4 | var5;
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            ScriptExecutor.field1070[++class60.field600 - 1] = var4 | var5;
             return 1;
         } else if (var0 == 4018) {
             class60.field600 -= 3;
-            long var10 = (long) class70.field1070[class60.field600];
-            long var12 = (long) class70.field1070[class60.field600 + 1];
-            long var14 = (long) class70.field1070[class60.field600 + 2];
-            class70.field1070[++class60.field600 - 1] = (int) (var10 * var14 / var12);
+            long var10 = (long) ScriptExecutor.field1070[class60.field600];
+            long var12 = (long) ScriptExecutor.field1070[class60.field600 + 1];
+            long var14 = (long) ScriptExecutor.field1070[class60.field600 + 2];
+            ScriptExecutor.field1070[++class60.field600 - 1] = (int) (var10 * var14 / var12);
             return 1;
         } else {
             return 2;

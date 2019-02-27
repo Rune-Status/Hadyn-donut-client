@@ -50,7 +50,7 @@ public class class82 {
             class71.index13 = class134.method3261(13, true, false, true, (byte) 40);
             class27.index14 = class134.method3261(14, false, true, true, (byte) 104);
             class270.index15 = class134.method3261(15, false, true, true, (byte) 81);
-            class159.index16 = class134.method3261(16, true, true, true, (byte) 10);
+            AbstractSocket.index16 = class134.method3261(16, true, true, true, (byte) 10);
             class145.index17 = class134.method3261(17, true, true, true, (byte) 71);
             class79.field1159 = "Connecting to update server";
             class79.field1158 = 20;
@@ -73,7 +73,7 @@ public class class82 {
             var1 += class71.index13.method4923((byte) -12) * 2 / 100;
             var1 += class27.index14.method4923((byte) 13) * 2 / 100;
             var1 += class270.index15.method4923((byte) 46) * 2 / 100;
-            var1 += class159.index16.method4923((byte) -29) * 2 / 100;
+            var1 += AbstractSocket.index16.method4923((byte) -29) * 2 / 100;
             var1 +=
                 class145.index17.method4922(1719349983) && class145.index17.method4904((byte) 5)
                     ? 1 : 0;
@@ -94,7 +94,7 @@ public class class82 {
                 class233.method4754(IssacRandom.index11, "Music Jingles", 1846815080);
                 class233.method4754(class27.index14, "Music Samples", 1480794421);
                 class233.method4754(class270.index15, "Music Patches", 1454399212);
-                class233.method4754(class159.index16, "World Map", 794108251);
+                class233.method4754(AbstractSocket.index16, "World Map", 794108251);
                 class1.field8 = new class311();
                 class1.field8.method5954(class145.index17, 1175740462);
                 class79.field1159 = "Loaded update list";
@@ -205,7 +205,7 @@ public class class82 {
                     } else {
                         class79.field1159 = "Loaded title screen";
                         class79.field1158 = 50;
-                        class16.method202(5, -1194677662);
+                        client.setState(5);
                         client.field902 = 70;
                     }
                 } else if (client.field902 == 70) {
@@ -476,7 +476,7 @@ public class class82 {
                         ++var1;
                     }
 
-                    if (class186.field2421 == null) {
+                    if (Time.field2421 == null) {
                         var3 = class154.index8;
                         var19 = class1.field8.field3819;
                         var6 = var3.method4831(var19, 0, 1789634852);
@@ -524,7 +524,7 @@ public class class82 {
                             }
                         }
 
-                        class186.field2421 = var36;
+                        Time.field2421 = var36;
                     } else {
                         ++var1;
                     }
@@ -754,15 +754,15 @@ public class class82 {
                     }
                 } else if (client.field902 == 140) {
                     class79.field1158 = 100;
-                    if (!class159.index16.method4851(class29.field291.field298, -2107594785)) {
+                    if (!AbstractSocket.index16.method4851(class29.field291.field298, -2107594785)) {
                         class79.field1159 = "Loading world map - "
-                            + class159.index16.method4845(class29.field291.field298, 29775380)
+                            + AbstractSocket.index16.method4845(class29.field291.field298, 29775380)
                             / 10 + "%";
                     } else {
                         if (class45.field418 == null) {
                             class45.field418 = new class329();
                             class45.field418
-                                .method6317(class159.index16, class163.field2066, client.field695,
+                                .method6317(AbstractSocket.index16, class163.field2066, client.field695,
                                             class278.field3642, -428996887);
                         }
 
@@ -775,7 +775,7 @@ public class class82 {
                         }
                     }
                 } else if (client.field902 == 150) {
-                    class16.method202(10, -1194677662);
+                    client.setState(10);
                 }
             }
         }

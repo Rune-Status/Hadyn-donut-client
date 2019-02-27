@@ -6,15 +6,15 @@ public class class250 implements Runnable {
 
     public static Object field3241;
     public static int field3243;
-    static class207 field3242;
-    static class207 field3244;
+    static Deque field3242;
+    static Deque field3244;
     static Thread field3245;
     static int[][] field3247;
     static boolean field3246;
 
     static {
-        field3242 = new class207();
-        field3244 = new class207();
+        field3242 = new Deque();
+        field3244 = new Deque();
         field3243 = 0;
         field3241 = new Object();
     }
@@ -58,10 +58,10 @@ public class class250 implements Runnable {
     public void run() {
         try {
             while (true) {
-                class207 var2 = field3242;
+                Deque var2 = field3242;
                 class247 var1;
                 synchronized (field3242) {
-                    var1 = (class247) field3242.method4298();
+                    var1 = (class247) field3242.getFirst();
                 }
 
                 Object var14;
@@ -79,7 +79,7 @@ public class class250 implements Runnable {
                             .get((int) var1.key);
                         var2 = field3242;
                         synchronized (field3242) {
-                            field3244.method4276(var1);
+                            field3244.addLast(var1);
                         }
                     }
 

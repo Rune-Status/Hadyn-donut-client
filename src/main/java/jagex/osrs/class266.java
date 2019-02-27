@@ -41,7 +41,7 @@ public class class266 extends class208 {
         } else if (var2 == 4) {
             this.field3404 = false;
         } else if (var2 == 5) {
-            this.field3405 = var1.method3778(-973617555);
+            this.field3405 = var1.getString();
         }
 
     }
@@ -55,7 +55,7 @@ public class class266 extends class208 {
 
     void method5176(Buffer var1, int var2) {
         while (true) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 == 0) {
                 return;
             }

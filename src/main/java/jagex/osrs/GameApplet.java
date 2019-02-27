@@ -133,7 +133,7 @@ public abstract class GameApplet extends Applet implements Runnable, FocusListen
     public final synchronized void paint(Graphics var1) {
         if (this == field427 && !field430) {
             this.field449 = true;
-            if (class120.method2866((short) 3133) - this.field453 > 1000L) {
+            if (Time.currentTimeMillis() - this.field453 > 1000L) {
                 Rectangle var2 = var1.getClipBounds();
                 if (var2 == null
                     || var2.width >= class68.windowWidth && var2.height >= class141.windowHeight) {
@@ -146,7 +146,7 @@ public abstract class GameApplet extends Applet implements Runnable, FocusListen
 
     public final void destroy() {
         if (this == field427 && !field430) {
-            field436 = class120.method2866((short) 3133);
+            field436 = Time.currentTimeMillis();
             class272.method5390(5000L);
             this.method862(-365773934);
         }
@@ -267,7 +267,7 @@ public abstract class GameApplet extends Applet implements Runnable, FocusListen
         }
 
         this.field452 = false;
-        this.field453 = class120.method2866((short) 3133);
+        this.field453 = Time.currentTimeMillis();
     }
 
     protected abstract void vmethod1240(int var1);
@@ -317,7 +317,7 @@ public abstract class GameApplet extends Applet implements Runnable, FocusListen
 
     void method859(byte var1) {
         Container var2 = this.getContainer(1469560962);
-        long var3 = class120.method2866((short) 3133);
+        long var3 = Time.currentTimeMillis();
         long var5 = field429[field437];
         field429[field437] = var3;
         field437 = field437 + 1 & 31;
@@ -407,7 +407,7 @@ public abstract class GameApplet extends Applet implements Runnable, FocusListen
     }
 
     void method858(byte var1) {
-        long var2 = class120.method2866((short) 3133);
+        long var2 = Time.currentTimeMillis();
         long var4 = field444[class320.field3863];
         field444[class320.field3863] = var2;
         class320.field3863 = class320.field3863 + 1 & 31;
@@ -436,7 +436,7 @@ public abstract class GameApplet extends Applet implements Runnable, FocusListen
     }
 
     protected final void method844(int var1) {
-        class70.method1949(1145405442);
+        ScriptExecutor.method1949(1145405442);
         class30.method574(this.field448, 1302375733);
     }
 
@@ -616,7 +616,7 @@ public abstract class GameApplet extends Applet implements Runnable, FocusListen
             this.vmethod1483(-1626847641);
             field433 = class220.method4523(-805510551);
 
-            while (0L == field436 || class120.method2866((short) 3133) < field436) {
+            while (0L == field436 || Time.currentTimeMillis() < field436) {
                 class181.field2363 = field433.vmethod3535(field432, field438, -191189521);
 
                 for (int var5 = 0; var5 < class181.field2363; ++var5) {
@@ -676,7 +676,7 @@ public abstract class GameApplet extends Applet implements Runnable, FocusListen
 
     public final void stop() {
         if (this == field427 && !field430) {
-            field436 = class120.method2866((short) 3133) + 4000L;
+            field436 = Time.currentTimeMillis() + 4000L;
         }
     }
 

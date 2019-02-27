@@ -42,8 +42,8 @@ public class class148 implements class190 {
     }
 
     static void method3368(int var0) {
-        for (class69 var1 = (class69) class69.field1051.method4298(); var1 != null;
-             var1 = (class69) class69.field1051.method4283()) {
+        for (class69 var1 = (class69) class69.field1051.getFirst(); var1 != null;
+             var1 = (class69) class69.field1051.getNext()) {
             if (var1.field1064 != null) {
                 class43.field413.method2214(var1.field1064);
                 var1.field1064 = null;
@@ -73,7 +73,7 @@ public class class148 implements class190 {
         } else if (var0.field977 >= client.field655) {
             if (var0.field977 == client.field655 || var0.field971 == -1 || var0.field998 != 0
                 || var0.field989 + 1 > class29
-                .method532(var0.field971, -742560655).field3630[var0.field986]) {
+                .method532(var0.field971).field3630[var0.field986]) {
                 var3 = var0.field977 - var0.field985;
                 var4 = client.field655 - var0.field985;
                 var5 = var0.field983 * 128 + var0.field964 * 64;
@@ -117,7 +117,7 @@ public class class148 implements class190 {
         var0.field941 = false;
         class275 var9;
         if (var0.field972 != -1) {
-            var9 = class29.method532(var0.field972, 68039901);
+            var9 = class29.method532(var0.field972);
             if (var9 != null && var9.field3623 != null) {
                 ++var0.field970;
                 if (var0.field969 < var9.field3623.length
@@ -146,7 +146,7 @@ public class class148 implements class190 {
 
             var3 = class250.method4918(var0.field976, 1855125780).field3348;
             if (var3 != -1) {
-                class275 var10 = class29.method532(var3, -1996134519);
+                class275 var10 = class29.method532(var3);
                 if (var10 != null && var10.field3623 != null) {
                     ++var0.field978;
                     if (var0.field993 < var10.field3623.length
@@ -170,7 +170,7 @@ public class class148 implements class190 {
         }
 
         if (var0.field971 != -1 && var0.field998 <= 1) {
-            var9 = class29.method532(var0.field971, 1313990379);
+            var9 = class29.method532(var0.field971);
             if (var9.field3622 == 1 && var0.field959 > 0 && var0.field985 <= client.field655
                 && var0.field977 < client.field655) {
                 var0.field998 = 1;
@@ -179,7 +179,7 @@ public class class148 implements class190 {
         }
 
         if (var0.field971 != -1 && var0.field998 == 0) {
-            var9 = class29.method532(var0.field971, 1343612858);
+            var9 = class29.method532(var0.field971);
             if (var9 != null && var9.field3623 != null) {
                 ++var0.field989;
                 if (var0.field986 < var9.field3623.length

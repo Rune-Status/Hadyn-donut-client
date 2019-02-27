@@ -64,18 +64,18 @@ public class class18 implements class31 {
         class232 var4;
         if (var0 >= 2000) {
             var0 -= 1000;
-            var4 = method213(class70.field1070[--class60.field600], -870883205);
+            var4 = method213(ScriptExecutor.field1070[--class60.field600], -870883205);
         } else {
-            var4 = var2 ? class10.field75 : class70.field1080;
+            var4 = var2 ? class10.field75 : ScriptExecutor.field1080;
         }
 
-        String var5 = class70.field1065[--class70.field1072];
+        String var5 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
         int[] var6 = null;
         if (var5.length() > 0 && var5.charAt(var5.length() - 1) == 'Y') {
-            int var7 = class70.field1070[--class60.field600];
+            int var7 = ScriptExecutor.field1070[--class60.field600];
             if (var7 > 0) {
                 for (var6 = new int[var7]; var7-- > 0;
-                     var6[var7] = class70.field1070[--class60.field600]) {
+                     var6[var7] = ScriptExecutor.field1070[--class60.field600]) {
                     ;
                 }
             }
@@ -88,13 +88,13 @@ public class class18 implements class31 {
         int var8;
         for (var8 = var9.length - 1; var8 >= 1; --var8) {
             if (var5.charAt(var8 - 1) == 's') {
-                var9[var8] = class70.field1065[--class70.field1072];
+                var9[var8] = ScriptExecutor.field1065[--ScriptExecutor.field1072];
             } else {
-                var9[var8] = new Integer(class70.field1070[--class60.field600]);
+                var9[var8] = new Integer(ScriptExecutor.field1070[--class60.field600]);
             }
         }
 
-        var8 = class70.field1070[--class60.field600];
+        var8 = ScriptExecutor.field1070[--class60.field600];
         if (var8 != -1) {
             var9[0] = new Integer(var8);
         } else {
@@ -219,8 +219,8 @@ public class class18 implements class31 {
     }
 
     public void vmethod709(Buffer var1, int var2) {
-        this.field174 = var1.getUByte();
-        this.field164 = var1.getUByte();
+        this.field174 = var1.readUint8();
+        this.field164 = var1.readUint8();
         this.field166 = var1.readUint16();
         this.field177 = var1.readUint16();
         this.field168 = var1.readUint16();

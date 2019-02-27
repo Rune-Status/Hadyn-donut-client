@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Date;
 
-public class class161 extends class159 {
+public class class161 extends AbstractSocket {
 
     static int field2051;
     static int[] field2048;
@@ -97,53 +97,53 @@ public class class161 extends class159 {
         String var4;
         int var5;
         if (var0 == 4100) {
-            var4 = class70.field1065[--class70.field1072];
-            var5 = class70.field1070[--class60.field600];
-            class70.field1065[++class70.field1072 - 1] = var4 + var5;
+            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
+            var5 = ScriptExecutor.field1070[--class60.field600];
+            ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4 + var5;
             return 1;
         } else {
             String var10;
             if (var0 == 4101) {
-                class70.field1072 -= 2;
-                var4 = class70.field1065[class70.field1072];
-                var10 = class70.field1065[class70.field1072 + 1];
-                class70.field1065[++class70.field1072 - 1] = var4 + var10;
+                ScriptExecutor.field1072 -= 2;
+                var4 = ScriptExecutor.field1065[ScriptExecutor.field1072];
+                var10 = ScriptExecutor.field1065[ScriptExecutor.field1072 + 1];
+                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4 + var10;
                 return 1;
             } else if (var0 == 4102) {
-                var4 = class70.field1065[--class70.field1072];
-                var5 = class70.field1070[--class60.field600];
-                class70.field1065[++class70.field1072 - 1] =
+                var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
+                var5 = ScriptExecutor.field1070[--class60.field600];
+                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] =
                     var4 + class33.method616(var5, true, -1658049082);
                 return 1;
             } else if (var0 == 4103) {
-                var4 = class70.field1065[--class70.field1072];
-                class70.field1065[++class70.field1072 - 1] = var4.toLowerCase();
+                var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
+                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4.toLowerCase();
                 return 1;
             } else {
                 int var7;
                 int var11;
                 if (var0 == 4104) {
-                    var11 = class70.field1070[--class60.field600];
+                    var11 = ScriptExecutor.field1070[--class60.field600];
                     long var12 = (11745L + (long) var11) * 86400000L;
-                    class70.field1076.setTime(new Date(var12));
-                    var7 = class70.field1076.get(5);
-                    int var17 = class70.field1076.get(2);
-                    int var9 = class70.field1076.get(1);
-                    class70.field1065[++class70.field1072 - 1] =
-                        var7 + "-" + class70.field1071[var17] + "-" + var9;
+                    ScriptExecutor.field1076.setTime(new Date(var12));
+                    var7 = ScriptExecutor.field1076.get(5);
+                    int var17 = ScriptExecutor.field1076.get(2);
+                    int var9 = ScriptExecutor.field1076.get(1);
+                    ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] =
+                        var7 + "-" + ScriptExecutor.field1071[var17] + "-" + var9;
                     return 1;
                 } else if (var0 != 4105) {
                     if (var0 == 4106) {
-                        var11 = class70.field1070[--class60.field600];
-                        class70.field1065[++class70.field1072 - 1] = Integer.toString(var11);
+                        var11 = ScriptExecutor.field1070[--class60.field600];
+                        ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = Integer.toString(var11);
                         return 1;
                     } else if (var0 == 4107) {
-                        class70.field1072 -= 2;
-                        class70.field1070[++class60.field600 - 1] = class134.method3263(class10
+                        ScriptExecutor.field1072 -= 2;
+                        ScriptExecutor.field1070[++class60.field600 - 1] = class134.method3263(class10
                                                                                             .method116(
-                                                                                                class70.field1065[class70.field1072],
-                                                                                                class70.field1065[
-                                                                                                    class70.field1072
+                                                                                                ScriptExecutor.field1065[ScriptExecutor.field1072],
+                                                                                                ScriptExecutor.field1065[
+                                                                                                    ScriptExecutor.field1072
                                                                                                         + 1],
                                                                                                 client.field785,
                                                                                                 (byte) -31),
@@ -154,83 +154,83 @@ public class class161 extends class159 {
                         byte[] var14;
                         class300 var15;
                         if (var0 == 4108) {
-                            var4 = class70.field1065[--class70.field1072];
+                            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                             class60.field600 -= 2;
-                            var5 = class70.field1070[class60.field600];
-                            var6 = class70.field1070[class60.field600 + 1];
+                            var5 = ScriptExecutor.field1070[class60.field600];
+                            var6 = ScriptExecutor.field1070[class60.field600 + 1];
                             var14 = class71.index13.method4831(var6, 0, 1789634852);
                             var15 = new class300(var14);
-                            class70.field1070[++class60.field600 - 1] = var15
+                            ScriptExecutor.field1070[++class60.field600 - 1] = var15
                                 .method5796(var4, var5);
                             return 1;
                         } else if (var0 == 4109) {
-                            var4 = class70.field1065[--class70.field1072];
+                            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                             class60.field600 -= 2;
-                            var5 = class70.field1070[class60.field600];
-                            var6 = class70.field1070[class60.field600 + 1];
+                            var5 = ScriptExecutor.field1070[class60.field600];
+                            var6 = ScriptExecutor.field1070[class60.field600 + 1];
                             var14 = class71.index13.method4831(var6, 0, 1789634852);
                             var15 = new class300(var14);
-                            class70.field1070[++class60.field600 - 1] = var15
+                            ScriptExecutor.field1070[++class60.field600 - 1] = var15
                                 .method5795(var4, var5);
                             return 1;
                         } else if (var0 == 4110) {
-                            class70.field1072 -= 2;
-                            var4 = class70.field1065[class70.field1072];
-                            var10 = class70.field1065[class70.field1072 + 1];
-                            if (class70.field1070[--class60.field600] == 1) {
-                                class70.field1065[++class70.field1072 - 1] = var4;
+                            ScriptExecutor.field1072 -= 2;
+                            var4 = ScriptExecutor.field1065[ScriptExecutor.field1072];
+                            var10 = ScriptExecutor.field1065[ScriptExecutor.field1072 + 1];
+                            if (ScriptExecutor.field1070[--class60.field600] == 1) {
+                                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4;
                             } else {
-                                class70.field1065[++class70.field1072 - 1] = var10;
+                                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var10;
                             }
 
                             return 1;
                         } else if (var0 == 4111) {
-                            var4 = class70.field1065[--class70.field1072];
-                            class70.field1065[++class70.field1072 - 1] = class301.method5797(var4);
+                            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
+                            ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = class301.method5797(var4);
                             return 1;
                         } else if (var0 == 4112) {
-                            var4 = class70.field1065[--class70.field1072];
-                            var5 = class70.field1070[--class60.field600];
-                            class70.field1065[++class70.field1072 - 1] = var4 + (char) var5;
+                            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
+                            var5 = ScriptExecutor.field1070[--class60.field600];
+                            ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4 + (char) var5;
                             return 1;
                         } else if (var0 == 4113) {
-                            var11 = class70.field1070[--class60.field600];
-                            class70.field1070[++class60.field600 - 1] =
+                            var11 = ScriptExecutor.field1070[--class60.field600];
+                            ScriptExecutor.field1070[++class60.field600 - 1] =
                                 class24.method473((char) var11, 1345146658) ? 1 : 0;
                             return 1;
                         } else if (var0 == 4114) {
-                            var11 = class70.field1070[--class60.field600];
-                            class70.field1070[++class60.field600 - 1] =
+                            var11 = ScriptExecutor.field1070[--class60.field600];
+                            ScriptExecutor.field1070[++class60.field600 - 1] =
                                 class254.method5002((char) var11, (byte) 8) ? 1 : 0;
                             return 1;
                         } else if (var0 == 4115) {
-                            var11 = class70.field1070[--class60.field600];
-                            class70.field1070[++class60.field600 - 1] =
+                            var11 = ScriptExecutor.field1070[--class60.field600];
+                            ScriptExecutor.field1070[++class60.field600 - 1] =
                                 GameType.method4817((char) var11, (byte) 1) ? 1 : 0;
                             return 1;
                         } else if (var0 == 4116) {
-                            var11 = class70.field1070[--class60.field600];
-                            class70.field1070[++class60.field600 - 1] =
+                            var11 = ScriptExecutor.field1070[--class60.field600];
+                            ScriptExecutor.field1070[++class60.field600 - 1] =
                                 class239.method4788((char) var11, 606266459) ? 1 : 0;
                             return 1;
                         } else if (var0 == 4117) {
-                            var4 = class70.field1065[--class70.field1072];
+                            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                             if (var4 != null) {
-                                class70.field1070[++class60.field600 - 1] = var4.length();
+                                ScriptExecutor.field1070[++class60.field600 - 1] = var4.length();
                             } else {
-                                class70.field1070[++class60.field600 - 1] = 0;
+                                ScriptExecutor.field1070[++class60.field600 - 1] = 0;
                             }
 
                             return 1;
                         } else if (var0 == 4118) {
-                            var4 = class70.field1065[--class70.field1072];
+                            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                             class60.field600 -= 2;
-                            var5 = class70.field1070[class60.field600];
-                            var6 = class70.field1070[class60.field600 + 1];
-                            class70.field1065[++class70.field1072 - 1] = var4.substring(var5, var6);
+                            var5 = ScriptExecutor.field1070[class60.field600];
+                            var6 = ScriptExecutor.field1070[class60.field600 + 1];
+                            ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4.substring(var5, var6);
                             return 1;
                         } else if (var0 == 4119) {
-                            var4 = class70.field1065[--class70.field1072];
+                            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
                             StringBuilder var18 = new StringBuilder(var4.length());
                             boolean var16 = false;
 
@@ -245,33 +245,33 @@ public class class161 extends class159 {
                                 }
                             }
 
-                            class70.field1065[++class70.field1072 - 1] = var18.toString();
+                            ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var18.toString();
                             return 1;
                         } else if (var0 == 4120) {
-                            var4 = class70.field1065[--class70.field1072];
-                            var5 = class70.field1070[--class60.field600];
-                            class70.field1070[++class60.field600 - 1] = var4.indexOf(var5);
+                            var4 = ScriptExecutor.field1065[--ScriptExecutor.field1072];
+                            var5 = ScriptExecutor.field1070[--class60.field600];
+                            ScriptExecutor.field1070[++class60.field600 - 1] = var4.indexOf(var5);
                             return 1;
                         } else if (var0 == 4121) {
-                            class70.field1072 -= 2;
-                            var4 = class70.field1065[class70.field1072];
-                            var10 = class70.field1065[class70.field1072 + 1];
-                            var6 = class70.field1070[--class60.field600];
-                            class70.field1070[++class60.field600 - 1] = var4.indexOf(var10, var6);
+                            ScriptExecutor.field1072 -= 2;
+                            var4 = ScriptExecutor.field1065[ScriptExecutor.field1072];
+                            var10 = ScriptExecutor.field1065[ScriptExecutor.field1072 + 1];
+                            var6 = ScriptExecutor.field1070[--class60.field600];
+                            ScriptExecutor.field1070[++class60.field600 - 1] = var4.indexOf(var10, var6);
                             return 1;
                         } else {
                             return 2;
                         }
                     }
                 } else {
-                    class70.field1072 -= 2;
-                    var4 = class70.field1065[class70.field1072];
-                    var10 = class70.field1065[class70.field1072 + 1];
+                    ScriptExecutor.field1072 -= 2;
+                    var4 = ScriptExecutor.field1065[ScriptExecutor.field1072];
+                    var10 = ScriptExecutor.field1065[ScriptExecutor.field1072 + 1];
                     if (class69.localPlayer.field630 != null
                         && class69.localPlayer.field630.field2637) {
-                        class70.field1065[++class70.field1072 - 1] = var10;
+                        ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var10;
                     } else {
-                        class70.field1065[++class70.field1072 - 1] = var4;
+                        ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4;
                     }
 
                     return 1;
@@ -293,7 +293,7 @@ public class class161 extends class159 {
         this.field2049.method3405(-1914551564);
     }
 
-    public boolean isReadable(int var1, int var2) throws IOException {
+    public boolean available(int var1) throws IOException {
         return this.field2049.isReadable(var1);
     }
 

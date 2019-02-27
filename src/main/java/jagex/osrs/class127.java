@@ -16,7 +16,7 @@ public class class127 {
     static int[] field1829;
     static int field1789;
     static int field1792;
-    static class207 field1814;
+    static Deque field1814;
     static int field1784;
     static int field1809;
     static int field1783;
@@ -66,7 +66,7 @@ public class class127 {
         field1803 = new class134[field1809][500];
         field1789 = 0;
         field1774 = new class134[500];
-        field1814 = new class207();
+        field1814 = new Deque();
         field1815 = new int[]{19, 55, 38, 155, 255, 110, 137, 205, 76};
         field1776 = new int[]{160, 192, 80, 96, 0, 144, 80, 48, 160};
         field1817 = new int[]{76, 8, 137, 4, 0, 1, 38, 2, 19};
@@ -1219,7 +1219,7 @@ public class class127 {
     }
 
     void method3099(class120 var1, boolean var2) {
-        field1814.method4276(var1);
+        field1814.addLast(var1);
 
         while (true) {
             class120 var3;
@@ -1555,28 +1555,28 @@ public class class127 {
                                                 if (var4 < field1812 && (var14 & 4) != 0) {
                                                     var36 = var8[var4 + 1][var5];
                                                     if (var36 != null && var36.field1631) {
-                                                        field1814.method4276(var36);
+                                                        field1814.addLast(var36);
                                                     }
                                                 }
 
                                                 if (var5 < field1791 && (var14 & 2) != 0) {
                                                     var36 = var8[var4][var5 + 1];
                                                     if (var36 != null && var36.field1631) {
-                                                        field1814.method4276(var36);
+                                                        field1814.addLast(var36);
                                                     }
                                                 }
 
                                                 if (var4 > field1812 && (var14 & 1) != 0) {
                                                     var36 = var8[var4 - 1][var5];
                                                     if (var36 != null && var36.field1631) {
-                                                        field1814.method4276(var36);
+                                                        field1814.addLast(var36);
                                                     }
                                                 }
 
                                                 if (var5 > field1791 && (var14 & 8) != 0) {
                                                     var36 = var8[var4][var5 - 1];
                                                     if (var36 != null && var36.field1631) {
-                                                        field1814.method4276(var36);
+                                                        field1814.addLast(var36);
                                                     }
                                                 }
                                             }
@@ -1731,10 +1731,10 @@ public class class127 {
                                                          var15 <= var33.field1901; ++var15) {
                                                         class120 var26 = var8[var14][var15];
                                                         if (var26.field1635 != 0) {
-                                                            field1814.method4276(var26);
+                                                            field1814.addLast(var26);
                                                         } else if ((var14 != var4 || var15 != var5)
                                                             && var26.field1631) {
-                                                            field1814.method4276(var26);
+                                                            field1814.addLast(var26);
                                                         }
                                                     }
                                                 }
@@ -1869,35 +1869,35 @@ public class class127 {
             if (var6 < this.field1770 - 1) {
                 var30 = this.field1810[var6 + 1][var4][var5];
                 if (var30 != null && var30.field1631) {
-                    field1814.method4276(var30);
+                    field1814.addLast(var30);
                 }
             }
 
             if (var4 < field1812) {
                 var30 = var8[var4 + 1][var5];
                 if (var30 != null && var30.field1631) {
-                    field1814.method4276(var30);
+                    field1814.addLast(var30);
                 }
             }
 
             if (var5 < field1791) {
                 var30 = var8[var4][var5 + 1];
                 if (var30 != null && var30.field1631) {
-                    field1814.method4276(var30);
+                    field1814.addLast(var30);
                 }
             }
 
             if (var4 > field1812) {
                 var30 = var8[var4 - 1][var5];
                 if (var30 != null && var30.field1631) {
-                    field1814.method4276(var30);
+                    field1814.addLast(var30);
                 }
             }
 
             if (var5 > field1791) {
                 var30 = var8[var4][var5 - 1];
                 if (var30 != null && var30.field1631) {
-                    field1814.method4276(var30);
+                    field1814.addLast(var30);
                 }
             }
         }

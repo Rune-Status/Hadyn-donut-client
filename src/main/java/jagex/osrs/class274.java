@@ -51,7 +51,7 @@ public class class274 extends class208 {
         if (var2 == 1) {
             this.field3603 = var1.method3773(-561198457);
         } else if (var2 == 2) {
-            this.field3604 = var1.getUByte();
+            this.field3604 = var1.readUint8();
         } else if (var2 == 5) {
             this.field3602 = false;
         } else if (var2 == 7) {
@@ -136,7 +136,7 @@ public class class274 extends class208 {
 
     public void method5452(Buffer var1, int var2, byte var3) {
         while (true) {
-            int var4 = var1.getUByte();
+            int var4 = var1.readUint8();
             if (var4 == 0) {
                 return;
             }

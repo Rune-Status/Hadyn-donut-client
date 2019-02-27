@@ -51,8 +51,8 @@ public class class157 {
             var0 -= field2036;
             var4 -= Buffer.field2409;
             var1 -= class50.field508;
-            int var5 = class124.field1747[class57.field576];
-            int var6 = class124.field1754[class57.field576];
+            int var5 = class124.field1747[ScriptCall.field576];
+            int var6 = class124.field1754[ScriptCall.field576];
             int var7 = class124.field1747[class15.field143];
             int var8 = class124.field1754[class15.field143];
             int var9 = var7 * var1 + var0 * var8 >> 16;

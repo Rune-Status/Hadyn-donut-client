@@ -128,20 +128,20 @@ public class class14 implements class31 {
     }
 
     public void vmethod709(Buffer var1, int var2) {
-        this.field125 = var1.getUByte();
-        this.field117 = var1.getUByte();
+        this.field125 = var1.readUint8();
+        this.field117 = var1.readUint8();
         this.field118 = var1.readUint16();
-        this.field122 = var1.getUByte();
-        this.field129 = var1.getUByte();
+        this.field122 = var1.readUint8();
+        this.field129 = var1.readUint8();
         this.field119 = var1.readUint16();
-        this.field123 = var1.getUByte();
-        this.field124 = var1.getUByte();
+        this.field123 = var1.readUint8();
+        this.field124 = var1.readUint8();
         this.field120 = var1.readUint16();
-        this.field126 = var1.getUByte();
-        this.field131 = var1.getUByte();
+        this.field126 = var1.readUint8();
+        this.field131 = var1.readUint8();
         this.field130 = var1.readUint16();
-        this.field121 = var1.getUByte();
-        this.field133 = var1.getUByte();
+        this.field121 = var1.readUint8();
+        this.field133 = var1.readUint8();
         this.method168(-414697091);
     }
 

@@ -225,12 +225,12 @@ public class class10 extends class16 {
     }
 
     void method106(Buffer var1, Buffer var2, int var3) {
-        int var4 = var2.getUByte();
+        int var4 = var2.readUint8();
         if (var4 != class25.field258.field254) {
             throw new IllegalStateException("");
         } else {
-            super.field150 = var2.getUByte();
-            super.field148 = var2.getUByte();
+            super.field150 = var2.readUint8();
+            super.field148 = var2.readUint8();
             super.field146 = var2.readUint16();
             super.field151 = var2.readUint16();
             super.field147 = var2.readUint16();
@@ -241,12 +241,12 @@ public class class10 extends class16 {
             super.field154 = new byte[super.field148][64][64];
             super.field155 = new byte[super.field148][64][64];
             super.field156 = new class19[super.field148][64][64][];
-            var4 = var1.getUByte();
+            var4 = var1.readUint8();
             if (var4 != class24.field251.field247) {
                 throw new IllegalStateException("");
             } else {
-                int var5 = var1.getUByte();
-                int var6 = var1.getUByte();
+                int var5 = var1.readUint8();
+                int var6 = var1.readUint8();
                 if (var5 == super.field147 && var6 == super.field149) {
                     for (int var7 = 0; var7 < 64; ++var7) {
                         for (int var8 = 0; var8 < 64; ++var8) {

@@ -23,21 +23,21 @@ public class class29 {
         this.field298 = var1;
     }
 
-    public static class275 method532(int var0, int var1) {
+    public static class275 method532(int var0) {
         class275 var2 = (class275) class275.field3618.method4198((long) var0);
         if (var2 != null) {
             return var2;
-        } else {
-            byte[] var3 = class275.field3631.method4831(12, var0, 1789634852);
-            var2 = new class275();
-            if (var3 != null) {
-                var2.method5464(new Buffer(var3), -1690168982);
-            }
-
-            var2.method5456(-2062242357);
-            class275.field3618.method4204(var2, (long) var0);
-            return var2;
         }
+
+        byte[] var3 = class275.field3631.method4831(12, var0, 1789634852);
+        var2 = new class275();
+        if (var3 != null) {
+            var2.method5464(new Buffer(var3), -1690168982);
+        }
+
+        var2.method5456(-2062242357);
+        class275.field3618.method4204(var2, (long) var0);
+        return var2;
     }
 
     static boolean method533(long var0) {
@@ -58,13 +58,13 @@ public class class29 {
                 (long) var3 << 42);
         class323 var9;
         if (!var5) {
-            var9 = (class323) class271.field3546.method4198(var7);
+            var9 = (class323) ItemConfig.field3546.method4198(var7);
             if (var9 != null) {
                 return var9;
             }
         }
 
-        class271 var10 = class84.method2125(var0, -205103429);
+        ItemConfig var10 = ItemConfig.get(var0);
         if (var1 > 1 && var10.field3553 != null) {
             int var11 = -1;
 
@@ -75,7 +75,7 @@ public class class29 {
             }
 
             if (var11 != -1) {
-                var10 = class84.method2125(var11, -205103429);
+                var10 = ItemConfig.get(var11);
             }
         }
 
@@ -150,7 +150,7 @@ public class class29 {
                 var23.method6164(0, 0);
             }
 
-            if (var4 == 1 || var4 == 2 && var10.field3523 == 1) {
+            if (var4 == 1 || var4 == 2 && var10.stackable == 1) {
                 class300 var20 = class140.field1931;
                 String var21;
                 if (var1 < 100000) {
@@ -165,7 +165,7 @@ public class class29 {
             }
 
             if (!var5) {
-                class271.field3546.method4204(var9, var7);
+                ItemConfig.field3546.method4204(var9, var7);
             }
 
             class319.method6038(var13, var14, var15);
@@ -180,16 +180,16 @@ public class class29 {
         class232 var4;
         if (var0 >= 2000) {
             var0 -= 1000;
-            var4 = class18.method213(class70.field1070[--class60.field600], -734005908);
+            var4 = class18.method213(ScriptExecutor.field1070[--class60.field600], -734005908);
         } else {
-            var4 = var2 ? class10.field75 : class70.field1080;
+            var4 = var2 ? class10.field75 : ScriptExecutor.field1080;
         }
 
         class37.method721(var4, 1238023037);
         if (var0 != 1200 && var0 != 1205 && var0 != 1212) {
             if (var0 == 1201) {
                 var4.field2740 = 2;
-                var4.field2755 = class70.field1070[--class60.field600];
+                var4.field2755 = ScriptExecutor.field1070[--class60.field600];
                 return 1;
             } else if (var0 == 1202) {
                 var4.field2740 = 3;
@@ -200,11 +200,11 @@ public class class29 {
             }
         } else {
             class60.field600 -= 2;
-            int var5 = class70.field1070[class60.field600];
-            int var6 = class70.field1070[class60.field600 + 1];
+            int var5 = ScriptExecutor.field1070[class60.field600];
+            int var6 = ScriptExecutor.field1070[class60.field600 + 1];
             var4.field2793 = var5;
             var4.field2794 = var6;
-            class271 var7 = class84.method2125(var5, -205103429);
+            ItemConfig var7 = ItemConfig.get(var5);
             var4.field2732 = var7.field3524;
             var4.field2719 = var7.field3519;
             var4.field2720 = var7.field3520;
@@ -213,7 +213,7 @@ public class class29 {
             var4.field2721 = var7.field3517;
             if (var0 == 1205) {
                 var4.field2797 = 0;
-            } else if (var0 == 1212 | var7.field3523 == 1) {
+            } else if (var0 == 1212 | var7.stackable == 1) {
                 var4.field2797 = 1;
             } else {
                 var4.field2797 = 2;

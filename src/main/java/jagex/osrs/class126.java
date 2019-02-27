@@ -10,22 +10,22 @@ public class class126 extends Node {
     class126(int var1, byte[] var2) {
         this.field1763 = var1;
         Buffer var3 = new Buffer(var2);
-        this.field1767 = var3.getUByte();
+        this.field1767 = var3.readUint8();
         this.field1764 = new int[this.field1767];
         this.field1765 = new int[this.field1767][];
 
         int var4;
         for (var4 = 0; var4 < this.field1767; ++var4) {
-            this.field1764[var4] = var3.getUByte();
+            this.field1764[var4] = var3.readUint8();
         }
 
         for (var4 = 0; var4 < this.field1767; ++var4) {
-            this.field1765[var4] = new int[var3.getUByte()];
+            this.field1765[var4] = new int[var3.readUint8()];
         }
 
         for (var4 = 0; var4 < this.field1767; ++var4) {
             for (int var5 = 0; var5 < this.field1765[var4].length; ++var5) {
-                this.field1765[var4][var5] = var3.getUByte();
+                this.field1765[var4][var5] = var3.readUint8();
             }
         }
 
@@ -46,7 +46,7 @@ public class class126 extends Node {
             class50.field492[var1][var2][var3] = 0;
 
             while (true) {
-                var8 = var0.getUByte();
+                var8 = var0.readUint8();
                 if (var8 == 0) {
                     if (var1 == 0) {
                         class50.field506[0][var2][var3] = -class43
@@ -59,7 +59,7 @@ public class class126 extends Node {
                 }
 
                 if (var8 == 1) {
-                    int var9 = var0.getUByte();
+                    int var9 = var0.readUint8();
                     if (var9 == 1) {
                         var9 = 0;
                     }
@@ -85,18 +85,18 @@ public class class126 extends Node {
             }
         } else {
             while (true) {
-                var8 = var0.getUByte();
+                var8 = var0.readUint8();
                 if (var8 == 0) {
                     break;
                 }
 
                 if (var8 == 1) {
-                    var0.getUByte();
+                    var0.readUint8();
                     break;
                 }
 
                 if (var8 <= 49) {
-                    var0.getUByte();
+                    var0.readUint8();
                 }
             }
         }

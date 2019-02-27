@@ -13,12 +13,12 @@ public class class35 {
         class232 var6 = class9.method102(var1, var2, -1387474084);
         if (var6 != null) {
             if (var6.field2773 != null) {
-                class57 var7 = new class57();
+                ScriptCall var7 = new ScriptCall();
                 var7.field570 = var6;
                 var7.field567 = var0;
                 var7.field571 = var4;
-                var7.field575 = var6.field2773;
-                class53.method1076(var7, 1475267745);
+                var7.arguments = var6.field2773;
+                ScriptExecutor.execute(var7);
             }
 
             boolean var12 = true;

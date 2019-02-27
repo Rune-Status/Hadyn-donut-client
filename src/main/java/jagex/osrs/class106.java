@@ -97,13 +97,13 @@ public class class106 {
     }
 
     final void method2636(Buffer var1, class98 var2) {
-        int var3 = var1.getUByte();
+        int var3 = var1.readUint8();
         this.field1433[0] = var3 >> 4;
         this.field1433[1] = var3 & 15;
         if (var3 != 0) {
             this.field1432[0] = var1.readUint16();
             this.field1432[1] = var1.readUint16();
-            int var4 = var1.getUByte();
+            int var4 = var1.readUint8();
 
             int var5;
             int var6;

@@ -256,7 +256,7 @@ public class class94 extends Node {
 
             int var6;
             do {
-                var6 = var2.getUByte();
+                var6 = var2.readUint8();
                 var5 += var6;
             } while (var6 >= 255);
 

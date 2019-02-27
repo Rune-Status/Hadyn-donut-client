@@ -17,8 +17,8 @@ public class class118 extends Node {
     class118(Buffer var1) {
         this.field1589 = false;
         this.field1593 = var1.readUint16();
-        this.field1602 = var1.getUByte() == 1;
-        int var2 = var1.getUByte();
+        this.field1602 = var1.readUint8() == 1;
+        int var2 = var1.readUint8();
         if (var2 >= 1 && var2 <= 4) {
             this.field1595 = new int[var2];
 
@@ -31,7 +31,7 @@ public class class118 extends Node {
                 this.field1596 = new int[var2 - 1];
 
                 for (var3 = 0; var3 < var2 - 1; ++var3) {
-                    this.field1596[var3] = var1.getUByte();
+                    this.field1596[var3] = var1.readUint8();
                 }
             }
 
@@ -39,7 +39,7 @@ public class class118 extends Node {
                 this.field1597 = new int[var2 - 1];
 
                 for (var3 = 0; var3 < var2 - 1; ++var3) {
-                    this.field1597[var3] = var1.getUByte();
+                    this.field1597[var3] = var1.readUint8();
                 }
             }
 
@@ -49,8 +49,8 @@ public class class118 extends Node {
                 this.field1598[var3] = var1.getInt();
             }
 
-            this.field1599 = var1.getUByte();
-            this.field1591 = var1.getUByte();
+            this.field1599 = var1.readUint8();
+            this.field1591 = var1.readUint8();
             this.field1592 = null;
         } else {
             throw new RuntimeException();

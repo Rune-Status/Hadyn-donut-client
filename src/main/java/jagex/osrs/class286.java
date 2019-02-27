@@ -21,11 +21,11 @@ public class class286 extends class287 {
     public void method5574(Buffer var1, int var2, int var3) {
         while (true) {
             if (var1.offset < var2) {
-                int var4 = var1.getUByte();
+                int var4 = var1.readUint8();
                 boolean var5 = (var4 & 1) == 1;
-                class293 var6 = new class293(var1.method3778(-1524526756), this.field3696);
-                class293 var7 = new class293(var1.method3778(-930436478), this.field3696);
-                var1.method3778(467724342);
+                class293 var6 = new class293(var1.getString(), this.field3696);
+                class293 var7 = new class293(var1.getString(), this.field3696);
+                var1.getString();
                 if (var6 != null && var6.method5707(1368750553)) {
                     class288 var8 = (class288) this.method5590(var6, -266772152);
                     if (var5) {

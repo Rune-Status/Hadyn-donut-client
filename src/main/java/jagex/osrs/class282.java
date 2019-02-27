@@ -29,7 +29,7 @@ public class class282 {
 
     public void method5504(int var1) {
         if (this.field3678 != -1L) {
-            this.field3681 = class120.method2866((short) 3133) - this.field3678;
+            this.field3681 = Time.currentTimeMillis() - this.field3678;
             this.field3678 = -1L;
         }
 
@@ -39,19 +39,19 @@ public class class282 {
 
     public void method5502(int var1) {
         if (-1L != this.field3686) {
-            this.field3682 = class120.method2866((short) 3133) - this.field3686;
+            this.field3682 = Time.currentTimeMillis() - this.field3686;
             this.field3686 = -1L;
         }
 
     }
 
     public void method5503(int var1, byte var2) {
-        this.field3678 = class120.method2866((short) 3133);
+        this.field3678 = Time.currentTimeMillis();
         this.field3684 = var1;
     }
 
-    public void method5517(int var1) {
-        this.field3686 = class120.method2866((short) 3133);
+    public void method5517() {
+        this.field3686 = Time.currentTimeMillis();
     }
 
     public void method5507(Buffer var1, byte var2) {

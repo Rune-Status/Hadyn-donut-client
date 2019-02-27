@@ -390,9 +390,9 @@ public class class232 extends Node {
     }
 
     void method4701(Buffer var1, int var2) {
-        var1.getUByte();
+        var1.readUint8();
         this.field2685 = true;
-        this.field2808 = var1.getUByte();
+        this.field2808 = var1.readUint8();
         this.field2741 = var1.readUint16();
         this.field2676 = var1.method3814((byte) -1);
         this.field2751 = var1.method3814((byte) -1);
@@ -414,22 +414,22 @@ public class class232 extends Node {
             this.field2700 += this.field2770 & -65536;
         }
 
-        this.field2704 = var1.getUByte() == 1;
+        this.field2704 = var1.readUint8() == 1;
         if (this.field2808 == 0) {
             this.field2690 = var1.readUint16();
             this.field2691 = var1.readUint16();
-            this.field2807 = var1.getUByte() == 1;
+            this.field2807 = var1.readUint8() == 1;
         }
 
         if (this.field2808 == 5) {
             this.field2702 = var1.getInt();
             this.field2780 = var1.readUint16();
-            this.field2705 = var1.getUByte() == 1;
-            this.field2698 = var1.getUByte();
-            this.field2706 = var1.getUByte();
+            this.field2705 = var1.readUint8() == 1;
+            this.field2698 = var1.readUint8();
+            this.field2706 = var1.readUint8();
             this.field2707 = var1.getInt();
-            this.field2671 = var1.getUByte() == 1;
-            this.field2709 = var1.getUByte() == 1;
+            this.field2671 = var1.readUint8() == 1;
+            this.field2709 = var1.readUint8() == 1;
         }
 
         if (this.field2808 == 6) {
@@ -450,7 +450,7 @@ public class class232 extends Node {
                 this.field2714 = -1;
             }
 
-            this.field2688 = var1.getUByte() == 1;
+            this.field2688 = var1.readUint8() == 1;
             var1.readUint16();
             if (this.field2736 != 0) {
                 this.field2722 = var1.readUint16();
@@ -467,41 +467,41 @@ public class class232 extends Node {
                 this.field2727 = -1;
             }
 
-            this.field2728 = var1.method3778(-453480170);
-            this.field2730 = var1.getUByte();
-            this.field2681 = var1.getUByte();
-            this.field2776 = var1.getUByte();
-            this.field2716 = var1.getUByte() == 1;
+            this.field2728 = var1.getString();
+            this.field2730 = var1.readUint8();
+            this.field2681 = var1.readUint8();
+            this.field2776 = var1.readUint8();
+            this.field2716 = var1.readUint8() == 1;
             this.field2686 = var1.getInt();
         }
 
         if (this.field2808 == 3) {
             this.field2686 = var1.getInt();
-            this.field2696 = var1.getUByte() == 1;
-            this.field2698 = var1.getUByte();
+            this.field2696 = var1.readUint8() == 1;
+            this.field2698 = var1.readUint8();
         }
 
         if (this.field2808 == 9) {
-            this.field2768 = var1.getUByte();
+            this.field2768 = var1.readUint8();
             this.field2686 = var1.getInt();
-            this.field2701 = var1.getUByte() == 1;
+            this.field2701 = var1.readUint8() == 1;
         }
 
         this.field2713 = var1.method3773(357209724);
-        this.field2697 = var1.method3778(-373382323);
-        int var3 = var1.getUByte();
+        this.field2697 = var1.getString();
+        int var3 = var1.readUint8();
         if (var3 > 0) {
             this.field2731 = new String[var3];
 
             for (int var4 = 0; var4 < var3; ++var4) {
-                this.field2731[var4] = var1.method3778(355010194);
+                this.field2731[var4] = var1.getString();
             }
         }
 
-        this.field2749 = var1.getUByte();
-        this.field2799 = var1.getUByte();
-        this.field2784 = var1.getUByte() == 1;
-        this.field2752 = var1.method3778(-1208278349);
+        this.field2749 = var1.readUint8();
+        this.field2799 = var1.readUint8();
+        this.field2784 = var1.readUint8() == 1;
+        this.field2752 = var1.getString();
         this.field2754 = this.method4704(var1, 1475274853);
         this.field2759 = this.method4704(var1, 1632508415);
         this.field2761 = this.method4704(var1, -169303029);
@@ -527,14 +527,14 @@ public class class232 extends Node {
 
     void method4702(Buffer var1, int var2) {
         this.field2685 = false;
-        this.field2808 = var1.getUByte();
-        this.field2670 = var1.getUByte();
+        this.field2808 = var1.readUint8();
+        this.field2670 = var1.readUint8();
         this.field2741 = var1.readUint16();
         this.field2676 = var1.method3814((byte) -1);
         this.field2751 = var1.method3814((byte) -1);
         this.field2678 = var1.readUint16();
         this.field2679 = var1.readUint16();
-        this.field2698 = var1.getUByte();
+        this.field2698 = var1.readUint8();
         this.field2700 = var1.readUint16();
         if (this.field2700 == 65535) {
             this.field2700 = -1;
@@ -547,19 +547,19 @@ public class class232 extends Node {
             this.field2788 = -1;
         }
 
-        int var3 = var1.getUByte();
+        int var3 = var1.readUint8();
         int var4;
         if (var3 > 0) {
             this.field2786 = new int[var3];
             this.field2778 = new int[var3];
 
             for (var4 = 0; var4 < var3; ++var4) {
-                this.field2786[var4] = var1.getUByte();
+                this.field2786[var4] = var1.readUint8();
                 this.field2778[var4] = var1.readUint16();
             }
         }
 
-        var4 = var1.getUByte();
+        var4 = var1.readUint8();
         int var5;
         int var6;
         int var7;
@@ -581,46 +581,46 @@ public class class232 extends Node {
 
         if (this.field2808 == 0) {
             this.field2691 = var1.readUint16();
-            this.field2704 = var1.getUByte() == 1;
+            this.field2704 = var1.readUint8() == 1;
         }
 
         if (this.field2808 == 1) {
             var1.readUint16();
-            var1.getUByte();
+            var1.readUint8();
         }
 
         if (this.field2808 == 2) {
             this.field2762 = new int[this.field2678 * this.field2679];
             this.field2792 = new int[this.field2679 * this.field2678];
-            var5 = var1.getUByte();
+            var5 = var1.readUint8();
             if (var5 == 1) {
                 this.field2713 |= 268435456;
             }
 
-            var6 = var1.getUByte();
+            var6 = var1.readUint8();
             if (var6 == 1) {
                 this.field2713 |= 1073741824;
             }
 
-            var7 = var1.getUByte();
+            var7 = var1.readUint8();
             if (var7 == 1) {
                 this.field2713 |= Integer.MIN_VALUE;
             }
 
-            int var8 = var1.getUByte();
+            int var8 = var1.readUint8();
             if (var8 == 1) {
                 this.field2713 |= 536870912;
             }
 
-            this.field2734 = var1.getUByte();
-            this.field2708 = var1.getUByte();
+            this.field2734 = var1.readUint8();
+            this.field2708 = var1.readUint8();
             this.field2726 = new int[20];
             this.field2737 = new int[20];
             this.field2738 = new int[20];
 
             int var9;
             for (var9 = 0; var9 < 20; ++var9) {
-                int var10 = var1.getUByte();
+                int var10 = var1.readUint8();
                 if (var10 == 1) {
                     this.field2726[var9] = var1.method3814((byte) -1);
                     this.field2737[var9] = var1.method3814((byte) -1);
@@ -633,7 +633,7 @@ public class class232 extends Node {
             this.field2739 = new String[5];
 
             for (var9 = 0; var9 < 5; ++var9) {
-                String var11 = var1.method3778(446384906);
+                String var11 = var1.getString();
                 if (var11.length() > 0) {
                     this.field2739[var9] = var11;
                     this.field2713 |= 1 << var9 + 23;
@@ -642,24 +642,24 @@ public class class232 extends Node {
         }
 
         if (this.field2808 == 3) {
-            this.field2696 = var1.getUByte() == 1;
+            this.field2696 = var1.readUint8() == 1;
         }
 
         if (this.field2808 == 4 || this.field2808 == 1) {
-            this.field2681 = var1.getUByte();
-            this.field2776 = var1.getUByte();
-            this.field2730 = var1.getUByte();
+            this.field2681 = var1.readUint8();
+            this.field2776 = var1.readUint8();
+            this.field2730 = var1.readUint8();
             this.field2727 = var1.readUint16();
             if (this.field2727 == 65535) {
                 this.field2727 = -1;
             }
 
-            this.field2716 = var1.getUByte() == 1;
+            this.field2716 = var1.readUint8() == 1;
         }
 
         if (this.field2808 == 4) {
-            this.field2728 = var1.method3778(-634920079);
-            this.field2729 = var1.method3778(81517625);
+            this.field2728 = var1.getString();
+            this.field2729 = var1.getString();
         }
 
         if (this.field2808 == 1 || this.field2808 == 3 || this.field2808 == 4) {
@@ -708,17 +708,17 @@ public class class232 extends Node {
         if (this.field2808 == 7) {
             this.field2762 = new int[this.field2678 * this.field2679];
             this.field2792 = new int[this.field2678 * this.field2679];
-            this.field2681 = var1.getUByte();
+            this.field2681 = var1.readUint8();
             this.field2727 = var1.readUint16();
             if (this.field2727 == 65535) {
                 this.field2727 = -1;
             }
 
-            this.field2716 = var1.getUByte() == 1;
+            this.field2716 = var1.readUint8() == 1;
             this.field2686 = var1.getInt();
             this.field2734 = var1.method3814((byte) -1);
             this.field2708 = var1.method3814((byte) -1);
-            var5 = var1.getUByte();
+            var5 = var1.readUint8();
             if (var5 == 1) {
                 this.field2713 |= 1073741824;
             }
@@ -726,7 +726,7 @@ public class class232 extends Node {
             this.field2739 = new String[5];
 
             for (var6 = 0; var6 < 5; ++var6) {
-                String var12 = var1.method3778(415222434);
+                String var12 = var1.getString();
                 if (var12.length() > 0) {
                     this.field2739[var6] = var12;
                     this.field2713 |= 1 << var6 + 23;
@@ -735,19 +735,19 @@ public class class232 extends Node {
         }
 
         if (this.field2808 == 8) {
-            this.field2728 = var1.method3778(197389761);
+            this.field2728 = var1.getString();
         }
 
         if (this.field2670 == 2 || this.field2808 == 2) {
-            this.field2752 = var1.method3778(291041470);
-            this.field2677 = var1.method3778(108833319);
+            this.field2752 = var1.getString();
+            this.field2677 = var1.getString();
             var5 = var1.readUint16() & 63;
             this.field2713 |= var5 << 11;
         }
 
         if (this.field2670 == 1 || this.field2670 == 4 || this.field2670 == 5
             || this.field2670 == 6) {
-            this.field2790 = var1.method3778(-218237655);
+            this.field2790 = var1.getString();
             if (this.field2790.length() == 0) {
                 if (this.field2670 == 1) {
                     this.field2790 = "Ok";
@@ -933,7 +933,7 @@ public class class232 extends Node {
                 }
 
                 if (var6 == 4) {
-                    class271 var10 = class84.method2125(var7, -205103429);
+                    ItemConfig var10 = ItemConfig.get(var7);
                     var9 = var10.method5381(10, (short) -19539);
                     if (var9 == null) {
                         field2665 = true;
@@ -982,18 +982,18 @@ public class class232 extends Node {
     }
 
     Object[] method4704(Buffer var1, int var2) {
-        int var3 = var1.getUByte();
+        int var3 = var1.readUint8();
         if (var3 == 0) {
             return null;
         } else {
             Object[] var4 = new Object[var3];
 
             for (int var5 = 0; var5 < var3; ++var5) {
-                int var6 = var1.getUByte();
+                int var6 = var1.readUint8();
                 if (var6 == 0) {
                     var4[var5] = new Integer(var1.getInt());
                 } else if (var6 == 1) {
-                    var4[var5] = var1.method3778(-122311369);
+                    var4[var5] = var1.getString();
                 }
             }
 
@@ -1027,7 +1027,7 @@ public class class232 extends Node {
     }
 
     int[] method4703(Buffer var1, int var2) {
-        int var3 = var1.getUByte();
+        int var3 = var1.readUint8();
         if (var3 == 0) {
             return null;
         } else {

@@ -23,48 +23,113 @@ public final class class63 extends Node {
         this.field933 = -1;
     }
 
-    public static InboundPacketDescriptor[] getInboundPackets(int var0) {
-        return new InboundPacketDescriptor[]{InboundPacketDescriptor.field2178, InboundPacketDescriptor.field2159, InboundPacketDescriptor.field2119,
-            InboundPacketDescriptor.field2187, InboundPacketDescriptor.field2121, InboundPacketDescriptor.field2122, InboundPacketDescriptor.field2123,
-            InboundPacketDescriptor.field2199, InboundPacketDescriptor.field2125, InboundPacketDescriptor.field2126, InboundPacketDescriptor.field2127,
-            InboundPacketDescriptor.field2128, InboundPacketDescriptor.field2129, InboundPacketDescriptor.field2130, InboundPacketDescriptor.field2118,
-            InboundPacketDescriptor.field2132, InboundPacketDescriptor.field2133, InboundPacketDescriptor.field2134, InboundPacketDescriptor.field2169,
-            InboundPacketDescriptor.field2136, InboundPacketDescriptor.field2124, InboundPacketDescriptor.field2165, InboundPacketDescriptor.field2139,
-            InboundPacketDescriptor.field2140, InboundPacketDescriptor.field2141, InboundPacketDescriptor.field2198, InboundPacketDescriptor.field2143,
-            InboundPacketDescriptor.field2181, InboundPacketDescriptor.field2145, InboundPacketDescriptor.field2146, InboundPacketDescriptor.field2147,
-            InboundPacketDescriptor.field2148, InboundPacketDescriptor.field2149, InboundPacketDescriptor.field2175, InboundPacketDescriptor.field2144,
-            InboundPacketDescriptor.field2152, InboundPacketDescriptor.field2153, InboundPacketDescriptor.field2200, InboundPacketDescriptor.field2155,
-            InboundPacketDescriptor.field2205, InboundPacketDescriptor.field2157, InboundPacketDescriptor.field2158, InboundPacketDescriptor.field2203,
-            InboundPacketDescriptor.field2156, InboundPacketDescriptor.field2161, InboundPacketDescriptor.field2162, InboundPacketDescriptor.field2163,
-            InboundPacketDescriptor.field2164, InboundPacketDescriptor.field2195, InboundPacketDescriptor.field2194, InboundPacketDescriptor.field2167,
-            InboundPacketDescriptor.field2168, InboundPacketDescriptor.field2190, InboundPacketDescriptor.field2170, InboundPacketDescriptor.field2171,
-            InboundPacketDescriptor.field2160, InboundPacketDescriptor.field2173, InboundPacketDescriptor.field2174, InboundPacketDescriptor.field2193,
-            InboundPacketDescriptor.field2176, InboundPacketDescriptor.field2177, InboundPacketDescriptor.field2138, InboundPacketDescriptor.field2179,
-            InboundPacketDescriptor.field2180, InboundPacketDescriptor.field2172, InboundPacketDescriptor.field2182, InboundPacketDescriptor.field2183,
-            InboundPacketDescriptor.field2184, InboundPacketDescriptor.field2185, InboundPacketDescriptor.field2186, InboundPacketDescriptor.field2196,
-            InboundPacketDescriptor.field2188, InboundPacketDescriptor.field2189, InboundPacketDescriptor.field2154, InboundPacketDescriptor.field2191,
-            InboundPacketDescriptor.field2192, InboundPacketDescriptor.field2120, InboundPacketDescriptor.field2137, InboundPacketDescriptor.field2131,
-            InboundPacketDescriptor.field2201, InboundPacketDescriptor.field2197, InboundPacketDescriptor.field2135, InboundPacketDescriptor.field2142,
-            InboundPacketDescriptor.field2166, InboundPacketDescriptor.field2204};
+    public static InboundPacketDescriptor[] getInboundPackets() {
+        return new InboundPacketDescriptor[]{
+            InboundPacketDescriptor.REBUILD_SCENE,
+            InboundPacketDescriptor.LOGOUT,
+            InboundPacketDescriptor.INBOUND_PACKET_2,
+            InboundPacketDescriptor.INBOUND_PACKET_3,
+            InboundPacketDescriptor.INBOUND_PACKET_4,
+            InboundPacketDescriptor.INBOUND_PACKET_5,
+            InboundPacketDescriptor.INBOUND_PACKET_6,
+            InboundPacketDescriptor.INBOUND_PACKET_7,
+            InboundPacketDescriptor.INBOUND_PACKET_8,
+            InboundPacketDescriptor.INBOUND_PACKET_9,
+            InboundPacketDescriptor.INBOUND_PACKET_10,
+            InboundPacketDescriptor.INBOUND_PACKET_11,
+            InboundPacketDescriptor.INBOUND_PACKET_12,
+            InboundPacketDescriptor.INBOUND_PACKET_13,
+            InboundPacketDescriptor.REMOVE_ITEM_STACK,
+            InboundPacketDescriptor.UPDATE_ITEM_STACK,
+            InboundPacketDescriptor.INBOUND_PACKET_16,
+            InboundPacketDescriptor.INBOUND_PACKET_17,
+            InboundPacketDescriptor.OPEN_URL,
+            InboundPacketDescriptor.INBOUND_PACKET_19,
+            InboundPacketDescriptor.INBOUND_PACKET_20,
+            InboundPacketDescriptor.INBOUND_PACKET_21,
+            InboundPacketDescriptor.INBOUND_PACKET_22,
+            InboundPacketDescriptor.INBOUND_PACKET_23,
+            InboundPacketDescriptor.INBOUND_PACKET_24,
+            InboundPacketDescriptor.INBOUND_PACKET_25,
+            InboundPacketDescriptor.CREATE_GROUND_ITEM,
+            InboundPacketDescriptor.INBOUND_PACKET_27,
+            InboundPacketDescriptor.INBOUND_PACKET_28,
+            InboundPacketDescriptor.INBOUND_PACKET_29,
+            InboundPacketDescriptor.INBOUND_PACKET_30,
+            InboundPacketDescriptor.INBOUND_PACKET_31,
+            InboundPacketDescriptor.INBOUND_PACKET_32,
+            InboundPacketDescriptor.INBOUND_PACKET_33,
+            InboundPacketDescriptor.INBOUND_PACKET_34,
+            InboundPacketDescriptor.INBOUND_PACKET_35,
+            InboundPacketDescriptor.INBOUND_PACKET_36,
+            InboundPacketDescriptor.INBOUND_PACKET_37,
+            InboundPacketDescriptor.INBOUND_PACKET_38,
+            InboundPacketDescriptor.INBOUND_PACKET_39,
+            InboundPacketDescriptor.INBOUND_PACKET_40,
+            InboundPacketDescriptor.INBOUND_PACKET_41,
+            InboundPacketDescriptor.INBOUND_PACKET_42,
+            InboundPacketDescriptor.INBOUND_PACKET_43,
+            InboundPacketDescriptor.INBOUND_PACKET_44,
+            InboundPacketDescriptor.INBOUND_PACKET_45,
+            InboundPacketDescriptor.INBOUND_PACKET_46,
+            InboundPacketDescriptor.INBOUND_PACKET_47,
+            InboundPacketDescriptor.INBOUND_PACKET_48,
+            InboundPacketDescriptor.INBOUND_PACKET_49,
+            InboundPacketDescriptor.INBOUND_PACKET_50,
+            InboundPacketDescriptor.REBUILD_INSTANCED_SCENE,
+            InboundPacketDescriptor.INBOUND_PACKET_52,
+            InboundPacketDescriptor.INBOUND_PACKET_53,
+            InboundPacketDescriptor.INBOUND_PACKET_54,
+            InboundPacketDescriptor.INBOUND_PACKET_55,
+            InboundPacketDescriptor.INBOUND_PACKET_56,
+            InboundPacketDescriptor.INBOUND_PACKET_57,
+            InboundPacketDescriptor.INBOUND_PACKET_58,
+            InboundPacketDescriptor.INBOUND_PACKET_59,
+            InboundPacketDescriptor.INBOUND_PACKET_60,
+            InboundPacketDescriptor.INBOUND_PACKET_61,
+            InboundPacketDescriptor.EXECUTE_SCRIPT,
+            InboundPacketDescriptor.INBOUND_PACKET_63,
+            InboundPacketDescriptor.INBOUNC_PACKET_64,
+            InboundPacketDescriptor.INBOUND_PACKET_65,
+            InboundPacketDescriptor.SET_PLAYER_OPTION,
+            InboundPacketDescriptor.INBOUND_PACKET_67,
+            InboundPacketDescriptor.INBOUND_PACKET_68,
+            InboundPacketDescriptor.INBOUND_PACKET_69,
+            InboundPacketDescriptor.INBOUND_PACKET_70,
+            InboundPacketDescriptor.INBOUND_PACKET_71,
+            InboundPacketDescriptor.INBOUND_PACKET_72,
+            InboundPacketDescriptor.INBOUND_PACKET_73,
+            InboundPacketDescriptor.INBOUND_PACKET_74,
+            InboundPacketDescriptor.INBOUND_PACKET_75,
+            InboundPacketDescriptor.INBOUND_PACKET_76,
+            InboundPacketDescriptor.INBOUND_PACKET_77,
+            InboundPacketDescriptor.INBOUND_PACKET_78,
+            InboundPacketDescriptor.INBOUND_PACKET_79,
+            InboundPacketDescriptor.INBOUND_PACKET_80,
+            InboundPacketDescriptor.INBOUND_PACKET_81,
+            InboundPacketDescriptor.INBOUND_PACKET_82,
+            InboundPacketDescriptor.INBOUND_PACKET_83,
+            InboundPacketDescriptor.INBOUND_PACKET_84
+        };
     }
 
-    public static class159 method1657(Socket var0, int var1, int var2, int var3)
+    public static AbstractSocket method1657(Socket var0, int var1, int var2, int var3)
         throws IOException {
         return new class161(var0, var1, var2);
     }
 
     static int method1658(int var0, class86 var1, boolean var2, int var3) {
-        class232 var4 = var2 ? class10.field75 : class70.field1080;
+        class232 var4 = var2 ? class10.field75 : ScriptExecutor.field1080;
         if (var0 == 1800) {
-            class70.field1070[++class60.field600 - 1] = class9
+            ScriptExecutor.field1070[++class60.field600 - 1] = class9
                 .method98(class254.method5000(var4, 2143165709), (byte) -78);
             return 1;
         } else if (var0 != 1801) {
             if (var0 == 1802) {
                 if (var4.field2697 == null) {
-                    class70.field1065[++class70.field1072 - 1] = "";
+                    ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = "";
                 } else {
-                    class70.field1065[++class70.field1072 - 1] = var4.field2697;
+                    ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4.field2697;
                 }
 
                 return 1;
@@ -72,13 +137,13 @@ public final class class63 extends Node {
                 return 2;
             }
         } else {
-            int var5 = class70.field1070[--class60.field600];
+            int var5 = ScriptExecutor.field1070[--class60.field600];
             --var5;
             if (var4.field2731 != null && var5 < var4.field2731.length
                 && var4.field2731[var5] != null) {
-                class70.field1065[++class70.field1072 - 1] = var4.field2731[var5];
+                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var4.field2731[var5];
             } else {
-                class70.field1065[++class70.field1072 - 1] = "";
+                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = "";
             }
 
             return 1;

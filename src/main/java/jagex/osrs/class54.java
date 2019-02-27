@@ -31,22 +31,22 @@ public class class54 extends Node {
         class232 var4;
         if (var0 >= 2000) {
             var0 -= 1000;
-            var4 = class18.method213(class70.field1070[--class60.field600], -943889115);
+            var4 = class18.method213(ScriptExecutor.field1070[--class60.field600], -943889115);
         } else {
-            var4 = var2 ? class10.field75 : class70.field1080;
+            var4 = var2 ? class10.field75 : ScriptExecutor.field1080;
         }
 
         if (var0 == 1927) {
-            if (class70.field1075 >= 10) {
+            if (ScriptExecutor.field1075 >= 10) {
                 throw new RuntimeException();
             } else if (var4.field2782 == null) {
                 return 0;
             } else {
-                class57 var5 = new class57();
+                ScriptCall var5 = new ScriptCall();
                 var5.field570 = var4;
-                var5.field575 = var4.field2782;
-                var5.field572 = class70.field1075 + 1;
-                client.field842.method4276(var5);
+                var5.arguments = var4.field2782;
+                var5.field572 = ScriptExecutor.field1075 + 1;
+                client.field842.addLast(var5);
                 return 1;
             }
         } else {

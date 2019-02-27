@@ -21,9 +21,9 @@ public class class68 {
         var4.key = (long) var0;
         var4.field3212 = var1;
         var4.field3215 = var2;
-        class207 var5 = class250.field3242;
+        Deque var5 = class250.field3242;
         synchronized (class250.field3242) {
-            class250.field3242.method4276(var4);
+            class250.field3242.addLast(var4);
         }
 
         Object var10 = class250.field3241;
@@ -814,7 +814,7 @@ public class class68 {
     final void method1823(int var1) {
         for (class296 var2 = (class296) this.field1040.field3717.method4317(); var2 != null;
              var2 = (class296) this.field1040.field3717.method4318()) {
-            if ((long) var2.field3736 < class120.method2866((short) 3133) / 1000L - 5L) {
+            if ((long) var2.field3736 < Time.currentTimeMillis() / 1000L - 5L) {
                 if (var2.field3735 > 0) {
                     class59.method1163(5, "", var2.field3734 + " has logged in.", -1483885983);
                 }

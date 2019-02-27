@@ -69,7 +69,7 @@ public class class109 {
         this.field1464.method2411(var1);
         this.field1451 = new class98();
         this.field1451.method2411(var1);
-        int var2 = var1.getUByte();
+        int var2 = var1.readUint8();
         if (var2 != 0) {
             --var1.offset;
             this.field1452 = new class98();
@@ -78,7 +78,7 @@ public class class109 {
             this.field1463.method2411(var1);
         }
 
-        var2 = var1.getUByte();
+        var2 = var1.readUint8();
         if (var2 != 0) {
             --var1.offset;
             this.field1454 = new class98();
@@ -87,7 +87,7 @@ public class class109 {
             this.field1455.method2411(var1);
         }
 
-        var2 = var1.getUByte();
+        var2 = var1.readUint8();
         if (var2 != 0) {
             --var1.offset;
             this.field1456 = new class98();

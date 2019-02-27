@@ -41,7 +41,7 @@ public class class88 {
                 int var13;
                 for (var9 = 0; var9 < 104; ++var9) {
                     for (var10 = 0; var10 < 104; ++var10) {
-                        class207 var16 = client.field829[class60.level][var9][var10];
+                        Deque var16 = client.itemStacks[class60.level][var9][var10];
                         if (var16 != null) {
                             var12 = var9 * 4 + 2 - class69.localPlayer.x / 32;
                             var13 = var10 * 4 + 2 - class69.localPlayer.z / 32;
@@ -107,7 +107,7 @@ public class class88 {
                             var12 = var21.x / 32 - class69.localPlayer.x / 32;
                             var13 = var21.z / 32 - class69.localPlayer.z / 32;
                             class257
-                                .method5065(var1, var2, var12, var13, class186.field2421[1], var5,
+                                .method5065(var1, var2, var12, var13, Time.field2421[1], var5,
                                             (byte) -10);
                         }
                     }
@@ -117,7 +117,7 @@ public class class88 {
                             - class69.localPlayer.x / 32;
                         var12 = client.field667 * 4 - class11.sceneZ * 4 + 2
                             - class69.localPlayer.z / 32;
-                        class257.method5065(var1, var2, var11, var12, class186.field2421[1], var5,
+                        class257.method5065(var1, var2, var11, var12, Time.field2421[1], var5,
                                             (byte) -25);
                     }
 
@@ -128,7 +128,7 @@ public class class88 {
                             var12 = var22.x / 32 - class69.localPlayer.x / 32;
                             var13 = var22.z / 32 - class69.localPlayer.z / 32;
                             class257
-                                .method5065(var1, var2, var12, var13, class186.field2421[1], var5,
+                                .method5065(var1, var2, var12, var13, Time.field2421[1], var5,
                                             (byte) -125);
                         }
                     }
@@ -137,7 +137,7 @@ public class class88 {
                 if (client.field722 != 0) {
                     var11 = client.field722 * 4 + 2 - class69.localPlayer.x / 32;
                     var12 = client.field875 * 4 + 2 - class69.localPlayer.z / 32;
-                    class56.method1111(var1, var2, var11, var12, class186.field2421[0], var5,
+                    class56.method1111(var1, var2, var11, var12, Time.field2421[0], var5,
                                        -759341551);
                 }
 

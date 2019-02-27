@@ -6,7 +6,7 @@ public class class252 {
 
     public static int field3277;
     public static int field3278;
-    public static class159 field3263;
+    public static AbstractSocket field3263;
     static int field3272;
     static class204 field3266;
     static class204 field3270;
@@ -46,6 +46,6 @@ public class class252 {
     }
 
     static int method4978(int var0, byte var1) {
-        return (int) ((Math.log((double) var0) / class70.field1081 - 7.0D) * 256.0D);
+        return (int) ((Math.log((double) var0) / ScriptExecutor.field1081 - 7.0D) * 256.0D);
     }
 }

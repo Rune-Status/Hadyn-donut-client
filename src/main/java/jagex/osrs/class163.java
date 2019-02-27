@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
-public final class class163 extends class159 implements Runnable {
+public final class class163 extends AbstractSocket implements Runnable {
 
     static class300 field2066;
     static int field2067;
@@ -94,7 +94,7 @@ public final class class163 extends class159 implements Runnable {
         }
     }
 
-    public boolean isReadable(int var1, int var2) throws IOException {
+    public boolean available(int var1) throws IOException {
         return this.field2057 ? false : this.field2055.available() >= var1;
     }
 

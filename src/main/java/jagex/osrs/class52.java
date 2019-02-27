@@ -4,7 +4,7 @@ import java.util.concurrent.Callable;
 
 public class class52 implements Callable {
 
-    static class159 field524;
+    static AbstractSocket field524;
 
     public static int method1070(int var0, int var1) {
         var0 = (var0 & 1431655765) + (var0 >>> 1 & 1431655765);

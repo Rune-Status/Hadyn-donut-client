@@ -2,29 +2,29 @@ package jagex.osrs;
 
 public class class90 extends class107 {
 
-    class207 field1297;
-    class207 field1296;
+    Deque field1297;
+    Deque field1296;
     int field1299;
     int field1298;
 
     public class90() {
-        this.field1297 = new class207();
-        this.field1296 = new class207();
+        this.field1297 = new Deque();
+        this.field1296 = new Deque();
         this.field1298 = 0;
         this.field1299 = -1;
     }
 
     void method2221(int[] var1, int var2, int var3) {
-        for (class107 var4 = (class107) this.field1297.method4298(); var4 != null;
-             var4 = (class107) this.field1297.method4283()) {
+        for (class107 var4 = (class107) this.field1297.getFirst(); var4 != null;
+             var4 = (class107) this.field1297.getNext()) {
             var4.method2654(var1, var2, var3);
         }
 
     }
 
     void method2241(int var1) {
-        for (class107 var2 = (class107) this.field1297.method4298(); var2 != null;
-             var2 = (class107) this.field1297.method4283()) {
+        for (class107 var2 = (class107) this.field1297.getFirst(); var2 != null;
+             var2 = (class107) this.field1297.getNext()) {
             var2.vmethod4601(var1);
         }
 
@@ -49,7 +49,7 @@ public class class90 extends class107 {
             var3 -= var4;
             this.field1298 += var4;
             this.method2216();
-            class102 var5 = (class102) this.field1296.method4298();
+            class102 var5 = (class102) this.field1296.getFirst();
             synchronized (var5) {
                 int var7 = var5.method2438(this);
                 if (var7 < 0) {
@@ -82,7 +82,7 @@ public class class90 extends class107 {
             var1 -= var2;
             this.field1298 += var2;
             this.method2216();
-            class102 var3 = (class102) this.field1296.method4298();
+            class102 var3 = (class102) this.field1296.getFirst();
             synchronized (var3) {
                 int var5 = var3.method2438(this);
                 if (var5 < 0) {
@@ -98,13 +98,13 @@ public class class90 extends class107 {
     }
 
     protected class107 vmethod4598() {
-        return (class107) this.field1297.method4283();
+        return (class107) this.field1297.getNext();
     }
 
     void method2216() {
         if (this.field1298 > 0) {
-            for (class102 var1 = (class102) this.field1296.method4298(); var1 != null;
-                 var1 = (class102) this.field1296.method4283()) {
+            for (class102 var1 = (class102) this.field1296.getFirst(); var1 != null;
+                 var1 = (class102) this.field1296.getNext()) {
                 var1.field1401 -= this.field1298;
             }
 
@@ -115,11 +115,11 @@ public class class90 extends class107 {
     }
 
     public final synchronized void method2215(class107 var1) {
-        this.field1297.method4277(var1);
+        this.field1297.addFirst(var1);
     }
 
     protected class107 vmethod4596() {
-        return (class107) this.field1297.method4298();
+        return (class107) this.field1297.getFirst();
     }
 
     public final synchronized void method2214(class107 var1) {
@@ -129,8 +129,8 @@ public class class90 extends class107 {
     void method2239(class102 var1) {
         var1.unlink();
         var1.method2437();
-        Node var2 = this.field1296.field2498.nextNode;
-        if (var2 == this.field1296.field2498) {
+        Node var2 = this.field1296.root.nextNode;
+        if (var2 == this.field1296.root) {
             this.field1299 = -1;
         } else {
             this.field1299 = ((class102) var2).field1401;
@@ -139,12 +139,12 @@ public class class90 extends class107 {
     }
 
     void method2213(Node var1, class102 var2) {
-        while (this.field1296.field2498 != var1 && ((class102) var1).field1401 <= var2.field1401) {
+        while (this.field1296.root != var1 && ((class102) var1).field1401 <= var2.field1401) {
             var1 = var1.nextNode;
         }
 
-        class207.method4307(var2, var1);
-        this.field1299 = ((class102) this.field1296.field2498.nextNode).field1401;
+        Deque.method4307(var2, var1);
+        this.field1299 = ((class102) this.field1296.root.nextNode).field1401;
     }
 
     protected int vmethod4609() {

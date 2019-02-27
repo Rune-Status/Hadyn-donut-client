@@ -108,7 +108,7 @@ public class class269 extends class208 {
         } else if (var2 == 11) {
             this.field3442 = 0;
         } else if (var2 == 12) {
-            this.field3445 = var1.getUByte();
+            this.field3445 = var1.readUint8();
         } else if (var2 == 13) {
             this.field3446 = var1.method3814((byte) -1);
         } else if (var2 == 14) {
@@ -132,7 +132,7 @@ public class class269 extends class208 {
                 }
             }
 
-            int var5 = var1.getUByte();
+            int var5 = var1.readUint8();
             this.field3443 = new int[var5 + 2];
 
             for (int var6 = 0; var6 <= var5; ++var6) {
@@ -149,7 +149,7 @@ public class class269 extends class208 {
 
     void method5234(Buffer var1, byte var2) {
         while (true) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 == 0) {
                 return;
             }

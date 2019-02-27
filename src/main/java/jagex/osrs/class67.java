@@ -35,22 +35,22 @@ public class class67 {
         this.field1033 = false;
         this.field1028 = new LinkedHashMap();
         if (var1 != null && var1.bytes != null) {
-            int var2 = var1.getUByte();
+            int var2 = var1.readUint8();
             if (var2 >= 0 && var2 <= field1030) {
-                if (var1.getUByte() == 1) {
+                if (var1.readUint8() == 1) {
                     this.field1029 = true;
                 }
 
                 if (var2 > 1) {
-                    this.field1035 = var1.getUByte() == 1;
+                    this.field1035 = var1.readUint8() == 1;
                 }
 
                 if (var2 > 3) {
-                    this.field1031 = var1.getUByte();
+                    this.field1031 = var1.readUint8();
                 }
 
                 if (var2 > 2) {
-                    int var3 = var1.getUByte();
+                    int var3 = var1.readUint8();
 
                     for (int var4 = 0; var4 < var3; ++var4) {
                         int var5 = var1.getInt();
@@ -163,10 +163,10 @@ public class class67 {
 
             if (client.state != 5) {
                 if (-1L == class79.field1178) {
-                    class79.field1178 = class120.method2866((short) 3133) + 1000L;
+                    class79.field1178 = Time.currentTimeMillis() + 1000L;
                 }
 
-                long var13 = class120.method2866((short) 3133);
+                long var13 = Time.currentTimeMillis();
                 boolean var4;
                 if (client.field915 != null && client.field765 < client.field915.size()) {
                     while (true) {
@@ -241,7 +241,7 @@ public class class67 {
                         var10 = 291;
                         if (var5 == 1 && var26 >= var9 - 75 && var26 <= var9 + 75
                             && var19 >= var10 - 20 && var19 <= var10 + 20) {
-                            class138.method3291(class56.method1109("secure", true, (byte) 0)
+                            class138.openUrl(class56.method1109("secure", true, (byte) 0)
                                                     + "m=account-creation/g=oldscape/create_account_funnel.ws",
                                                 true, false, (short) 2500);
                         }
@@ -329,7 +329,7 @@ public class class67 {
                                                 class79.field1163 = 5;
                                                 return;
                                             case 2:
-                                                class138.method3291(
+                                                class138.openUrl(
                                                     "https://support.runescape.com/hc/en-gb", true,
                                                     false, (short) 2500);
                                         }
@@ -357,7 +357,7 @@ public class class67 {
                                     class185
                                         .method4006("", "Connecting to server...", "", 2095206915);
                                     class30.method577(false, -2107322233);
-                                    class16.method202(20, -1194677662);
+                                    client.setState(20);
                                     return;
                                 }
 
@@ -474,7 +474,7 @@ public class class67 {
                                                     .method4006("", "Connecting to server...", "",
                                                                 1766495890);
                                                 class30.method577(false, -2147423235);
-                                                class16.method202(20, -1194677662);
+                                                client.setState(20);
                                                 return;
                                             }
 
@@ -527,7 +527,7 @@ public class class67 {
                                         class30.method577(true, -2073251868);
                                         class185.method4006("", "Connecting to server...", "",
                                                             1656147388);
-                                        class16.method202(20, -1194677662);
+                                        client.setState(20);
                                         return;
                                     }
 
@@ -540,7 +540,7 @@ public class class67 {
                                     if (var5 == 1 && var26 >= class79.field1144 + 180 - 34
                                         && var26 <= class79.field1144 + 34 + 180 && var19 >= 351
                                         && var19 <= 363) {
-                                        class138.method3291(
+                                        class138.openUrl(
                                             class56.method1109("secure", true, (byte) 0)
                                                 + "m=totp-authenticator/disableTOTPRequest", true,
                                             false, (short) 2500);
@@ -595,7 +595,7 @@ public class class67 {
                                                 class185
                                                     .method4006("", "Connecting to server...", "",
                                                                 2056426348);
-                                                class16.method202(20, -1194677662);
+                                                client.setState(20);
                                                 return;
                                             }
 
@@ -675,7 +675,7 @@ public class class67 {
                                     var23 = 321;
                                     if (var5 == 1 && var26 >= var21 - 75 && var26 <= var21 + 75
                                         && var19 >= var23 - 20 && var19 <= var23 + 20) {
-                                        class138.method3291(
+                                        class138.openUrl(
                                             class56.method1109("secure", true, (byte) 0)
                                                 + "m=dob/set_dob.ws", true, false, (short) 2500);
                                         class185.method4006("", "Page has opened in a new window.",
@@ -695,7 +695,7 @@ public class class67 {
                                     var23 = 321;
                                     if (var5 == 1 && var26 >= var21 - 75 && var26 <= var21 + 75
                                         && var19 >= var23 - 20 && var19 <= var23 + 20) {
-                                        class138.method3291(
+                                        class138.openUrl(
                                             "https://www.jagex.com/terms/privacy/#eight", true,
                                             false, (short) 2500);
                                         class185.method4006("", "Page has opened in a new window.",
@@ -727,7 +727,7 @@ public class class67 {
                                     var10 = 276;
                                     if (var5 == 1 && var26 >= var9 - 75 && var26 <= var9 + 75
                                         && var19 >= var10 - 20 && var19 <= var10 + 20) {
-                                        class138.method3291(var17, true, false, (short) 2500);
+                                        class138.openUrl(var17, true, false, (short) 2500);
                                         class185.method4006("", "Page has opened in a new window.",
                                                             "(Please check your popup blocker.)",
                                                             1600098501);

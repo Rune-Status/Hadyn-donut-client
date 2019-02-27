@@ -50,7 +50,7 @@ public final class class80 extends class129 {
         this.field1193 = false;
         int var12 = class250.method4918(this.field1196, 1934404945).field3348;
         if (var12 != -1) {
-            this.field1204 = class29.method532(var12, 56870308);
+            this.field1204 = class29.method532(var12);
         } else {
             this.field1204 = null;
         }
@@ -117,7 +117,7 @@ public final class class80 extends class129 {
         var2.field1254 = var3.readUint16();
         var2.field1258 = var3.readUint16();
         var2.field1259 = var3.readUint16();
-        int var7 = var3.getUByte();
+        int var7 = var3.readUint8();
         int var8;
         int var9;
         if (var7 > 0) {
@@ -145,11 +145,11 @@ public final class class80 extends class129 {
         for (var8 = 0; var3.offset < var5; var2.field1257[var8++] = var9) {
             var9 = var3.readUint16();
             if (var9 == 3) {
-                var2.field1255[var8] = var3.method3778(-1705418709);
+                var2.field1255[var8] = var3.getString();
             } else if (var9 < 100 && var9 != 21 && var9 != 38 && var9 != 39) {
                 var2.field1252[var8] = var3.getInt();
             } else {
-                var2.field1252[var8] = var3.getUByte();
+                var2.field1252[var8] = var3.readUint8();
             }
         }
 

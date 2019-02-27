@@ -57,7 +57,7 @@ public class class311 {
         Buffer var4 = new Buffer(var3);
 
         while (true) {
-            int var5 = var4.getUByte();
+            int var5 = var4.readUint8();
             if (var5 == 0) {
                 return;
             }

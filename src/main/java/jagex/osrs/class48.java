@@ -50,7 +50,7 @@ public class class48 implements MouseListener, MouseMotionListener, FocusListene
 
     public static void method1019(byte var0) {
         while (true) {
-            class207 var2 = class250.field3242;
+            Deque var2 = class250.field3242;
             class247 var1;
             synchronized (class250.field3242) {
                 var1 = (class247) class250.field3244.method4279();
@@ -80,7 +80,7 @@ public class class48 implements MouseListener, MouseMotionListener, FocusListene
         int var4 = 0;
 
         for (int var5 = 0; var5 < class316.field3840; ++var5) {
-            class271 var6 = class84.method2125(var5, -205103429);
+            ItemConfig var6 = ItemConfig.get(var5);
             if ((!var1 || var6.field3509) && var6.field3552 == -1
                 && var6.field3515.toLowerCase().indexOf(var0) != -1) {
                 if (var4 >= 250) {
@@ -109,7 +109,7 @@ public class class48 implements MouseListener, MouseMotionListener, FocusListene
         String[] var9 = new String[class152.field1983];
 
         for (int var10 = 0; var10 < class152.field1983; ++var10) {
-            var9[var10] = class84.method2125(var3[var10], -205103429).field3515;
+            var9[var10] = ItemConfig.get(var3[var10]).field3515;
         }
 
         short[] var11 = class33.field325;
@@ -136,7 +136,7 @@ public class class48 implements MouseListener, MouseMotionListener, FocusListene
             field484 = 0;
             field474 = var1.getX();
             field475 = var1.getY();
-            field476 = class120.method2866((short) 3133);
+            field476 = Time.currentTimeMillis();
             field471 = this.method985(var1, -1173032679);
             if (field471 != 0) {
                 field481 = field471;

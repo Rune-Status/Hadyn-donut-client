@@ -117,7 +117,7 @@ public final class client extends GameApplet implements class290 {
     static int field667;
     static int field668;
     static int affiliateId;
-    static class207 field842;
+    static Deque field842;
     static int field825;
     static int field669;
     static int field826;
@@ -163,16 +163,16 @@ public final class client extends GameApplet implements class290 {
     static int field686;
     static int field727;
     static int field881;
-    static class207 field688;
+    static Deque field688;
     static int[] field687;
     static int field910;
     static int field779;
     static int field841;
     static class232 field811;
-    static class207[][][] field829;
+    static Deque[][][] itemStacks;
     static int[] field689;
     static boolean field728;
-    static class207 field711;
+    static Deque field711;
     static int field877;
     static int field830;
     static int field741;
@@ -194,7 +194,7 @@ public final class client extends GameApplet implements class290 {
     static int field850;
     static class232 field880;
     static int field718;
-    static class207 field773;
+    static Deque field773;
     static int[] field743;
     static int field712;
     static short field649;
@@ -239,11 +239,11 @@ public final class client extends GameApplet implements class290 {
     static int[] field867;
     static boolean field726;
     static int[] field846;
-    static class207 field843;
+    static Deque field843;
     static boolean[] field890;
     static int field729;
     static boolean field863;
-    static class207 field844;
+    static Deque field844;
     static int field912;
     static int field731;
     static int[] field732;
@@ -271,7 +271,7 @@ public final class client extends GameApplet implements class290 {
     static int field808;
     static int field797;
     static int field813;
-    static String[] field767;
+    static String[] playerOptions;
     static boolean[] field768;
     static int field680;
     static long[] field840;
@@ -411,14 +411,14 @@ public final class client extends GameApplet implements class290 {
         field850 = 0;
         field743 = new int[1000];
         field742 = new int[]{44, 45, 46, 47, 48, 49, 50, 51};
-        field767 = new String[8];
+        playerOptions = new String[8];
         field768 = new boolean[8];
         field699 = new int[]{768, 1024, 1280, 512, 1536, 256, 0, 1792};
         field769 = -1;
-        field829 = new class207[4][104][104];
-        field688 = new class207();
-        field773 = new class207();
-        field711 = new class207();
+        itemStacks = new Deque[4][104][104];
+        field688 = new Deque();
+        field773 = new Deque();
+        field711 = new Deque();
         field775 = new int[25];
         field776 = new int[25];
         field777 = new int[25];
@@ -486,9 +486,9 @@ public final class client extends GameApplet implements class290 {
         field839 = 0;
         field685 = 0;
         field841 = 0;
-        field842 = new class207();
-        field843 = new class207();
-        field844 = new class207();
+        field842 = new Deque();
+        field843 = new Deque();
+        field844 = new Deque();
         field800 = new class204(512);
         field853 = 0;
         field847 = -2;
@@ -564,332 +564,76 @@ public final class client extends GameApplet implements class290 {
         field900 = new int[50];
     }
 
-    static void method1655(class57 var0, int var1, int var2) {
-        Object[] var3 = var0.field575;
-        class86 var4;
-        int var18;
-        if (class128.method3234(var0.field573, -1048301153)) {
-            class152.field1985 = (class36) var3[0];
-            class257 var5 = class162.method3533(class152.field1985.field343, 32768);
-            var4 = class30.method578(var0.field573, var5.field3313, var5.field3317, -69024650);
-        } else {
-            var18 = ((Integer) var3[0]).intValue();
-            var4 = class9.method99(var18, (byte) 0);
+    static void setState(int state) {
+        if (state == client.state) {
+            return;
         }
 
-        if (var4 != null) {
-            class60.field600 = 0;
-            class70.field1072 = 0;
-            var18 = -1;
-            int[] var6 = var4.field1257;
-            int[] var7 = var4.field1252;
-            byte var8 = -1;
-            class70.field1083 = 0;
-            class70.field1078 = false;
+        if (client.state == 0) {
+            class157.field2037.method873(787938515);
+        }
 
-            try {
-                int var11;
-                try {
-                    class70.field1077 = new int[var4.field1256];
-                    int var9 = 0;
-                    class70.field1067 = new String[var4.field1254];
-                    int var10 = 0;
-
-                    int var12;
-                    String var19;
-                    for (var11 = 1; var11 < var3.length; ++var11) {
-                        if (var3[var11] instanceof Integer) {
-                            var12 = ((Integer) var3[var11]).intValue();
-                            if (var12 == -2147483647) {
-                                var12 = var0.field565;
-                            }
-
-                            if (var12 == -2147483646) {
-                                var12 = var0.field566;
-                            }
-
-                            if (var12 == -2147483645) {
-                                var12 = var0.field570 != null ? var0.field570.field2770 : -1;
-                            }
-
-                            if (var12 == -2147483644) {
-                                var12 = var0.field567;
-                            }
-
-                            if (var12 == -2147483643) {
-                                var12 = var0.field570 != null ? var0.field570.field2787 : -1;
-                            }
-
-                            if (var12 == -2147483642) {
-                                var12 = var0.field568 != null ? var0.field568.field2770 : -1;
-                            }
-
-                            if (var12 == -2147483641) {
-                                var12 = var0.field568 != null ? var0.field568.field2787 : -1;
-                            }
-
-                            if (var12 == -2147483640) {
-                                var12 = var0.field569;
-                            }
-
-                            if (var12 == -2147483639) {
-                                var12 = var0.field562;
-                            }
-
-                            class70.field1077[var9++] = var12;
-                        } else if (var3[var11] instanceof String) {
-                            var19 = (String) var3[var11];
-                            if (var19.equals("event_opbase")) {
-                                var19 = var0.field571;
-                            }
-
-                            class70.field1067[var10++] = var19;
-                        }
-                    }
-
-                    var11 = 0;
-                    class70.field1075 = var0.field572;
-
-                    while (true) {
-                        ++var11;
-                        if (var11 > var1) {
-                            throw new RuntimeException();
-                        }
-
-                        ++var18;
-                        int var30 = var6[var18];
-                        int var21;
-                        if (var30 >= 100) {
-                            boolean var34;
-                            if (var4.field1252[var18] == 1) {
-                                var34 = true;
-                            } else {
-                                var34 = false;
-                            }
-
-                            var21 = class140.method3311(var30, var4, var34, 49958749);
-                            switch (var21) {
-                                case 0:
-                                    return;
-                                case 1:
-                                default:
-                                    break;
-                                case 2:
-                                    throw new IllegalStateException();
-                            }
-                        } else if (var30 == 0) {
-                            class70.field1070[++class60.field600 - 1] = var7[var18];
-                        } else if (var30 == 1) {
-                            var12 = var7[var18];
-                            class70.field1070[++class60.field600 - 1] = class227.field2629[var12];
-                        } else if (var30 == 2) {
-                            var12 = var7[var18];
-                            class227.field2629[var12] = class70.field1070[--class60.field600];
-                            class223.method4595(var12, -1750193407);
-                        } else if (var30 == 3) {
-                            class70.field1065[++class70.field1072 - 1] = var4.field1255[var18];
-                        } else if (var30 == 6) {
-                            var18 += var7[var18];
-                        } else if (var30 == 7) {
-                            class60.field600 -= 2;
-                            if (class70.field1070[class60.field600] != class70.field1070[
-                                class60.field600 + 1]) {
-                                var18 += var7[var18];
-                            }
-                        } else if (var30 == 8) {
-                            class60.field600 -= 2;
-                            if (class70.field1070[class60.field600] == class70.field1070[
-                                class60.field600 + 1]) {
-                                var18 += var7[var18];
-                            }
-                        } else if (var30 == 9) {
-                            class60.field600 -= 2;
-                            if (class70.field1070[class60.field600] < class70.field1070[
-                                class60.field600 + 1]) {
-                                var18 += var7[var18];
-                            }
-                        } else if (var30 == 10) {
-                            class60.field600 -= 2;
-                            if (class70.field1070[class60.field600] > class70.field1070[
-                                class60.field600 + 1]) {
-                                var18 += var7[var18];
-                            }
-                        } else if (var30 == 21) {
-                            if (class70.field1083 == 0) {
-                                return;
-                            }
-
-                            class51 var35 = class70.field1074[--class70.field1083];
-                            var4 = var35.field521;
-                            var6 = var4.field1257;
-                            var7 = var4.field1252;
-                            var18 = var35.field523;
-                            class70.field1077 = var35.field514;
-                            class70.field1067 = var35.field517;
-                        } else if (var30 == 25) {
-                            var12 = var7[var18];
-                            class70.field1070[++class60.field600 - 1] = class97
-                                .method2405(var12, (byte) 116);
-                        } else if (var30 == 27) {
-                            var12 = var7[var18];
-                            class40.method766(var12, class70.field1070[--class60.field600],
-                                              1551244815);
-                        } else if (var30 == 31) {
-                            class60.field600 -= 2;
-                            if (class70.field1070[class60.field600] <= class70.field1070[
-                                class60.field600 + 1]) {
-                                var18 += var7[var18];
-                            }
-                        } else if (var30 == 32) {
-                            class60.field600 -= 2;
-                            if (class70.field1070[class60.field600] >= class70.field1070[
-                                class60.field600 + 1]) {
-                                var18 += var7[var18];
-                            }
-                        } else if (var30 == 33) {
-                            class70.field1070[++class60.field600
-                                - 1] = class70.field1077[var7[var18]];
-                        } else if (var30 == 34) {
-                            class70.field1077[var7[var18]] = class70.field1070[--class60.field600];
-                        } else if (var30 == 35) {
-                            class70.field1065[++class70.field1072
-                                - 1] = class70.field1067[var7[var18]];
-                        } else if (var30 == 36) {
-                            class70.field1067[var7[var18]] = class70.field1065[--class70.field1072];
-                        } else if (var30 == 37) {
-                            var12 = var7[var18];
-                            class70.field1072 -= var12;
-                            String var32 = class25
-                                .method477(class70.field1065, class70.field1072, var12, 922841529);
-                            class70.field1065[++class70.field1072 - 1] = var32;
-                        } else if (var30 == 38) {
-                            --class60.field600;
-                        } else if (var30 == 39) {
-                            --class70.field1072;
-                        } else {
-                            int var16;
-                            if (var30 != 40) {
-                                if (var30 == 42) {
-                                    class70.field1070[++class60.field600 - 1] = class36.field348
-                                        .method2091(var7[var18], -193547956);
-                                } else if (var30 == 43) {
-                                    class36.field348.method2114(var7[var18],
-                                                                class70.field1070[--class60.field600],
-                                                                -1482826901);
-                                } else if (var30 == 44) {
-                                    var12 = var7[var18] >> 16;
-                                    var21 = var7[var18] & 65535;
-                                    int var22 = class70.field1070[--class60.field600];
-                                    if (var22 < 0 || var22 > 5000) {
-                                        throw new RuntimeException();
-                                    }
-
-                                    class70.field1068[var12] = var22;
-                                    byte var23 = -1;
-                                    if (var21 == 105) {
-                                        var23 = 0;
-                                    }
-
-                                    for (var16 = 0; var16 < var22; ++var16) {
-                                        class70.field1069[var12][var16] = var23;
-                                    }
-                                } else if (var30 == 45) {
-                                    var12 = var7[var18];
-                                    var21 = class70.field1070[--class60.field600];
-                                    if (var21 < 0 || var21 >= class70.field1068[var12]) {
-                                        throw new RuntimeException();
-                                    }
-
-                                    class70.field1070[++class60.field600
-                                        - 1] = class70.field1069[var12][var21];
-                                } else if (var30 == 46) {
-                                    var12 = var7[var18];
-                                    class60.field600 -= 2;
-                                    var21 = class70.field1070[class60.field600];
-                                    if (var21 < 0 || var21 >= class70.field1068[var12]) {
-                                        throw new RuntimeException();
-                                    }
-
-                                    class70.field1069[var12][var21] = class70.field1070[
-                                        class60.field600 + 1];
-                                } else if (var30 == 47) {
-                                    var19 = class36.field348.method2089(var7[var18], 1425514174);
-                                    if (var19 == null) {
-                                        var19 = "null";
-                                    }
-
-                                    class70.field1065[++class70.field1072 - 1] = var19;
-                                } else if (var30 == 48) {
-                                    class36.field348.method2106(var7[var18],
-                                                                class70.field1065[--class70.field1072],
-                                                                (byte) 39);
-                                } else {
-                                    if (var30 != 60) {
-                                        throw new IllegalStateException();
-                                    }
-
-                                    class199 var33 = var4.field1253[var7[var18]];
-                                    class213 var31 = (class213) var33
-                                        .method4185((long) class70.field1070[--class60.field600]);
-                                    if (var31 != null) {
-                                        var18 += var31.field2512;
-                                    }
-                                }
-                            } else {
-                                var12 = var7[var18];
-                                class86 var13 = class9.method99(var12, (byte) 0);
-                                int[] var14 = new int[var13.field1256];
-                                String[] var15 = new String[var13.field1254];
-
-                                for (var16 = 0; var16 < var13.field1258; ++var16) {
-                                    var14[var16] = class70.field1070[var16 + (class60.field600
-                                        - var13.field1258)];
-                                }
-
-                                for (var16 = 0; var16 < var13.field1259; ++var16) {
-                                    var15[var16] = class70.field1065[var16 + (class70.field1072
-                                        - var13.field1259)];
-                                }
-
-                                class60.field600 -= var13.field1258;
-                                class70.field1072 -= var13.field1259;
-                                class51 var20 = new class51();
-                                var20.field521 = var4;
-                                var20.field523 = var18;
-                                var20.field514 = class70.field1077;
-                                var20.field517 = class70.field1067;
-                                class70.field1074[++class70.field1083 - 1] = var20;
-                                var4 = var13;
-                                var6 = var13.field1257;
-                                var7 = var13.field1252;
-                                var18 = -1;
-                                class70.field1077 = var14;
-                                class70.field1067 = var15;
-                            }
-                        }
-                    }
-                } catch (Exception var28) {
-                    StringBuilder var25 = new StringBuilder(30);
-                    var25.append("").append(var4.key).append(" ");
-
-                    for (var11 = class70.field1083 - 1; var11 >= 0; --var11) {
-                        var25.append("").append(class70.field1074[var11].field521.key)
-                             .append(" ");
-                    }
-
-                    var25.append("").append(var8);
-                    class80.method2041(var25.toString(), var28, 1721189784);
-                }
-            } finally {
-                if (class70.field1078) {
-                    class70.field1079 = true;
-                    class42.method783(1952311603);
-                    class70.field1079 = false;
-                    class70.field1078 = false;
-                }
-
+        if (state == 20 || state == 40 || state == 45) {
+            loginStage = 0;
+            field678 = 0;
+            field679 = 0;
+            field904.method5503(state, (byte) 43);
+            if (state != 20) {
+                class30.method577(false, -2143307376);
             }
         }
+
+        if (state != 20 && state != 40 && class52.field524 != null) {
+            class52.field524.vmethod3558(-1987090849);
+            class52.field524 = null;
+        }
+
+        if (client.state == 25) {
+            field700 = 0;
+            field696 = 0;
+            field697 = 1;
+            field753 = 0;
+            field909 = 1;
+        }
+
+        if (state != 5 && state != 10) {
+            if (state == 20) {
+                class20.method317(class12.index10, class154.index8, true,
+                                  client.state == 11 ? 4 : 0, (byte) 9);
+            } else if (state == 11) {
+                class20.method317(class12.index10, class154.index8, false, 4, (byte) 31);
+            } else if (class79.field1174) {
+                class79.field1149 = null;
+                class307.field3801 = null;
+                class6.field44 = null;
+                class79.field1145 = null;
+                class79.field1146 = null;
+                class265.field3401 = null;
+                class79.field1147 = null;
+                class185.field2417 = null;
+                class132.field1861 = null;
+                class78.field1137 = null;
+                BufferedFile.field1490 = null;
+                class10.field81 = null;
+                class50.field513 = null;
+                class10.field77 = null;
+                class79.field1151 = null;
+                class58.field583 = null;
+                class161.field2048 = null;
+                class69.field1047 = null;
+                class62.field640 = null;
+                class32.field322 = null;
+                class19.field182 = null;
+                class19.field183 = null;
+                class180.method3732(2);
+                class227.method4642(true, -714835684);
+                class79.field1174 = false;
+            }
+        } else {
+            class20.method317(class12.index10, class154.index8, true, 0, (byte) 27);
+        }
+
+        client.state = state;
     }
 
     void method1241(byte var1) {
@@ -1105,1407 +849,1416 @@ public final class client extends GameApplet implements class290 {
     protected final void vmethod1465(short var1) {
     }
 
-    final boolean method1249(class89 var1, int var2) {
-        class159 var3 = var1.method2192((byte) -4);
-        PacketBuffer var4 = var1.field1283;
-        if (var3 == null) {
+    final boolean decodePacket(class89 var1) {
+        AbstractSocket socket = var1.getSocket();
+        PacketBuffer buffer = var1.buffer;
+        if (socket == null) {
             return false;
-        } else {
-            String var18;
-            int var19;
-            try {
-                int var6;
-                if (var1.packetDescriptor == null) {
-                    if (var1.field1286) {
-                        if (!var3.isReadable(1, -1333943190)) {
-                            return false;
-                        }
+        }
 
-                        var3.read(var1.field1283.bytes, 0, 1);
-                        var1.field1287 = 0;
-                        var1.field1286 = false;
-                    }
-
-                    var4.offset = 0;
-                    if (var4.method4048((byte) -52)) {
-                        if (!var3.isReadable(1, -933878687)) {
-                            return false;
-                        }
-
-                        var3.read(var1.field1283.bytes, 1, 1);
-                        var1.field1287 = 0;
-                    }
-
-                    var1.field1286 = true;
-                    InboundPacketDescriptor[] var5 = class63.getInboundPackets(1512368041);
-                    var6 = var4.readEncipheredShort(-170613268);
-                    if (var6 < 0 || var6 >= var5.length) {
-                        throw new IOException(var6 + " " + var4.offset);
-                    }
-
-                    var1.packetDescriptor = var5[var6];
-                    var1.packetLength = var1.packetDescriptor.length;
-                }
-
-                if (var1.packetLength == -1) {
-                    if (!var3.isReadable(1, 1612700317)) {
+        String var18;
+        int var19;
+        try {
+            int var6;
+            if (var1.currentPacket == null) {
+                /*if (var1.readFirstByte) {
+                    if (!socket.available(1)) {
                         return false;
                     }
 
-                    var1.method2192((byte) 27).read(var4.bytes, 0, 1);
-                    var1.packetLength = var4.bytes[0] & 255;
-                }
+                    socket.read(var1.buffer.bytes, 0, 1);
+                    var1.field1287 = 0;
+                    var1.readFirstByte = false;
+                }*/
 
-                if (var1.packetLength == -2) {
-                    if (!var3.isReadable(2, 1552915171)) {
+                /*
+                buffer.offset = 0;
+                if (buffer.isPacketIdShort()) {
+                    if (!socket.available(1)) {
                         return false;
                     }
 
-                    var1.method2192((byte) 1).read(var4.bytes, 0, 2);
-                    var4.offset = 0;
-                    var1.packetLength = var4.readUint16();
-                }
+                    socket.read(var1.buffer.bytes, 1, 1);
+                    var1.field1287 = 0;
+                }*/
 
-                if (!var3.isReadable(var1.packetLength, -87054583)) {
+                //var1.readFirstByte = true;
+
+                if (!socket.available(1)) {
                     return false;
                 }
 
-                var4.offset = 0;
-                var3.read(var4.bytes, 0, var1.packetLength);
+                socket.read(var1.buffer.bytes, 0, 1);
                 var1.field1287 = 0;
-                field904.method5517(-1610452923);
-                var1.field1278 = var1.field1284;
-                var1.field1284 = var1.field1295;
-                var1.field1295 = var1.packetDescriptor;
-                if (InboundPacketDescriptor.field2178 == var1.packetDescriptor) {
-                    class11.decodeSceneRebuild(false, var1.field1283);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2159 == var1.packetDescriptor) {
-                    class74.method1987(-2100056555);
-                    var1.packetDescriptor = null;
-                    return false;
-                }
-
-                if (InboundPacketDescriptor.field2177 == var1.packetDescriptor) {
-                    class0.method11(1200659683);
-                    field810 = var4.getUByte();
-                    field685 = field828;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2188 == var1.packetDescriptor) {
-                    class0.method11(1200659683);
-                    field851 = var4.method3814((byte) -1);
-                    field685 = field828;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                class232 var7;
-                int var8;
-                int var9;
-                int var10;
-                int var11;
-                int var17;
-                if (InboundPacketDescriptor.field2196 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    var6 = var4.readUint16();
-                    if (var17 < -70000) {
-                        var6 += 32768;
-                    }
-
-                    if (var17 >= 0) {
-                        var7 = class18.method213(var17, -2060739794);
-                    } else {
-                        var7 = null;
-                    }
-
-                    if (var7 != null) {
-                        for (var8 = 0; var8 < var7.field2762.length; ++var8) {
-                            var7.field2762[var8] = 0;
-                            var7.field2792[var8] = 0;
-                        }
-                    }
-
-                    class71.method1957(var6, (byte) 42);
-                    var8 = var4.readUint16();
-
-                    for (var9 = 0; var9 < var8; ++var9) {
-                        var10 = var4.readUint16();
-                        var11 = var4.getUByte();
-                        if (var11 == 255) {
-                            var11 = var4.method3772(-854436441);
-                        }
-
-                        if (var7 != null && var9 < var7.field2762.length) {
-                            var7.field2762[var9] = var10;
-                            var7.field2792[var9] = var11;
-                        }
-
-                        class27.method492(var6, var9, var10 - 1, var11, (byte) -42);
-                    }
-
-                    if (var7 != null) {
-                        class37.method721(var7, 1238023037);
-                    }
-
-                    class0.method11(1200659683);
-                    field831[++field832 - 1 & 31] = var6 & 32767;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2148 == var1.packetDescriptor) {
-                    var17 = var4.method3772(1534204633);
-                    var6 = var4.method3792(128671456);
-                    var7 = class18.method213(var17, -1691960496);
-                    if (var7.field2740 != 1 || var6 != var7.field2755) {
-                        var7.field2740 = 1;
-                        var7.field2755 = var6;
-                        class37.method721(var7, 1238023037);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2136 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    var18 = var4.method3778(-1773674715);
-                    var7 = class18.method213(var17, -1198151199);
-                    if (!var18.equals(var7.field2728)) {
-                        var7.field2728 = var18;
-                        class37.method721(var7, 1238023037);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2145 == var1.packetDescriptor) {
-                    for (var17 = 0; var17 < players.length; ++var17) {
-                        if (players[var17] != null) {
-                            players[var17].field971 = -1;
-                        }
-                    }
-
-                    for (var17 = 0; var17 < field806.length; ++var17) {
-                        if (field806[var17] != null) {
-                            field806[var17].field971 = -1;
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2182 == var1.packetDescriptor) {
-                    var17 = var4.readUint16();
-                    var6 = var4.getUByte();
-                    var19 = var4.readUint16();
-                    class36.method693(var17, var6, var19, -557263979);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2129 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2321, (byte) 85);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2125 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2319, (byte) 17);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2201 == var1.packetDescriptor) {
-                    class67.method1748(var4, var1.packetLength, 1408100742);
-                    class16.method182(1877553034);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2164 == var1.packetDescriptor) {
-                    class66 var42 = new class66();
-                    var42.field1019 = var4.method3778(-1209316729);
-                    var42.field1015 = var4.readUint16();
-                    var6 = var4.getInt();
-                    var42.field1008 = var6;
-                    class16.method202(45, -1194677662);
-                    var3.vmethod3558(-730422622);
-                    var3 = null;
-                    class138.method3292(var42, -555531433);
-                    var1.packetDescriptor = null;
-                    return false;
-                }
-
-                if (InboundPacketDescriptor.field2161 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    var6 = var4.readUint16();
-                    if (var17 < -70000) {
-                        var6 += 32768;
-                    }
-
-                    if (var17 >= 0) {
-                        var7 = class18.method213(var17, -1399206472);
-                    } else {
-                        var7 = null;
-                    }
-
-                    for (; var4.offset < var1.packetLength;
-                         class27.method492(var6, var8, var9 - 1, var10, (byte) -15)) {
-                        var8 = var4.method3783(-429753275);
-                        var9 = var4.readUint16();
-                        var10 = 0;
-                        if (var9 != 0) {
-                            var10 = var4.getUByte();
-                            if (var10 == 255) {
-                                var10 = var4.getInt();
-                            }
-                        }
-
-                        if (var7 != null && var8 >= 0 && var8 < var7.field2762.length) {
-                            var7.field2762[var8] = var9;
-                            var7.field2792[var8] = var10;
-                        }
-                    }
-
-                    if (var7 != null) {
-                        class37.method721(var7, 1238023037);
-                    }
-
-                    class0.method11(1200659683);
-                    field831[++field832 - 1 & 31] = var6 & 32767;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2172 == var1.packetDescriptor) {
-                    class187.field2433 = var4.method3799(-106999200);
-                    class72.field1100 = var4.method3891((byte) 0);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2163 == var1.packetDescriptor) {
-                    var17 = var4.method3807(64801268);
-                    class30.method575(var17, 2145588800);
-                    field831[++field832 - 1 & 31] = var17 & 32767;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2174 == var1.packetDescriptor) {
-                    var4.offset += 28;
-                    if (var4.method3786((byte) 66)) {
-                        class86.method2163(var4, var4.offset - 28, 1427407129);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2140 == var1.packetDescriptor) {
-                    var17 = var4.method3792(92958702);
-                    if (var17 == 65535) {
-                        var17 = -1;
-                    }
-
-                    class69.method1841(var17, (byte) 2);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2157 == var1.packetDescriptor) {
-                    var17 = var4.method3812(1652165997);
-                    var6 = var4.method3808(-1599744535);
-                    if (var6 == 65535) {
-                        var6 = -1;
-                    }
-
-                    class254.method4994(var6, var17, 1163401710);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                class232 var57;
-                if (InboundPacketDescriptor.field2176 == var1.packetDescriptor) {
-                    var17 = var4.method3964(287627655);
-                    var6 = var4.method3811(-1831644342);
-                    var19 = var4.method3810(1308083007);
-                    var57 = class18.method213(var17, -351223324);
-                    if (var19 != var57.field2676 || var6 != var57.field2751 || var57.field2672 != 0
-                        || var57.field2673 != 0) {
-                        var57.field2676 = var19;
-                        var57.field2751 = var6;
-                        var57.field2672 = 0;
-                        var57.field2673 = 0;
-                        class37.method721(var57, 1238023037);
-                        this.method1577(var57, -794294536);
-                        if (var57.field2808 == 0) {
-                            class223.method4594(class145.field1951[var17 >> 16], var57, false,
-                                                1658306306);
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2131 == var1.packetDescriptor) {
-                    for (var17 = 0; var17 < class256.field3302; ++var17) {
-                        class256 var56 = class142.method3328(var17, (byte) 58);
-                        if (var56 != null) {
-                            class227.field2630[var17] = 0;
-                            class227.field2629[var17] = 0;
-                        }
-                    }
-
-                    class0.method11(1200659683);
-                    field830 += 32;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2149 == var1.packetDescriptor) {
-                    InboundPacketDescriptor.field2150.field1041.method5574(var4, var1.packetLength, 451663299);
-                    class2.method20((byte) 0);
-                    field836 = field828;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2134 == var1.packetDescriptor) {
-                    class72.field1100 = var4.method3891((byte) 0);
-                    class187.field2433 = var4.method3799(594389036);
-
-                    while (var4.offset < var1.packetLength) {
-                        var17 = var4.getUByte();
-                        class173 var55 = class66.method1733(2144968091)[var17];
-                        class160.method3500(var55, (byte) 22);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2190 == var1.packetDescriptor) {
-                    if (field803 != -1) {
-                        class33.method607(field803, 0, 209337126);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2170 == var1.packetDescriptor) {
-                    class12.method141(var4, var1.packetLength, (byte) 96);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2138 == var1.packetDescriptor) {
-                    var17 = var4.method3814((byte) -1);
-                    var6 = var4.method3772(-1292175866);
-                    var7 = class18.method213(var6, 213302743);
-                    if (var17 != var7.field2714 || var17 == -1) {
-                        var7.field2714 = var17;
-                        var7.field2795 = 0;
-                        var7.field2750 = 0;
-                        class37.method721(var7, 1238023037);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                boolean var52;
-                if (InboundPacketDescriptor.field2181 == var1.packetDescriptor) {
-                    var52 = var4.getUByte() == 1;
-                    if (var52) {
-                        class113.field1511 =
-                            class120.method2866((short) 3133) - var4.method3775((byte) 126);
-                        class59.field590 = new class1(var4, true);
-                    } else {
-                        class59.field590 = null;
-                    }
-
-                    field839 = field828;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2192 == var1.packetDescriptor) {
-                    field889 = true;
-                    class27.field266 = var4.getUByte();
-                    class180.field2361 = var4.getUByte();
-                    class138.field1926 = var4.readUint16();
-                    InboundPacketDescriptor.field2206 = var4.getUByte();
-                    class30.field314 = var4.getUByte();
-                    if (class30.field314 >= 100) {
-                        class157.field2036 = class27.field266 * 128 + 64;
-                        class50.field508 = class180.field2361 * 128 + 64;
-                        Buffer.field2409 = class152
-                            .method3394(class157.field2036, class50.field508, class60.level,
-                                        (byte) 23) - class138.field1926;
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2194 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2320, (byte) 78);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2175 == var1.packetDescriptor) {
-                    class53.method1082(false, var4, (byte) 4);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2203 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2318, (byte) 111);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                class56 var20;
-                class232 var21;
-                if (InboundPacketDescriptor.field2142 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    var6 = var4.getInt();
-                    class56 var45 = (class56) field804.method4224((long) var6);
-                    var20 = (class56) field804.method4224((long) var17);
-                    if (var20 != null) {
-                        class6.method67(var20, var45 == null || var20.field556 != var45.field556,
-                                        (short) 180);
-                    }
-
-                    if (var45 != null) {
-                        var45.unlink();
-                        field804.method4226(var45, (long) var17);
-                    }
-
-                    var21 = class18.method213(var6, -1995320984);
-                    if (var21 != null) {
-                        class37.method721(var21, 1238023037);
-                    }
-
-                    var21 = class18.method213(var17, -1546696403);
-                    if (var21 != null) {
-                        class37.method721(var21, 1238023037);
-                        class223.method4594(class145.field1951[var21.field2770 >>> 16], var21, true,
-                                            1658306306);
-                    }
-
-                    if (field803 != -1) {
-                        class33.method607(field803, 1, 944464657);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2144 == var1.packetDescriptor) {
-                    var17 = var4.getUByte();
-                    class24.method472(var17, -1864650036);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2153 == var1.packetDescriptor) {
-                    field663 = var4.getUByte();
-                    if (field663 == 1) {
-                        field664 = var4.readUint16();
-                    }
-
-                    if (field663 >= 2 && field663 <= 6) {
-                        if (field663 == 2) {
-                            field669 = 64;
-                            field755 = 64;
-                        }
-
-                        if (field663 == 3) {
-                            field669 = 0;
-                            field755 = 64;
-                        }
-
-                        if (field663 == 4) {
-                            field669 = 128;
-                            field755 = 64;
-                        }
-
-                        if (field663 == 5) {
-                            field669 = 64;
-                            field755 = 0;
-                        }
-
-                        if (field663 == 6) {
-                            field669 = 64;
-                            field755 = 128;
-                        }
-
-                        field663 = 2;
-                        field666 = var4.readUint16();
-                        field667 = var4.readUint16();
-                        field668 = var4.getUByte();
-                    }
-
-                    if (field663 == 10) {
-                        field665 = var4.readUint16();
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2184 == var1.packetDescriptor) {
-                    field722 = var4.getUByte();
-                    if (field722 == 255) {
-                        field722 = 0;
-                    }
-
-                    field875 = var4.getUByte();
-                    if (field875 == 255) {
-                        field875 = 0;
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2126 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    class56 var53 = (class56) field804.method4224((long) var17);
-                    if (var53 != null) {
-                        class6.method67(var53, true, (short) 180);
-                    }
-
-                    if (field880 != null) {
-                        class37.method721(field880, 1238023037);
-                        field880 = null;
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                class232 var50;
-                if (InboundPacketDescriptor.field2147 == var1.packetDescriptor) {
-                    var17 = var4.method3772(575506974);
-                    var50 = class18.method213(var17, 152645935);
-                    var50.field2740 = 3;
-                    var50.field2755 = class69.localPlayer.field630.method4672(-1098490940);
-                    class37.method721(var50, 1238023037);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2121 == var1.packetDescriptor) {
-                    var17 = var4.readUint16();
-                    var6 = var4.getInt();
-                    class227.field2630[var17] = var6;
-                    if (class227.field2629[var17] != var6) {
-                        class227.field2629[var17] = var6;
-                    }
-
-                    class223.method4595(var17, -1750193407);
-                    field653[++field830 - 1 & 31] = var17;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2158 == var1.packetDescriptor) {
-                    var17 = var4.method3808(-2018401159);
-                    var6 = var4.method3807(-1586416145);
-                    var19 = var4.method3964(287627655);
-                    var57 = class18.method213(var19, -1140705979);
-                    var57.field2723 = var17 + (var6 << 16);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2128 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2316, (byte) 114);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2152 == var1.packetDescriptor) {
-                    var17 = var4.method3792(252179005);
-                    var6 = var4.method3772(-143203232);
-                    var7 = class18.method213(var6, -408988183);
-                    if (var7.field2740 != 2 || var17 != var7.field2755) {
-                        var7.field2740 = 2;
-                        var7.field2755 = var17;
-                        class37.method721(var7, 1238023037);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2124 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    var6 = var4.readUint16();
-                    if (var6 == 65535) {
-                        var6 = -1;
-                    }
-
-                    var19 = var4.method3772(-1429167805);
-                    var57 = class18.method213(var17, -1338232778);
-                    class271 var59;
-                    if (!var57.field2685) {
-                        if (var6 == -1) {
-                            var57.field2740 = 0;
-                            var1.packetDescriptor = null;
-                            return true;
-                        }
-
-                        var59 = class84.method2125(var6, -205103429);
-                        var57.field2740 = 4;
-                        var57.field2755 = var6;
-                        var57.field2732 = var59.field3524;
-                        var57.field2719 = var59.field3519;
-                        var57.field2721 = var59.field3517 * 100 / var19;
-                        class37.method721(var57, 1238023037);
-                    } else {
-                        var57.field2793 = var6;
-                        var57.field2794 = var19;
-                        var59 = class84.method2125(var6, -205103429);
-                        var57.field2732 = var59.field3524;
-                        var57.field2719 = var59.field3519;
-                        var57.field2720 = var59.field3520;
-                        var57.field2718 = var59.field3521;
-                        var57.field2717 = var59.field3522;
-                        var57.field2721 = var59.field3517;
-                        if (var59.field3523 == 1) {
-                            var57.field2797 = 1;
-                        } else {
-                            var57.field2797 = 2;
-                        }
-
-                        if (var57.field2722 > 0) {
-                            var57.field2721 = var57.field2721 * 32 / var57.field2722;
-                        } else if (var57.field2678 > 0) {
-                            var57.field2721 = var57.field2721 * 32 / var57.field2678;
-                        }
-
-                        class37.method721(var57, 1238023037);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                String var41;
-                boolean var44;
-                if (InboundPacketDescriptor.field2187 == var1.packetDescriptor) {
-                    var17 = var4.method3783(-169177407);
-                    var44 = var4.getUByte() == 1;
-                    var41 = "";
-                    boolean var46 = false;
-                    if (var44) {
-                        var41 = var4.method3778(324350744);
-                        if (InboundPacketDescriptor.field2150
-                            .method1803(new class293(var41, field920), 1440386847)) {
-                            var46 = true;
-                        }
-                    }
-
-                    String var58 = var4.method3778(-433872729);
-                    if (!var46) {
-                        class59.method1163(var17, var41, var58, -1483885983);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
 
-                if (InboundPacketDescriptor.field2166 == var1.packetDescriptor) {
-                    field889 = true;
-                    class67.field1027 = var4.getUByte();
-                    class141.field1939 = var4.getUByte();
-                    class21.field208 = var4.readUint16();
-                    class66.field1026 = var4.getUByte();
-                    class253.field3289 = var4.getUByte();
-                    if (class253.field3289 >= 100) {
-                        var17 = class67.field1027 * 128 + 64;
-                        var6 = class141.field1939 * 128 + 64;
-                        var19 = class152.method3394(var17, var6, class60.level, (byte) 86)
-                            - class21.field208;
-                        var8 = var17 - class157.field2036;
-                        var9 = var19 - Buffer.field2409;
-                        var10 = var6 - class50.field508;
-                        var11 = (int) Math.sqrt((double) (var8 * var8 + var10 * var10));
-                        class57.field576 =
-                            (int) (Math.atan2((double) var9, (double) var11) * 325.949D) & 2047;
-                        class15.field143 =
-                            (int) (Math.atan2((double) var8, (double) var10) * -325.949D) & 2047;
-                        if (class57.field576 < 128) {
-                            class57.field576 = 128;
-                        }
-
-                        if (class57.field576 > 383) {
-                            class57.field576 = 383;
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2120 == var1.packetDescriptor) {
-                    var17 = var4.method3772(1494306421);
-                    var6 = var4.method3792(986168560);
-                    var7 = class18.method213(var17, 77705851);
-                    if (var7 != null && var7.field2808 == 0) {
-                        if (var6 > var7.field2691 - var7.field2683) {
-                            var6 = var7.field2691 - var7.field2683;
-                        }
-
-                        if (var6 < 0) {
-                            var6 = 0;
-                        }
-
-                        if (var6 != var7.field2689) {
-                            var7.field2689 = var6;
-                            class37.method721(var7, 1238023037);
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                String var39;
-                if (InboundPacketDescriptor.field2179 == var1.packetDescriptor) {
-                    var39 = var4.method3778(-226701352);
-                    Object[] var51 = new Object[var39.length() + 1];
-
-                    for (var19 = var39.length() - 1; var19 >= 0; --var19) {
-                        if (var39.charAt(var19) == 's') {
-                            var51[var19 + 1] = var4.method3778(106955705);
-                        } else {
-                            var51[var19 + 1] = new Integer(var4.getInt());
-                        }
-                    }
-
-                    var51[0] = new Integer(var4.getInt());
-                    class57 var43 = new class57();
-                    var43.field575 = var51;
-                    class53.method1076(var43, -196178885);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2199 == var1.packetDescriptor) {
-                    var17 = var4.method3964(287627655);
-                    var50 = class18.method213(var17, 35313060);
-
-                    for (var19 = 0; var19 < var50.field2762.length; ++var19) {
-                        var50.field2762[var19] = -1;
-                        var50.field2762[var19] = 0;
-                    }
-
-                    class37.method721(var50, 1238023037);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2197 == var1.packetDescriptor) {
-                    field861 = var4.method3799(-1806195762);
-                    field730 = var4.method3799(-451429880);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2167 == var1.packetDescriptor) {
-                    var17 = var4.method3792(458005929);
-                    var6 = var4.method3792(1199235065);
-                    var19 = var4.method3792(573947425);
-                    var8 = var4.method3772(-1844927980);
-                    var21 = class18.method213(var8, -1008760965);
-                    if (var17 != var21.field2732 || var19 != var21.field2719
-                        || var6 != var21.field2721) {
-                        var21.field2732 = var17;
-                        var21.field2719 = var19;
-                        var21.field2721 = var6;
-                        class37.method721(var21, 1238023037);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2123 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2325, (byte) 80);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2191 == var1.packetDescriptor) {
-                    field876 = var4.getUByte();
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2141 == var1.packetDescriptor) {
-                    var17 = var4.method3964(287627655);
-                    var6 = var4.method3808(-1445929193);
-                    var19 = var6 >> 10 & 31;
-                    var8 = var6 >> 5 & 31;
-                    var9 = var6 & 31;
-                    var10 = (var8 << 11) + (var19 << 19) + (var9 << 3);
-                    class232 var60 = class18.method213(var17, -152844609);
-                    if (var10 != var60.field2686) {
-                        var60.field2686 = var10;
-                        class37.method721(var60, 1238023037);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                long var13;
-                if (InboundPacketDescriptor.field2173 == var1.packetDescriptor) {
-                    var17 = var4.offset + var1.packetLength;
-                    var6 = var4.readUint16();
-                    var19 = var4.readUint16();
-                    if (var6 != field803) {
-                        field803 = var6;
-                        this.method1253(false, -1736803607);
-                        class160.method3504(field803, 30895243);
-                        class25.method480(field803, -1869692911);
-
-                        for (var8 = 0; var8 < 100; ++var8) {
-                            field848[var8] = true;
-                        }
-                    }
-
-                    class56 var22;
-                    for (; var19-- > 0; var22.field555 = true) {
-                        var8 = var4.getInt();
-                        var9 = var4.readUint16();
-                        var10 = var4.getUByte();
-                        var22 = (class56) field804.method4224((long) var8);
-                        if (var22 != null && var9 != var22.field556) {
-                            class6.method67(var22, true, (short) 180);
-                            var22 = null;
-                        }
-
-                        if (var22 == null) {
-                            var22 = class17.method209(var8, var9, var10, (byte) 68);
-                        }
-                    }
-
-                    for (var20 = (class56) field804.method4235(); var20 != null;
-                         var20 = (class56) field804.method4229()) {
-                        if (var20.field555) {
-                            var20.field555 = false;
-                        } else {
-                            class6.method67(var20, true, (short) 180);
-                        }
-                    }
-
-                    field800 = new class204(512);
-
-                    while (var4.offset < var17) {
-                        var8 = var4.getInt();
-                        var9 = var4.readUint16();
-                        var10 = var4.readUint16();
-                        var11 = var4.getInt();
-
-                        for (int var12 = var9; var12 <= var10; ++var12) {
-                            var13 = (long) var12 + ((long) var8 << 32);
-                            field800.method4226(new class213(var11), var13);
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2119 == var1.packetDescriptor) {
-                    field889 = false;
-
-                    for (var17 = 0; var17 < 5; ++var17) {
-                        field890[var17] = false;
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2118 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2317, (byte) 9);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2204 == var1.packetDescriptor) {
-                    var17 = var4.method3792(322022840);
-                    field803 = var17;
-                    this.method1253(false, -1513331989);
-                    class160.method3504(var17, 30895243);
-                    class25.method480(field803, 1048567657);
-
-                    for (var6 = 0; var6 < 100; ++var6) {
-                        field848[var6] = true;
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2162 == var1.packetDescriptor) {
-                    if (class3.field26 != null) {
-                        class3.field26.method5743(var4, (byte) 0);
-                    }
-
-                    class40.method760((byte) 99);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2139 == var1.packetDescriptor) {
-                    class0.method11(1200659683);
-                    var17 = var4.method3816((byte) 8);
-                    var6 = var4.method3799(-1338629347);
-                    var19 = var4.getUByte();
-                    field777[var6] = var17;
-                    field775[var6] = var19;
-                    field776[var6] = 1;
-
-                    for (var8 = 0; var8 < 98; ++var8) {
-                        if (var17 >= class236.field2844[var8]) {
-                            field776[var6] = var8 + 2;
-                        }
-                    }
-
-                    field774[++field834 - 1 & 31] = var6;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2200 == var1.packetDescriptor) {
-                    class277.method5493(var4.method3778(757967067), (byte) 110);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2156 == var1.packetDescriptor) {
-                    if (var1.packetLength == 0) {
-                        class3.field26 = null;
-                    } else {
-                        if (class3.field26 == null) {
-                            class3.field26 = new class295(field920, class157.field2037);
-                        }
-
-                        class3.field26.method5742(var4, -1049135699);
-                    }
-
-                    class40.method760((byte) 89);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2169 == var1.packetDescriptor) {
-                    byte[] var40 = new byte[var1.packetLength];
-                    var4.method4058(var40, 0, var40.length, 479364060);
-                    Buffer var48 = new Buffer(var40);
-                    var41 = var48.method3778(87188092);
-                    class138.method3291(var41, true, false, (short) 2500);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2160 == var1.packetDescriptor) {
-                    var17 = var4.getUByte();
-                    if (var4.getUByte() == 0) {
-                        field895[var17] = new class4();
-                        var4.offset += 18;
-                    } else {
-                        --var4.offset;
-                        field895[var17] = new class4(var4, false);
-                    }
-
-                    field858 = field828;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2146 == var1.packetDescriptor) {
-                    InboundPacketDescriptor.field2150.method1804((short) 22193);
-                    field836 = field828;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                long var23;
-                long var25;
-                if (InboundPacketDescriptor.field2127 == var1.packetDescriptor) {
-                    var39 = var4.method3778(450809842);
-                    var23 = (long) var4.readUint16();
-                    var25 = (long) var4.method3773(-1119445886);
-                    class244 var27 = (class244) class43
-                        .method791(class6.method80(1865104037), var4.getUByte(),
-                                   1443720514);
-                    long var28 = (var23 << 32) + var25;
-                    boolean var30 = false;
-
-                    for (int var14 = 0; var14 < 100; ++var14) {
-                        if (field840[var14] == var28) {
-                            var30 = true;
-                            break;
-                        }
-                    }
-
-                    if (InboundPacketDescriptor.field2150.method1803(new class293(var39, field920), 1440386847)) {
-                        var30 = true;
-                    }
-
-                    if (!var30 && field680 == 0) {
-                        field840[field864] = var28;
-                        field864 = (field864 + 1) % 100;
-                        String var31 = class301.method5797(
-                            class235.method4782(class22.method332(var4, (byte) 36), -438189605));
-                        byte var47;
-                        if (var27.field3188) {
-                            var47 = 7;
-                        } else {
-                            var47 = 3;
-                        }
-
-                        if (var27.field3185 != -1) {
-                            class59.method1163(var47, class19.method243(var27.field3185, -658064207)
-                                + var39, var31, -1483885983);
-                        } else {
-                            class59.method1163(var47, var39, var31, -1483885983);
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                long var32;
-                if (InboundPacketDescriptor.field2171 == var1.packetDescriptor) {
-                    var39 = var4.method3778(-1715657417);
-                    var23 = var4.method3775((byte) 127);
-                    var25 = (long) var4.readUint16();
-                    var32 = (long) var4.method3773(1345695968);
-                    class244 var61 = (class244) class43
-                        .method791(class6.method80(1462467692), var4.getUByte(),
-                                   1443720514);
-                    var13 = (var25 << 32) + var32;
-                    boolean var15 = false;
-
-                    for (int var16 = 0; var16 < 100; ++var16) {
-                        if (field840[var16] == var13) {
-                            var15 = true;
-                            break;
-                        }
-                    }
-
-                    if (var61.field3190 && InboundPacketDescriptor.field2150
-                        .method1803(new class293(var39, field920), 1440386847)) {
-                        var15 = true;
-                    }
-
-                    if (!var15 && field680 == 0) {
-                        field840[field864] = var13;
-                        field864 = (field864 + 1) % 100;
-                        String var35 = class301.method5797(
-                            class235.method4782(class22.method332(var4, (byte) 40), -888027686));
-                        if (var61.field3185 != -1) {
-                            class9.method104(9,
-                                             class19.method243(var61.field3185, 1221265579) + var39,
-                                             var35, class256.method5038(var23), (byte) 38);
-                        } else {
-                            class9
-                                .method104(9, var39, var35, class256.method5038(var23), (byte) -35);
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2155 == var1.packetDescriptor) {
-                    var39 = var4.method3778(-221390434);
-                    var18 = class301.method5797(
-                        class235.method4782(class22.method332(var4, (byte) 41), -810357555));
-                    class59.method1163(6, var39, var18, -1483885983);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2154 == var1.packetDescriptor) {
-                    for (var17 = 0; var17 < class227.field2629.length; ++var17) {
-                        if (class227.field2630[var17] != class227.field2629[var17]) {
-                            class227.field2629[var17] = class227.field2630[var17];
-                            class223.method4595(var17, -1750193407);
-                            field653[++field830 - 1 & 31] = var17;
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2122 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    if (var17 != field659) {
-                        field659 = var17;
-                        class12.method139(86433056);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2133 == var1.packetDescriptor) {
-                    var52 = var4.method3776((byte) -86);
-                    if (var52) {
-                        if (class140.field1933 == null) {
-                            class140.field1933 = new class253();
-                        }
-                    } else {
-                        class140.field1933 = null;
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2186 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    var6 = var4.getInt();
-                    var19 = class177.method3695(-450458343);
-                    OutboundPacket var54 = class131
-                        .method3243(class171.field2218, field690.random, (byte) 10);
-                    var54.buffer.method3796(var19, 255878030);
-                    var54.buffer.writeByte(GameApplet.field434);
-                    var54.buffer.method3893(var17, (byte) 101);
-                    var54.buffer.method3813(var6, (byte) -65);
-                    field690.method2193(var54, 1184581843);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2183 == var1.packetDescriptor) {
-                    var17 = var4.method3883((byte) 54);
-                    var6 = var4.method3883((byte) 34);
-                    var41 = var4.method3778(-1360459030);
-                    if (var6 >= 1 && var6 <= 8) {
-                        if (var41.equalsIgnoreCase("null")) {
-                            var41 = null;
-                        }
-
-                        field767[var6 - 1] = var41;
-                        field768[var6 - 1] = var17 == 0;
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2180 == var1.packetDescriptor) {
-                    byte var49 = var4.method3968(1003182180);
-                    var6 = var4.method3808(-2009327179);
-                    class227.field2630[var6] = var49;
-                    if (class227.field2629[var6] != var49) {
-                        class227.field2629[var6] = var49;
-                    }
-
-                    class223.method4595(var6, -1750193407);
-                    field653[++field830 - 1 & 31] = var6;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2193 == var1.packetDescriptor) {
-                    InboundPacketDescriptor.field2150.method1753(var4, var1.packetLength, (byte) 2);
-                    field836 = field828;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2132 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2323, (byte) 103);
-                    var1.packetDescriptor = null;
-                    return true;
+                InboundPacketDescriptor[] packets = class63.getInboundPackets();
+                int id = buffer.readUint8(); // buffer.readEncipheredShort();
+                if (id < 0 || id >= packets.length) {
+                    throw new IOException(id + " " + buffer.offset);
                 }
-
-                if (InboundPacketDescriptor.field2130 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2322, (byte) 19);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2165 == var1.packetDescriptor) {
-                    var17 = var4.getInt();
-                    var44 = var4.getUByte() == 1;
-                    var7 = class18.method213(var17, -202720248);
-                    if (var44 != var7.field2704) {
-                        var7.field2704 = var44;
-                        class37.method721(var7, 1238023037);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2137 == var1.packetDescriptor) {
-                    var17 = var4.method3883((byte) 96);
-                    var6 = var4.method3964(287627655);
-                    var19 = var4.method3792(1220273656);
-                    var20 = (class56) field804.method4224((long) var6);
-                    if (var20 != null) {
-                        class6.method67(var20, var19 != var20.field556, (short) 180);
-                    }
-
-                    class17.method209(var6, var19, var17, (byte) 76);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2143 == var1.packetDescriptor) {
-                    class160.method3500(class173.field2329, (byte) 11);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2168 == var1.packetDescriptor) {
-                    class11.decodeSceneRebuild(true, var1.field1283);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2189 == var1.packetDescriptor) {
-                    field662 = var4.readUint16() * 30;
-                    field685 = field828;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2205 == var1.packetDescriptor) {
-                    var17 = var4.getUByte();
-                    var6 = var4.getUByte();
-                    var19 = var4.getUByte();
-                    var8 = var4.getUByte();
-                    field890[var17] = true;
-                    field891[var17] = var6;
-                    field892[var17] = var19;
-                    field893[var17] = var8;
-                    field894[var17] = 0;
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2135 == var1.packetDescriptor) {
-                    class53.method1082(true, var4, (byte) 41);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2185 == var1.packetDescriptor) {
-                    class274.field3613 = class51
-                        .method1060(var4.getUByte(), -1623033394);
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2195 == var1.packetDescriptor) {
-                    var17 = var4.method3816((byte) 8);
-                    var6 = var4.method3808(-1465605393);
-                    if (var6 == 65535) {
-                        var6 = -1;
-                    }
-
-                    var19 = var4.method3772(464137265);
-                    var8 = var4.readUint16();
-                    if (var8 == 65535) {
-                        var8 = -1;
-                    }
-
-                    for (var9 = var8; var9 <= var6; ++var9) {
-                        var32 = ((long) var19 << 32) + (long) var9;
-                        Node var34 = field800.method4224(var32);
-                        if (var34 != null) {
-                            var34.unlink();
-                        }
-
-                        field800.method4226(new class213(var17), var32);
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                if (InboundPacketDescriptor.field2198 == var1.packetDescriptor) {
-                    class72.field1100 = var4.method3799(-1643157288);
-                    class187.field2433 = var4.getUByte();
-
-                    for (var17 = class187.field2433; var17 < class187.field2433 + 8; ++var17) {
-                        for (var6 = class72.field1100; var6 < class72.field1100 + 8; ++var6) {
-                            if (field829[class60.level][var17][var6] != null) {
-                                field829[class60.level][var17][var6] = null;
-                                class238.method4784(var17, var6, 1243558325);
-                            }
-                        }
-                    }
-
-                    for (class63 var38 = (class63) field688.method4298(); var38 != null;
-                         var38 = (class63) field688.method4283()) {
-                        if (var38.field922 >= class187.field2433
-                            && var38.field922 < class187.field2433 + 8
-                            && var38.field925 >= class72.field1100
-                            && var38.field925 < class72.field1100 + 8
-                            && var38.field934 == class60.level) {
-                            var38.field933 = 0;
-                        }
-                    }
-
-                    var1.packetDescriptor = null;
-                    return true;
-                }
-
-                class80.method2041(
-                    "" + (var1.packetDescriptor != null ? var1.packetDescriptor.field2202 : -1) + "," + (
-                        var1.field1284 != null ? var1.field1284.field2202 : -1) + "," + (
-                        var1.field1278 != null ? var1.field1278.field2202 : -1) + ","
-                        + var1.packetLength, (Throwable) null, 1999033063);
-                class74.method1987(-1932880481);
-            } catch (IOException var36) {
-                class19.method241(133898311);
-            } catch (Exception var37) {
-                var18 = "" + (var1.packetDescriptor != null ? var1.packetDescriptor.field2202 : -1) + "," + (
-                    var1.field1284 != null ? var1.field1284.field2202 : -1) + "," + (
-                    var1.field1278 != null ? var1.field1278.field2202 : -1) + "," + var1.packetLength
-                    + "," + (class69.localPlayer.wx[0] + class49.sceneX) + "," + (
-                    class69.localPlayer.wz[0] + class11.sceneZ) + ",";
-
-                for (var19 = 0; var19 < var1.packetLength && var19 < 50; ++var19) {
-                    var18 = var18 + var4.bytes[var19] + ",";
-                }
-
-                class80.method2041(var18, var37, 1974395110);
-                class74.method1987(1460705646);
+                var1.currentPacket = packets[id];
+                var1.packetLength = var1.currentPacket.length;
             }
 
-            return true;
+            if (var1.packetLength == -1) {
+                if (!socket.available(1)) {
+                    return false;
+                }
+
+                var1.getSocket().read(buffer.bytes, 0, 1);
+                var1.packetLength = buffer.bytes[0] & 255;
+            }
+
+            if (var1.packetLength == -2) {
+                if (!socket.available(2)) {
+                    return false;
+                }
+
+                var1.getSocket().read(buffer.bytes, 0, 2);
+                buffer.offset = 0;
+                var1.packetLength = buffer.readUint16();
+            }
+
+            if (!socket.available(var1.packetLength)) {
+                return false;
+            }
+
+            buffer.offset = 0;
+            socket.read(buffer.bytes, 0, var1.packetLength);
+            var1.field1287 = 0;
+            field904.method5517();
+            var1.thirdPacket = var1.secondPacket;
+            var1.secondPacket = var1.lastPacket;
+            var1.lastPacket = var1.currentPacket;
+
+            if (InboundPacketDescriptor.REBUILD_SCENE == var1.currentPacket) {
+                class11.decodeSceneRebuild(false, var1.buffer);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.LOGOUT == var1.currentPacket) {
+                class74.logout();
+                var1.currentPacket = null;
+                return false;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_60 == var1.currentPacket) {
+                class0.method11(1200659683);
+                field810 = buffer.readUint8();
+                field685 = field828;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_71 == var1.currentPacket) {
+                class0.method11(1200659683);
+                field851 = buffer.method3814((byte) -1);
+                field685 = field828;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            class232 var7;
+            int var8;
+            int var9;
+            int var10;
+            int var11;
+            int var17;
+            if (InboundPacketDescriptor.INBOUND_PACKET_70 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                var6 = buffer.readUint16();
+                if (var17 < -70000) {
+                    var6 += 32768;
+                }
+
+                if (var17 >= 0) {
+                    var7 = class18.method213(var17, -2060739794);
+                } else {
+                    var7 = null;
+                }
+
+                if (var7 != null) {
+                    for (var8 = 0; var8 < var7.field2762.length; ++var8) {
+                        var7.field2762[var8] = 0;
+                        var7.field2792[var8] = 0;
+                    }
+                }
+
+                class71.method1957(var6, (byte) 42);
+                var8 = buffer.readUint16();
+
+                for (var9 = 0; var9 < var8; ++var9) {
+                    var10 = buffer.readUint16();
+                    var11 = buffer.readUint8();
+                    if (var11 == 255) {
+                        var11 = buffer.method3772(-854436441);
+                    }
+
+                    if (var7 != null && var9 < var7.field2762.length) {
+                        var7.field2762[var9] = var10;
+                        var7.field2792[var9] = var11;
+                    }
+
+                    class27.method492(var6, var9, var10 - 1, var11, (byte) -42);
+                }
+
+                if (var7 != null) {
+                    class37.method721(var7, 1238023037);
+                }
+
+                class0.method11(1200659683);
+                field831[++field832 - 1 & 31] = var6 & 32767;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_31 == var1.currentPacket) {
+                var17 = buffer.method3772(1534204633);
+                var6 = buffer.method3792(128671456);
+                var7 = class18.method213(var17, -1691960496);
+                if (var7.field2740 != 1 || var6 != var7.field2755) {
+                    var7.field2740 = 1;
+                    var7.field2755 = var6;
+                    class37.method721(var7, 1238023037);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_19 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                var18 = buffer.getString();
+                var7 = class18.method213(var17, -1198151199);
+                if (!var18.equals(var7.field2728)) {
+                    var7.field2728 = var18;
+                    class37.method721(var7, 1238023037);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_28 == var1.currentPacket) {
+                for (var17 = 0; var17 < players.length; ++var17) {
+                    if (players[var17] != null) {
+                        players[var17].field971 = -1;
+                    }
+                }
+
+                for (var17 = 0; var17 < field806.length; ++var17) {
+                    if (field806[var17] != null) {
+                        field806[var17].field971 = -1;
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_65 == var1.currentPacket) {
+                var17 = buffer.readUint16();
+                var6 = buffer.readUint8();
+                var19 = buffer.readUint16();
+                class36.method693(var17, var6, var19, -557263979);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_12 == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.field2321);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_8 == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.field2319);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_79 == var1.currentPacket) {
+                class67.method1748(buffer, var1.packetLength, 1408100742);
+                class16.method182(1877553034);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_47 == var1.currentPacket) {
+                class66 var42 = new class66();
+                var42.field1019 = buffer.getString();
+                var42.field1015 = buffer.readUint16();
+                var6 = buffer.getInt();
+                var42.field1008 = var6;
+                setState(45);
+                socket.vmethod3558(-730422622);
+                socket = null;
+                class138.method3292(var42, -555531433);
+                var1.currentPacket = null;
+                return false;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_44 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                var6 = buffer.readUint16();
+                if (var17 < -70000) {
+                    var6 += 32768;
+                }
+
+                if (var17 >= 0) {
+                    var7 = class18.method213(var17, -1399206472);
+                } else {
+                    var7 = null;
+                }
+
+                for (; buffer.offset < var1.packetLength;
+                     class27.method492(var6, var8, var9 - 1, var10, (byte) -15)) {
+                    var8 = buffer.method3783(-429753275);
+                    var9 = buffer.readUint16();
+                    var10 = 0;
+                    if (var9 != 0) {
+                        var10 = buffer.readUint8();
+                        if (var10 == 255) {
+                            var10 = buffer.getInt();
+                        }
+                    }
+
+                    if (var7 != null && var8 >= 0 && var8 < var7.field2762.length) {
+                        var7.field2762[var8] = var9;
+                        var7.field2792[var8] = var10;
+                    }
+                }
+
+                if (var7 != null) {
+                    class37.method721(var7, 1238023037);
+                }
+
+                class0.method11(1200659683);
+                field831[++field832 - 1 & 31] = var6 & 32767;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUNC_PACKET_64 == var1.currentPacket) {
+                class187.field2433 = buffer.method3799(-106999200);
+                class72.field1100 = buffer.method3891((byte) 0);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_46 == var1.currentPacket) {
+                var17 = buffer.method3807(64801268);
+                class30.method575(var17, 2145588800);
+                field831[++field832 - 1 & 31] = var17 & 32767;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_57 == var1.currentPacket) {
+                buffer.offset += 28;
+                if (buffer.method3786((byte) 66)) {
+                    class86.method2163(buffer, buffer.offset - 28, 1427407129);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_23 == var1.currentPacket) {
+                var17 = buffer.method3792(92958702);
+                if (var17 == 65535) {
+                    var17 = -1;
+                }
+
+                class69.method1841(var17, (byte) 2);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_40 == var1.currentPacket) {
+                var17 = buffer.method3812(1652165997);
+                var6 = buffer.method3808(-1599744535);
+                if (var6 == 65535) {
+                    var6 = -1;
+                }
+
+                class254.method4994(var6, var17, 1163401710);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            class232 var57;
+            if (InboundPacketDescriptor.INBOUND_PACKET_59 == var1.currentPacket) {
+                var17 = buffer.method3964(287627655);
+                var6 = buffer.method3811(-1831644342);
+                var19 = buffer.method3810(1308083007);
+                var57 = class18.method213(var17, -351223324);
+                if (var19 != var57.field2676 || var6 != var57.field2751 || var57.field2672 != 0
+                    || var57.field2673 != 0) {
+                    var57.field2676 = var19;
+                    var57.field2751 = var6;
+                    var57.field2672 = 0;
+                    var57.field2673 = 0;
+                    class37.method721(var57, 1238023037);
+                    this.method1577(var57, -794294536);
+                    if (var57.field2808 == 0) {
+                        class223.method4594(class145.field1951[var17 >> 16], var57, false,
+                                            1658306306);
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_78 == var1.currentPacket) {
+                for (var17 = 0; var17 < class256.field3302; ++var17) {
+                    class256 var56 = class142.method3328(var17, (byte) 58);
+                    if (var56 != null) {
+                        class227.field2630[var17] = 0;
+                        class227.field2629[var17] = 0;
+                    }
+                }
+
+                class0.method11(1200659683);
+                field830 += 32;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_32 == var1.currentPacket) {
+                InboundPacketDescriptor.field2150.field1041.method5574(buffer, var1.packetLength, 451663299);
+                class2.method20((byte) 0);
+                field836 = field828;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_17 == var1.currentPacket) {
+                class72.field1100 = buffer.method3891((byte) 0);
+                class187.field2433 = buffer.method3799(594389036);
+
+                while (buffer.offset < var1.packetLength) {
+                    var17 = buffer.readUint8();
+                    EntityPacket var55 = class66.method1733(2144968091)[var17];
+                    class160.decodeEntityPacket(var55);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_52 == var1.currentPacket) {
+                if (field803 != -1) {
+                    class33.method607(field803, 0, 209337126);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_53 == var1.currentPacket) {
+                class12.method141(buffer, var1.packetLength, (byte) 96);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_61 == var1.currentPacket) {
+                var17 = buffer.method3814((byte) -1);
+                var6 = buffer.method3772(-1292175866);
+                var7 = class18.method213(var6, 213302743);
+                if (var17 != var7.field2714 || var17 == -1) {
+                    var7.field2714 = var17;
+                    var7.field2795 = 0;
+                    var7.field2750 = 0;
+                    class37.method721(var7, 1238023037);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            boolean var52;
+            if (InboundPacketDescriptor.INBOUND_PACKET_27 == var1.currentPacket) {
+                var52 = buffer.readUint8() == 1;
+                if (var52) {
+                    class113.field1511 =
+                        Time.currentTimeMillis() - buffer.method3775((byte) 126);
+                    class59.field590 = new class1(buffer, true);
+                } else {
+                    class59.field590 = null;
+                }
+
+                field839 = field828;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_75 == var1.currentPacket) {
+                field889 = true;
+                class27.field266 = buffer.readUint8();
+                class180.field2361 = buffer.readUint8();
+                class138.field1926 = buffer.readUint16();
+                InboundPacketDescriptor.field2206 = buffer.readUint8();
+                class30.field314 = buffer.readUint8();
+                if (class30.field314 >= 100) {
+                    class157.field2036 = class27.field266 * 128 + 64;
+                    class50.field508 = class180.field2361 * 128 + 64;
+                    Buffer.field2409 = class152
+                        .method3394(class157.field2036, class50.field508, class60.level,
+                                    (byte) 23) - class138.field1926;
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_49 == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.field2320);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_33 == var1.currentPacket) {
+                class53.method1082(false, buffer, (byte) 4);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_42 == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.field2318);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            class56 var20;
+            class232 var21;
+            if (InboundPacketDescriptor.INBOUND_PACKET_82 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                var6 = buffer.getInt();
+                class56 var45 = (class56) field804.method4224((long) var6);
+                var20 = (class56) field804.method4224((long) var17);
+                if (var20 != null) {
+                    class6.method67(var20, var45 == null || var20.field556 != var45.field556,
+                                    (short) 180);
+                }
+
+                if (var45 != null) {
+                    var45.unlink();
+                    field804.method4226(var45, (long) var17);
+                }
+
+                var21 = class18.method213(var6, -1995320984);
+                if (var21 != null) {
+                    class37.method721(var21, 1238023037);
+                }
+
+                var21 = class18.method213(var17, -1546696403);
+                if (var21 != null) {
+                    class37.method721(var21, 1238023037);
+                    class223.method4594(class145.field1951[var21.field2770 >>> 16], var21, true,
+                                        1658306306);
+                }
+
+                if (field803 != -1) {
+                    class33.method607(field803, 1, 944464657);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_34 == var1.currentPacket) {
+                var17 = buffer.readUint8();
+                class24.method472(var17, -1864650036);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_36 == var1.currentPacket) {
+                field663 = buffer.readUint8();
+                if (field663 == 1) {
+                    field664 = buffer.readUint16();
+                }
+
+                if (field663 >= 2 && field663 <= 6) {
+                    if (field663 == 2) {
+                        field669 = 64;
+                        field755 = 64;
+                    }
+
+                    if (field663 == 3) {
+                        field669 = 0;
+                        field755 = 64;
+                    }
+
+                    if (field663 == 4) {
+                        field669 = 128;
+                        field755 = 64;
+                    }
+
+                    if (field663 == 5) {
+                        field669 = 64;
+                        field755 = 0;
+                    }
+
+                    if (field663 == 6) {
+                        field669 = 64;
+                        field755 = 128;
+                    }
+
+                    field663 = 2;
+                    field666 = buffer.readUint16();
+                    field667 = buffer.readUint16();
+                    field668 = buffer.readUint8();
+                }
+
+                if (field663 == 10) {
+                    field665 = buffer.readUint16();
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_67 == var1.currentPacket) {
+                field722 = buffer.readUint8();
+                if (field722 == 255) {
+                    field722 = 0;
+                }
+
+                field875 = buffer.readUint8();
+                if (field875 == 255) {
+                    field875 = 0;
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_9 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                class56 var53 = (class56) field804.method4224((long) var17);
+                if (var53 != null) {
+                    class6.method67(var53, true, (short) 180);
+                }
+
+                if (field880 != null) {
+                    class37.method721(field880, 1238023037);
+                    field880 = null;
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            class232 var50;
+            if (InboundPacketDescriptor.INBOUND_PACKET_30 == var1.currentPacket) {
+                var17 = buffer.method3772(575506974);
+                var50 = class18.method213(var17, 152645935);
+                var50.field2740 = 3;
+                var50.field2755 = class69.localPlayer.field630.method4672(-1098490940);
+                class37.method721(var50, 1238023037);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_4 == var1.currentPacket) {
+                var17 = buffer.readUint16();
+                var6 = buffer.getInt();
+                class227.field2630[var17] = var6;
+                if (class227.field2629[var17] != var6) {
+                    class227.field2629[var17] = var6;
+                }
+
+                class223.method4595(var17, -1750193407);
+                field653[++field830 - 1 & 31] = var17;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_41 == var1.currentPacket) {
+                var17 = buffer.method3808(-2018401159);
+                var6 = buffer.method3807(-1586416145);
+                var19 = buffer.method3964(287627655);
+                var57 = class18.method213(var19, -1140705979);
+                var57.field2723 = var17 + (var6 << 16);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_11 == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.field2316);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_35 == var1.currentPacket) {
+                var17 = buffer.method3792(252179005);
+                var6 = buffer.method3772(-143203232);
+                var7 = class18.method213(var6, -408988183);
+                if (var7.field2740 != 2 || var17 != var7.field2755) {
+                    var7.field2740 = 2;
+                    var7.field2755 = var17;
+                    class37.method721(var7, 1238023037);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_20 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                var6 = buffer.readUint16();
+                if (var6 == 65535) {
+                    var6 = -1;
+                }
+
+                var19 = buffer.method3772(-1429167805);
+                var57 = class18.method213(var17, -1338232778);
+                ItemConfig var59;
+                if (!var57.field2685) {
+                    if (var6 == -1) {
+                        var57.field2740 = 0;
+                        var1.currentPacket = null;
+                        return true;
+                    }
+
+                    var59 = ItemConfig.get(var6);
+                    var57.field2740 = 4;
+                    var57.field2755 = var6;
+                    var57.field2732 = var59.field3524;
+                    var57.field2719 = var59.field3519;
+                    var57.field2721 = var59.field3517 * 100 / var19;
+                    class37.method721(var57, 1238023037);
+                } else {
+                    var57.field2793 = var6;
+                    var57.field2794 = var19;
+                    var59 = ItemConfig.get(var6);
+                    var57.field2732 = var59.field3524;
+                    var57.field2719 = var59.field3519;
+                    var57.field2720 = var59.field3520;
+                    var57.field2718 = var59.field3521;
+                    var57.field2717 = var59.field3522;
+                    var57.field2721 = var59.field3517;
+                    if (var59.stackable == 1) {
+                        var57.field2797 = 1;
+                    } else {
+                        var57.field2797 = 2;
+                    }
+
+                    if (var57.field2722 > 0) {
+                        var57.field2721 = var57.field2721 * 32 / var57.field2722;
+                    } else if (var57.field2678 > 0) {
+                        var57.field2721 = var57.field2721 * 32 / var57.field2678;
+                    }
+
+                    class37.method721(var57, 1238023037);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            String var41;
+            boolean var44;
+            if (InboundPacketDescriptor.INBOUND_PACKET_3 == var1.currentPacket) {
+                var17 = buffer.method3783(-169177407);
+                var44 = buffer.readUint8() == 1;
+                var41 = "";
+                boolean var46 = false;
+                if (var44) {
+                    var41 = buffer.getString();
+                    if (InboundPacketDescriptor.field2150
+                        .method1803(new class293(var41, field920), 1440386847)) {
+                        var46 = true;
+                    }
+                }
+
+                String var58 = buffer.getString();
+                if (!var46) {
+                    class59.method1163(var17, var41, var58, -1483885983);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_83 == var1.currentPacket) {
+                field889 = true;
+                class67.field1027 = buffer.readUint8();
+                class141.field1939 = buffer.readUint8();
+                class21.field208 = buffer.readUint16();
+                class66.field1026 = buffer.readUint8();
+                class253.field3289 = buffer.readUint8();
+                if (class253.field3289 >= 100) {
+                    var17 = class67.field1027 * 128 + 64;
+                    var6 = class141.field1939 * 128 + 64;
+                    var19 = class152.method3394(var17, var6, class60.level, (byte) 86)
+                        - class21.field208;
+                    var8 = var17 - class157.field2036;
+                    var9 = var19 - Buffer.field2409;
+                    var10 = var6 - class50.field508;
+                    var11 = (int) Math.sqrt((double) (var8 * var8 + var10 * var10));
+                    ScriptCall.field576 =
+                        (int) (Math.atan2((double) var9, (double) var11) * 325.949D) & 2047;
+                    class15.field143 =
+                        (int) (Math.atan2((double) var8, (double) var10) * -325.949D) & 2047;
+                    if (ScriptCall.field576 < 128) {
+                        ScriptCall.field576 = 128;
+                    }
+
+                    if (ScriptCall.field576 > 383) {
+                        ScriptCall.field576 = 383;
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_76 == var1.currentPacket) {
+                var17 = buffer.method3772(1494306421);
+                var6 = buffer.method3792(986168560);
+                var7 = class18.method213(var17, 77705851);
+                if (var7 != null && var7.field2808 == 0) {
+                    if (var6 > var7.field2691 - var7.field2683) {
+                        var6 = var7.field2691 - var7.field2683;
+                    }
+
+                    if (var6 < 0) {
+                        var6 = 0;
+                    }
+
+                    if (var6 != var7.field2689) {
+                        var7.field2689 = var6;
+                        class37.method721(var7, 1238023037);
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            String var39;
+            if (InboundPacketDescriptor.EXECUTE_SCRIPT == var1.currentPacket) {
+                var39 = buffer.getString();
+                Object[] arguments = new Object[var39.length() + 1];
+
+                for (var19 = var39.length() - 1; var19 >= 0; --var19) {
+                    if (var39.charAt(var19) == 's') {
+                        arguments[var19 + 1] = buffer.getString();
+                    } else {
+                        arguments[var19 + 1] = new Integer(buffer.getInt());
+                    }
+                }
+
+                arguments[0] = new Integer(buffer.getInt());
+                ScriptCall var43 = new ScriptCall();
+                var43.arguments = arguments;
+                ScriptExecutor.execute(var43);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_7 == var1.currentPacket) {
+                var17 = buffer.method3964(287627655);
+                var50 = class18.method213(var17, 35313060);
+
+                for (var19 = 0; var19 < var50.field2762.length; ++var19) {
+                    var50.field2762[var19] = -1;
+                    var50.field2762[var19] = 0;
+                }
+
+                class37.method721(var50, 1238023037);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_80 == var1.currentPacket) {
+                field861 = buffer.method3799(-1806195762);
+                field730 = buffer.method3799(-451429880);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_50 == var1.currentPacket) {
+                var17 = buffer.method3792(458005929);
+                var6 = buffer.method3792(1199235065);
+                var19 = buffer.method3792(573947425);
+                var8 = buffer.method3772(-1844927980);
+                var21 = class18.method213(var8, -1008760965);
+                if (var17 != var21.field2732 || var19 != var21.field2719
+                    || var6 != var21.field2721) {
+                    var21.field2732 = var17;
+                    var21.field2719 = var19;
+                    var21.field2721 = var6;
+                    class37.method721(var21, 1238023037);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_6 == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.field2325);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_74 == var1.currentPacket) {
+                field876 = buffer.readUint8();
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_24 == var1.currentPacket) {
+                var17 = buffer.method3964(287627655);
+                var6 = buffer.method3808(-1445929193);
+                var19 = var6 >> 10 & 31;
+                var8 = var6 >> 5 & 31;
+                var9 = var6 & 31;
+                var10 = (var8 << 11) + (var19 << 19) + (var9 << 3);
+                class232 var60 = class18.method213(var17, -152844609);
+                if (var10 != var60.field2686) {
+                    var60.field2686 = var10;
+                    class37.method721(var60, 1238023037);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            long var13;
+            if (InboundPacketDescriptor.INBOUND_PACKET_56 == var1.currentPacket) {
+                var17 = buffer.offset + var1.packetLength;
+                var6 = buffer.readUint16();
+                var19 = buffer.readUint16();
+                if (var6 != field803) {
+                    field803 = var6;
+                    this.method1253(false, -1736803607);
+                    class160.method3504(field803, 30895243);
+                    class25.method480(field803, -1869692911);
+
+                    for (var8 = 0; var8 < 100; ++var8) {
+                        field848[var8] = true;
+                    }
+                }
+
+                class56 var22;
+                for (; var19-- > 0; var22.field555 = true) {
+                    var8 = buffer.getInt();
+                    var9 = buffer.readUint16();
+                    var10 = buffer.readUint8();
+                    var22 = (class56) field804.method4224((long) var8);
+                    if (var22 != null && var9 != var22.field556) {
+                        class6.method67(var22, true, (short) 180);
+                        var22 = null;
+                    }
+
+                    if (var22 == null) {
+                        var22 = class17.method209(var8, var9, var10, (byte) 68);
+                    }
+                }
+
+                for (var20 = (class56) field804.method4235(); var20 != null;
+                     var20 = (class56) field804.method4229()) {
+                    if (var20.field555) {
+                        var20.field555 = false;
+                    } else {
+                        class6.method67(var20, true, (short) 180);
+                    }
+                }
+
+                field800 = new class204(512);
+
+                while (buffer.offset < var17) {
+                    var8 = buffer.getInt();
+                    var9 = buffer.readUint16();
+                    var10 = buffer.readUint16();
+                    var11 = buffer.getInt();
+
+                    for (int var12 = var9; var12 <= var10; ++var12) {
+                        var13 = (long) var12 + ((long) var8 << 32);
+                        field800.method4226(new class213(var11), var13);
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_2 == var1.currentPacket) {
+                field889 = false;
+
+                for (var17 = 0; var17 < 5; ++var17) {
+                    field890[var17] = false;
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.REMOVE_ITEM_STACK == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.REMOVE_ITEM_STACK);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_84 == var1.currentPacket) {
+                var17 = buffer.method3792(322022840);
+                field803 = var17;
+                this.method1253(false, -1513331989);
+                class160.method3504(var17, 30895243);
+                class25.method480(field803, 1048567657);
+
+                for (var6 = 0; var6 < 100; ++var6) {
+                    field848[var6] = true;
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_45 == var1.currentPacket) {
+                if (class3.field26 != null) {
+                    class3.field26.method5743(buffer, (byte) 0);
+                }
+
+                class40.method760((byte) 99);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_22 == var1.currentPacket) {
+                class0.method11(1200659683);
+                var17 = buffer.method3816((byte) 8);
+                var6 = buffer.method3799(-1338629347);
+                var19 = buffer.readUint8();
+                field777[var6] = var17;
+                field775[var6] = var19;
+                field776[var6] = 1;
+
+                for (var8 = 0; var8 < 98; ++var8) {
+                    if (var17 >= class236.field2844[var8]) {
+                        field776[var6] = var8 + 2;
+                    }
+                }
+
+                field774[++field834 - 1 & 31] = var6;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_37 == var1.currentPacket) {
+                class277.method5493(buffer.getString(), (byte) 110);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_43 == var1.currentPacket) {
+                if (var1.packetLength == 0) {
+                    class3.field26 = null;
+                } else {
+                    if (class3.field26 == null) {
+                        class3.field26 = new class295(field920, class157.field2037);
+                    }
+
+                    class3.field26.method5742(buffer, -1049135699);
+                }
+
+                class40.method760((byte) 89);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.OPEN_URL == var1.currentPacket) {
+                byte[] var40 = new byte[var1.packetLength];
+                buffer.readEncipheredBytes(var40, 0, var40.length);
+                Buffer var48 = new Buffer(var40);
+                String url = var48.getString();
+                class138.openUrl(url, true, false, (short) 2500);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_55 == var1.currentPacket) {
+                var17 = buffer.readUint8();
+                if (buffer.readUint8() == 0) {
+                    field895[var17] = new class4();
+                    buffer.offset += 18;
+                } else {
+                    --buffer.offset;
+                    field895[var17] = new class4(buffer, false);
+                }
+
+                field858 = field828;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_29 == var1.currentPacket) {
+                InboundPacketDescriptor.field2150.method1804((short) 22193);
+                field836 = field828;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            long var23;
+            long var25;
+            if (InboundPacketDescriptor.INBOUND_PACKET_10 == var1.currentPacket) {
+                var39 = buffer.getString();
+                var23 = (long) buffer.readUint16();
+                var25 = (long) buffer.method3773(-1119445886);
+                class244 var27 = (class244) class43
+                    .method791(class6.method80(1865104037), buffer.readUint8(),
+                               1443720514);
+                long var28 = (var23 << 32) + var25;
+                boolean var30 = false;
+
+                for (int var14 = 0; var14 < 100; ++var14) {
+                    if (field840[var14] == var28) {
+                        var30 = true;
+                        break;
+                    }
+                }
+
+                if (InboundPacketDescriptor.field2150.method1803(new class293(var39, field920), 1440386847)) {
+                    var30 = true;
+                }
+
+                if (!var30 && field680 == 0) {
+                    field840[field864] = var28;
+                    field864 = (field864 + 1) % 100;
+                    String var31 = class301.method5797(
+                        class235.method4782(class22.method332(buffer, (byte) 36), -438189605));
+                    byte var47;
+                    if (var27.field3188) {
+                        var47 = 7;
+                    } else {
+                        var47 = 3;
+                    }
+
+                    if (var27.field3185 != -1) {
+                        class59.method1163(var47, class19.method243(var27.field3185, -658064207)
+                            + var39, var31, -1483885983);
+                    } else {
+                        class59.method1163(var47, var39, var31, -1483885983);
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            long var32;
+            if (InboundPacketDescriptor.INBOUND_PACKET_54 == var1.currentPacket) {
+                var39 = buffer.getString();
+                var23 = buffer.method3775((byte) 127);
+                var25 = (long) buffer.readUint16();
+                var32 = (long) buffer.method3773(1345695968);
+                class244 var61 = (class244) class43
+                    .method791(class6.method80(1462467692), buffer.readUint8(),
+                               1443720514);
+                var13 = (var25 << 32) + var32;
+                boolean var15 = false;
+
+                for (int var16 = 0; var16 < 100; ++var16) {
+                    if (field840[var16] == var13) {
+                        var15 = true;
+                        break;
+                    }
+                }
+
+                if (var61.field3190 && InboundPacketDescriptor.field2150
+                    .method1803(new class293(var39, field920), 1440386847)) {
+                    var15 = true;
+                }
+
+                if (!var15 && field680 == 0) {
+                    field840[field864] = var13;
+                    field864 = (field864 + 1) % 100;
+                    String var35 = class301.method5797(
+                        class235.method4782(class22.method332(buffer, (byte) 40), -888027686));
+                    if (var61.field3185 != -1) {
+                        class9.method104(9,
+                                         class19.method243(var61.field3185, 1221265579) + var39,
+                                         var35, class256.method5038(var23), (byte) 38);
+                    } else {
+                        class9
+                            .method104(9, var39, var35, class256.method5038(var23), (byte) -35);
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_38 == var1.currentPacket) {
+                var39 = buffer.getString();
+                var18 = class301.method5797(
+                    class235.method4782(class22.method332(buffer, (byte) 41), -810357555));
+                class59.method1163(6, var39, var18, -1483885983);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_73 == var1.currentPacket) {
+                for (var17 = 0; var17 < class227.field2629.length; ++var17) {
+                    if (class227.field2630[var17] != class227.field2629[var17]) {
+                        class227.field2629[var17] = class227.field2630[var17];
+                        class223.method4595(var17, -1750193407);
+                        field653[++field830 - 1 & 31] = var17;
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_5 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                if (var17 != field659) {
+                    field659 = var17;
+                    class12.method139(86433056);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_16 == var1.currentPacket) {
+                var52 = buffer.method3776((byte) -86);
+                if (var52) {
+                    if (class140.field1933 == null) {
+                        class140.field1933 = new class253();
+                    }
+                } else {
+                    class140.field1933 = null;
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_69 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                var6 = buffer.getInt();
+                var19 = class177.method3695(-450458343);
+                OutboundPacket var54 = class131
+                    .method3243(class171.field2218, field690.random, (byte) 10);
+                var54.buffer.method3796(var19, 255878030);
+                var54.buffer.writeByte(GameApplet.field434);
+                var54.buffer.method3893(var17, (byte) 101);
+                var54.buffer.method3813(var6, (byte) -65);
+                field690.method2193(var54, 1184581843);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.SET_PLAYER_OPTION == var1.currentPacket) {
+                var17 = buffer.method3883((byte) 54);
+                int n = buffer.method3883((byte) 34);
+                String option = buffer.getString();
+                if (n >= 1 && n <= 8) {
+                    if (option.equalsIgnoreCase("null")) {
+                        option = null;
+                    }
+
+                    playerOptions[n - 1] = option;
+                    field768[n - 1] = var17 == 0;
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_63 == var1.currentPacket) {
+                byte var49 = buffer.method3968(1003182180);
+                var6 = buffer.method3808(-2009327179);
+                class227.field2630[var6] = var49;
+                if (class227.field2629[var6] != var49) {
+                    class227.field2629[var6] = var49;
+                }
+
+                class223.method4595(var6, -1750193407);
+                field653[++field830 - 1 & 31] = var6;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_58 == var1.currentPacket) {
+                InboundPacketDescriptor.field2150.method1753(buffer, var1.packetLength, (byte) 2);
+                field836 = field828;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.UPDATE_ITEM_STACK == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.UPDATE_ITEM_STACK);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_13 == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.field2322);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_21 == var1.currentPacket) {
+                var17 = buffer.getInt();
+                var44 = buffer.readUint8() == 1;
+                var7 = class18.method213(var17, -202720248);
+                if (var44 != var7.field2704) {
+                    var7.field2704 = var44;
+                    class37.method721(var7, 1238023037);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_77 == var1.currentPacket) {
+                var17 = buffer.method3883((byte) 96);
+                var6 = buffer.method3964(287627655);
+                var19 = buffer.method3792(1220273656);
+                var20 = (class56) field804.method4224((long) var6);
+                if (var20 != null) {
+                    class6.method67(var20, var19 != var20.field556, (short) 180);
+                }
+
+                class17.method209(var6, var19, var17, (byte) 76);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.CREATE_GROUND_ITEM == var1.currentPacket) {
+                class160.decodeEntityPacket(EntityPacket.CREATE_ITEM_STACK);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.REBUILD_INSTANCED_SCENE == var1.currentPacket) {
+                class11.decodeSceneRebuild(true, var1.buffer);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_72 == var1.currentPacket) {
+                field662 = buffer.readUint16() * 30;
+                field685 = field828;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_39 == var1.currentPacket) {
+                var17 = buffer.readUint8();
+                var6 = buffer.readUint8();
+                var19 = buffer.readUint8();
+                var8 = buffer.readUint8();
+                field890[var17] = true;
+                field891[var17] = var6;
+                field892[var17] = var19;
+                field893[var17] = var8;
+                field894[var17] = 0;
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_81 == var1.currentPacket) {
+                class53.method1082(true, buffer, (byte) 41);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_68 == var1.currentPacket) {
+                class274.field3613 = class51
+                    .method1060(buffer.readUint8(), -1623033394);
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_48 == var1.currentPacket) {
+                var17 = buffer.method3816((byte) 8);
+                var6 = buffer.method3808(-1465605393);
+                if (var6 == 65535) {
+                    var6 = -1;
+                }
+
+                var19 = buffer.method3772(464137265);
+                var8 = buffer.readUint16();
+                if (var8 == 65535) {
+                    var8 = -1;
+                }
+
+                for (var9 = var8; var9 <= var6; ++var9) {
+                    var32 = ((long) var19 << 32) + (long) var9;
+                    Node var34 = field800.method4224(var32);
+                    if (var34 != null) {
+                        var34.unlink();
+                    }
+
+                    field800.method4226(new class213(var17), var32);
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            if (InboundPacketDescriptor.INBOUND_PACKET_25 == var1.currentPacket) {
+                class72.field1100 = buffer.method3799(-1643157288);
+                class187.field2433 = buffer.readUint8();
+
+                for (var17 = class187.field2433; var17 < class187.field2433 + 8; ++var17) {
+                    for (var6 = class72.field1100; var6 < class72.field1100 + 8; ++var6) {
+                        if (itemStacks[class60.level][var17][var6] != null) {
+                            itemStacks[class60.level][var17][var6] = null;
+                            class238.updateItemStacks(var17, var6);
+                        }
+                    }
+                }
+
+                for (class63 var38 = (class63) field688.getFirst(); var38 != null;
+                     var38 = (class63) field688.getNext()) {
+                    if (var38.field922 >= class187.field2433
+                        && var38.field922 < class187.field2433 + 8
+                        && var38.field925 >= class72.field1100
+                        && var38.field925 < class72.field1100 + 8
+                        && var38.field934 == class60.level) {
+                        var38.field933 = 0;
+                    }
+                }
+
+                var1.currentPacket = null;
+                return true;
+            }
+
+            class80.method2041(
+                "" + (var1.currentPacket != null ? var1.currentPacket.field2202 : -1) + "," + (
+                    var1.secondPacket != null ? var1.secondPacket.field2202 : -1) + "," + (
+                    var1.thirdPacket != null ? var1.thirdPacket.field2202 : -1) + ","
+                    + var1.packetLength, (Throwable) null, 1999033063);
+            class74.logout();
+        } catch (IOException var36) {
+            class19.method241(133898311);
+        } catch (Exception var37) {
+            var18 = "" + (var1.currentPacket != null ? var1.currentPacket.field2202 : -1) + "," + (
+                var1.secondPacket != null ? var1.secondPacket.field2202 : -1) + "," + (
+                var1.thirdPacket != null ? var1.thirdPacket.field2202 : -1) + "," + var1.packetLength
+                + "," + (class69.localPlayer.wx[0] + class49.sceneX) + "," + (
+                class69.localPlayer.wz[0] + class11.sceneZ) + ",";
+
+            for (var19 = 0; var19 < var1.packetLength && var19 < 50; ++var19) {
+                var18 = var18 + buffer.bytes[var19] + ",";
+            }
+
+            class80.method2041(var18, var37, 1974395110);
+            class74.logout();
         }
+
+        return true;
     }
 
     final void method1620(int var1, int var2, int var3) {
@@ -2802,7 +2555,7 @@ public final class client extends GameApplet implements class290 {
                                                     var15 = var13 & 63;
                                                     var16 = var13 >> 6 & 63;
                                                     var17 = var13 >> 12;
-                                                    var18 = var72.getUByte();
+                                                    var18 = var72.readUint8();
                                                     var19 = var18 >> 2;
                                                     var20 = var18 & 3;
                                                     var21 = var16 + var6;
@@ -3617,14 +3370,14 @@ public final class client extends GameApplet implements class290 {
 
                         for (var52 = 0; var52 < 104; ++var52) {
                             for (var8 = 0; var8 < 104; ++var8) {
-                                class238.method4784(var52, var8, 1423162969);
+                                class238.updateItemStacks(var52, var8);
                             }
                         }
 
                         class160.method3502((byte) 87);
 
-                        for (class63 var70 = (class63) field688.method4298(); var70 != null;
-                             var70 = (class63) field688.method4283()) {
+                        for (class63 var70 = (class63) field688.getFirst(); var70 != null;
+                             var70 = (class63) field688.getNext()) {
                             if (var70.field933 == -1) {
                                 var70.field932 = 0;
                                 class43.method790(var70, (short) 24128);
@@ -3661,7 +3414,7 @@ public final class client extends GameApplet implements class290 {
                             }
                         }
 
-                        class16.method202(30, -1194677662);
+                        setState(30);
                         class160.method3502((byte) 15);
                         class19.field188 = null;
                         class140.field1932 = null;
@@ -3754,7 +3507,7 @@ public final class client extends GameApplet implements class290 {
                         var2.writeInt(177);
                         BufferedFile.field1489.vmethod3578(var2.bytes, 0, 5, 1232195949);
                         ++field674;
-                        class43.field411 = class120.method2866((short) 3133);
+                        class43.field411 = Time.currentTimeMillis();
                     }
 
                     if (field674 == 3) {
@@ -3767,7 +3520,7 @@ public final class client extends GameApplet implements class290 {
                             }
 
                             ++field674;
-                        } else if (class120.method2866((short) 3133) - class43.field411 > 30000L) {
+                        } else if (Time.currentTimeMillis() - class43.field411 > 30000L) {
                             this.method1243(-2, -48715008);
                             return;
                         }
@@ -3901,7 +3654,7 @@ public final class client extends GameApplet implements class290 {
     }
 
     protected final void vmethod1248(int var1) {
-        field870 = class120.method2866((short) 3133) + 500L;
+        field870 = Time.currentTimeMillis() + 500L;
         this.method1359(-1117322195);
         if (field803 != -1) {
             this.method1253(true, -1412898674);
@@ -3916,7 +3669,7 @@ public final class client extends GameApplet implements class290 {
         }
 
         if ((state == 10 || state == 20 || state == 30) && 0L != field870
-            && class120.method2866((short) 3133) > field870) {
+            && Time.currentTimeMillis() > field870) {
             class27.method513(class17.getWindowMode());
         }
 
@@ -4007,7 +3760,7 @@ public final class client extends GameApplet implements class290 {
             }
 
             int var2;
-            for (var2 = 0; var2 < 100 && this.method1249(field690, -1570039626); ++var2) {
+            for (var2 = 0; var2 < 100 && this.decodePacket(field690); ++var2) {
                 ;
             }
 
@@ -4195,7 +3948,7 @@ public final class client extends GameApplet implements class290 {
                     var15 = class131.method3243(class171.field2274, field690.random, (byte) 114);
                     var15.buffer.writeShort(0);
                     var3 = var15.buffer.offset;
-                    long var20 = class120.method2866((short) 3133);
+                    long var20 = Time.currentTimeMillis();
 
                     for (var6 = 0; var6 < class39.field387; ++var6) {
                         long var22 = var20 - field868;
@@ -4445,17 +4198,17 @@ public final class client extends GameApplet implements class290 {
                         while (true) {
                             class232 var43;
                             class232 var44;
-                            class57 var45;
+                            ScriptCall var45;
                             do {
-                                var45 = (class57) field843.method4279();
+                                var45 = (ScriptCall) field843.method4279();
                                 if (var45 == null) {
                                     while (true) {
                                         do {
-                                            var45 = (class57) field844.method4279();
+                                            var45 = (ScriptCall) field844.method4279();
                                             if (var45 == null) {
                                                 while (true) {
                                                     do {
-                                                        var45 = (class57) field842.method4279();
+                                                        var45 = (ScriptCall) field842.method4279();
                                                         if (var45 == null) {
                                                             this.method1334((byte) 6);
                                                             class168.method3649(1248667532);
@@ -4953,7 +4706,7 @@ public final class client extends GameApplet implements class290 {
                                                         || var43
                                                         != var44.field2791[var43.field2787]);
 
-                                                    class53.method1076(var45, -1980099112);
+                                                    ScriptExecutor.execute(var45);
                                                 }
                                             }
 
@@ -4967,7 +4720,7 @@ public final class client extends GameApplet implements class290 {
                                             || var43.field2787 >= var44.field2791.length
                                             || var43 != var44.field2791[var43.field2787]);
 
-                                        class53.method1076(var45, -1735307479);
+                                        ScriptExecutor.execute(var45);
                                     }
                                 }
 
@@ -4981,7 +4734,7 @@ public final class client extends GameApplet implements class290 {
                                 || var43.field2787 >= var44.field2791.length
                                 || var43 != var44.field2791[var43.field2787]);
 
-                            class53.method1076(var45, -1105771219);
+                            ScriptExecutor.execute(var45);
                         }
                     }
                 }
@@ -4990,8 +4743,8 @@ public final class client extends GameApplet implements class290 {
     }
 
     final void method1244(byte var1) {
-        class159 var2 = field690.method2192((byte) 110);
-        PacketBuffer var3 = field690.field1283;
+        AbstractSocket var2 = field690.getSocket();
+        PacketBuffer var3 = field690.buffer;
 
         try {
             if (loginStage == 0) {
@@ -5063,7 +4816,7 @@ public final class client extends GameApplet implements class290 {
                 }
 
                 var13 = true;
-                if (field822 && !var2.isReadable(1, -1086705871)) {
+                if (field822 && !var2.available(1)) {
                     var13 = false;
                 }
 
@@ -5113,7 +4866,7 @@ public final class client extends GameApplet implements class290 {
             int var10;
             int start;
             if (loginStage == 5) {
-                field690.field1283.offset = 0;
+                field690.buffer.offset = 0;
                 field690.method2194();
                 PacketBuffer encrypted = new PacketBuffer(500);
                 int[] keys = new int[]{
@@ -5213,7 +4966,7 @@ public final class client extends GameApplet implements class290 {
                 var6.buffer.writeInt(class71.index13.checksum);
                 var6.buffer.writeInt(class27.index14.checksum);
                 var6.buffer.writeInt(class270.index15.checksum);
-                var6.buffer.writeInt(class159.index16.checksum);
+                var6.buffer.writeInt(AbstractSocket.index16.checksum);
                 var6.buffer.writeInt(class145.index17.checksum);
                 // var6.buffer.encipherXtea(keys, var8, var6.buffer.offset, (byte) 0); TODO
                 var6.buffer.writeLengthShort(var6.buffer.offset - start);
@@ -5281,12 +5034,12 @@ public final class client extends GameApplet implements class290 {
 
             } else {
                 if (loginStage == 11 && var2.available((byte) 78) >= 1) {
-                    class271.len = var2.read();
+                    ItemConfig.len = var2.read();
                     loginStage = 12;
                 }
 
                 boolean var35;
-                if (loginStage == 12 && var2.available((byte) 81) >= class271.len) {
+                if (loginStage == 12 && var2.available((byte) 81) >= ItemConfig.len) {
                     //boolean zzz = var2.read(-803995166) == 1;
                     //var2.read(var3.bytes, 0, 4, -887854775);
                     var3.offset = 0;
@@ -5337,14 +5090,14 @@ public final class client extends GameApplet implements class290 {
                     field761 = var2.read();
                     var2.read(var3.bytes, 0, 1);
                     var3.offset = 0;
-                    InboundPacketDescriptor[] packets = class63.getInboundPackets(816105871);
-                    int packetId = var3.readEncipheredShort(-711467529);
+                    InboundPacketDescriptor[] packets = class63.getInboundPackets();
+                    int packetId = var3.readEncipheredShort();
                     if (packetId < 0 || packetId >= packets.length) {
                         throw new IOException(packetId + " " + var3.offset);
                     }
 
-                    field690.packetDescriptor = packets[packetId];
-                    field690.packetLength = field690.packetDescriptor.length;
+                    field690.currentPacket = packets[packetId];
+                    field690.packetLength = field690.currentPacket.length;
                     var2.read(var3.bytes, 0, 2);
                     var3.offset = 0;
                     field690.packetLength = var3.readUint16();
@@ -5372,11 +5125,11 @@ public final class client extends GameApplet implements class290 {
                     field868 = -1L;
                     class247.method4821((byte) 102);
                     field690.method2194();
-                    field690.field1283.offset = 0;
-                    field690.packetDescriptor = null;
-                    field690.field1295 = null;
-                    field690.field1284 = null;
-                    field690.field1278 = null;
+                    field690.buffer.offset = 0;
+                    field690.currentPacket = null;
+                    field690.lastPacket = null;
+                    field690.secondPacket = null;
+                    field690.thirdPacket = null;
                     field690.packetLength = 0;
                     field690.field1287 = 0;
                     field662 = 0;
@@ -5420,12 +5173,12 @@ public final class client extends GameApplet implements class290 {
                     for (var34 = 0; var34 < 4; ++var34) {
                         for (var14 = 0; var14 < 104; ++var14) {
                             for (var18 = 0; var18 < 104; ++var18) {
-                                field829[var34][var14][var18] = null;
+                                itemStacks[var34][var14][var18] = null;
                             }
                         }
                     }
 
-                    field688 = new class207();
+                    field688 = new Deque();
                     InboundPacketDescriptor.field2150.method1755(-1601565488);
 
                     for (var34 = 0; var34 < class256.field3302; ++var34) {
@@ -5479,7 +5232,7 @@ public final class client extends GameApplet implements class290 {
                                         978549285);
 
                     for (var34 = 0; var34 < 8; ++var34) {
-                        field767[var34] = null;
+                        playerOptions[var34] = null;
                         field768[var34] = false;
                     }
 
@@ -5490,7 +5243,7 @@ public final class client extends GameApplet implements class290 {
                         field848[var34] = true;
                     }
 
-                    class70.method1948(1280140142);
+                    ScriptExecutor.method1948(1280140142);
                     class3.field26 = null;
 
                     for (var34 = 0; var34 < 8; ++var34) {
@@ -5501,7 +5254,7 @@ public final class client extends GameApplet implements class290 {
                     class260.decodePlayerPositioning(var3);
                     class123.field1727 = -1;
                     class11.decodeSceneRebuild(false, var3);
-                    field690.packetDescriptor = null;
+                    field690.currentPacket = null;
 
                 } else {
                     if (loginStage == 14 && var2.available((byte) 91) >= 2) {
@@ -5517,11 +5270,11 @@ public final class client extends GameApplet implements class290 {
                         var3.offset = 0;
                         var2.read(var3.bytes, 0, class1.field5);
                         var3.offset = 0;
-                        String var26 = var3.method3778(-1049738239);
-                        String var28 = var3.method3778(586497954);
-                        String var30 = var3.method3778(-1430474982);
+                        String var26 = var3.getString();
+                        String var28 = var3.getString();
+                        String var30 = var3.getString();
                         class185.method4006(var26, var28, var30, 1843693184);
-                        class16.method202(10, -1194677662);
+                        setState(10);
                     }
 
                     if (loginStage == 16) {
@@ -5806,26 +5559,26 @@ public final class client extends GameApplet implements class290 {
 
             int var7 = var2 - field713 + field817.field2711;
             int var8 = var3 - field823 + field817.field2689;
-            class57 var9;
+            ScriptCall var9;
             if (field816.field2712 != null && field827) {
-                var9 = new class57();
+                var9 = new ScriptCall();
                 var9.field570 = field816;
                 var9.field565 = var7;
                 var9.field566 = var8;
-                var9.field575 = field816.field2712;
-                class53.method1076(var9, -92078767);
+                var9.arguments = field816.field2712;
+                ScriptExecutor.execute(var9);
             }
 
             if (class48.field469 == 0) {
                 if (field827) {
                     if (field816.field2763 != null) {
-                        var9 = new class57();
+                        var9 = new ScriptCall();
                         var9.field570 = field816;
                         var9.field565 = var7;
                         var9.field566 = var8;
                         var9.field568 = field811;
-                        var9.field575 = field816.field2763;
-                        class53.method1076(var9, 1218727997);
+                        var9.arguments = field816.field2763;
+                        ScriptExecutor.execute(var9);
                     }
 
                     if (field811 != null && class244.method4799(field816, -1411794273) != null) {

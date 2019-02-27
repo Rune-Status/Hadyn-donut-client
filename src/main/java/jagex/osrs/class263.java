@@ -39,15 +39,15 @@ public class class263 extends class208 {
         if (var2 == 1) {
             var1.readUint16();
         } else if (var2 == 2) {
-            this.field3391 = var1.getUByte();
+            this.field3391 = var1.readUint8();
         } else if (var2 == 3) {
-            this.field3386 = var1.getUByte();
+            this.field3386 = var1.readUint8();
         } else if (var2 == 4) {
             this.field3394 = 0;
         } else if (var2 == 5) {
             this.field3387 = var1.readUint16();
         } else if (var2 == 6) {
-            var1.getUByte();
+            var1.readUint8();
         } else if (var2 == 7) {
             this.field3390 = var1.method3898((byte) -26);
         } else if (var2 == 8) {
@@ -55,16 +55,16 @@ public class class263 extends class208 {
         } else if (var2 == 11) {
             this.field3394 = var1.readUint16();
         } else if (var2 == 14) {
-            this.field3392 = var1.getUByte();
+            this.field3392 = var1.readUint8();
         } else if (var2 == 15) {
-            this.field3393 = var1.getUByte();
+            this.field3393 = var1.readUint8();
         }
 
     }
 
     void method5147(Buffer var1, byte var2) {
         while (true) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 == 0) {
                 return;
             }

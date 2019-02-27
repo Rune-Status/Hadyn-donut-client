@@ -47,7 +47,7 @@ public class class255 extends class208 {
                 int var16 = var14 & 63;
                 int var17 = var14 >> 6 & 63;
                 int var18 = var14 >> 12;
-                int var19 = var11.getUByte();
+                int var19 = var11.readUint8();
                 int var20 = var19 >> 2;
                 int var21 = var19 & 3;
                 if (var18 == var4 && var17 >= var5 && var17 < var5 + 8 && var16 >= var6
@@ -129,7 +129,7 @@ public class class255 extends class208 {
 
     void method5004(Buffer var1, int var2) {
         while (true) {
-            int var3 = var1.getUByte();
+            int var3 = var1.readUint8();
             if (var3 == 0) {
                 return;
             }

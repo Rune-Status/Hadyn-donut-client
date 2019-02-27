@@ -47,7 +47,7 @@ public class class27 implements class31 {
         }
 
         if (client.state >= 25) {
-            class70.method1948(-904353438);
+            ScriptExecutor.method1948(-904353438);
         }
 
     }
@@ -84,10 +84,10 @@ public class class27 implements class31 {
 
     public static void method517(class249 var0, class249 var1, boolean var2, class300 var3,
                                  byte var4) {
-        class271.field3506 = var0;
+        ItemConfig.field3506 = var0;
         class4.field32 = var1;
         class229.field2648 = var2;
-        class316.field3840 = class271.field3506.method4889(10, 1064669026);
+        class316.field3840 = ItemConfig.field3506.method4889(10, 1064669026);
         class140.field1931 = var3;
     }
 
@@ -150,8 +150,8 @@ public class class27 implements class31 {
     }
 
     public void vmethod709(Buffer var1, int var2) {
-        this.field271 = var1.getUByte();
-        this.field267 = var1.getUByte();
+        this.field271 = var1.readUint8();
+        this.field267 = var1.readUint8();
         this.field268 = var1.readUint16();
         this.field269 = var1.readUint16();
         this.field270 = var1.readUint16();

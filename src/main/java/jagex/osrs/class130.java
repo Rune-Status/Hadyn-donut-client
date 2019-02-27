@@ -4,6 +4,8 @@ import java.io.IOException;
 
 public final class class130 {
 
+    public static final int CHUNK_SIZE = 1024;
+
     public long field1848;
     public class129 field1846;
     public class129 field1847;
@@ -20,7 +22,7 @@ public final class class130 {
     }
 
     public static boolean method3241(byte var0) {
-        long var1 = class120.method2866((short) 3133);
+        long var1 = Time.currentTimeMillis();
         int var3 = (int) (var1 - class252.field3260);
         class252.field3260 = var1;
         if (var3 > 200) {
@@ -108,10 +110,10 @@ public final class class130 {
 
                             if (class193.field2460 == null) {
                                 class252.field3258.offset = 0;
-                                var8 = class252.field3258.getUByte();
+                                var8 = class252.field3258.readUint8();
                                 var9 = class252.field3258.readUint16();
                                 System.out.println("Recvd " + var8 + ", " + var9);
-                                int compression = class252.field3258.getUByte();
+                                int compression = class252.field3258.readUint8();
                                 var11 = class252.field3258.getInt();
                                 long var12 = (long) (var9 + (var8 << 16));
                                 class248 var14 = (class248) class252.field3261.method4224(var12);
@@ -144,7 +146,7 @@ public final class class130 {
                         } else {
                             var7 =
                                 class252.field3271.bytes.length - class193.field2460.field3221;
-                            var8 = 512 - class252.chunkOffset;
+                            var8 = CHUNK_SIZE - class252.chunkOffset;
                             if (var8 > var7 - class252.field3271.offset) {
                                 var8 = var7 - class252.field3271.offset;
                             }
@@ -218,7 +220,7 @@ public final class class130 {
                                 class193.field2460 = null;
                                 class252.field3271 = null;
                             } else {
-                                if (class252.chunkOffset != 512) {
+                                if (class252.chunkOffset != CHUNK_SIZE) {
                                     break;
                                 }
 

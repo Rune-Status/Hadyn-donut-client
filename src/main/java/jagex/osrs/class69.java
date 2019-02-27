@@ -6,12 +6,12 @@ import java.util.concurrent.TimeUnit;
 public final class class69 extends Node {
 
     static Player localPlayer;
-    static class207 field1051;
+    static Deque field1051;
     static int[] field1047;
     static int field1050;
 
     static {
-        field1051 = new class207();
+        field1051 = new Deque();
     }
 
     int field1054;

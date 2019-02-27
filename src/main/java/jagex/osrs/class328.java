@@ -19,8 +19,8 @@ public class class328 {
         int var7;
         if (var0 == 3400) {
             class60.field600 -= 2;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
             class268 var6 = class86.method2166(var4, 1801855127);
             if (var6.field3417 != 's') {
                 ;
@@ -28,40 +28,40 @@ public class class328 {
 
             for (var7 = 0; var7 < var6.field3420; ++var7) {
                 if (var5 == var6.field3416[var7]) {
-                    class70.field1065[++class70.field1072 - 1] = var6.field3423[var7];
+                    ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var6.field3423[var7];
                     var6 = null;
                     break;
                 }
             }
 
             if (var6 != null) {
-                class70.field1065[++class70.field1072 - 1] = var6.field3421;
+                ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var6.field3421;
             }
 
             return 1;
         } else if (var0 != 3408) {
             if (var0 == 3411) {
-                var4 = class70.field1070[--class60.field600];
+                var4 = ScriptExecutor.field1070[--class60.field600];
                 class268 var11 = class86.method2166(var4, 1915362488);
-                class70.field1070[++class60.field600 - 1] = var11.method5225((byte) 2);
+                ScriptExecutor.field1070[++class60.field600 - 1] = var11.method5225((byte) 2);
                 return 1;
             } else {
                 return 2;
             }
         } else {
             class60.field600 -= 4;
-            var4 = class70.field1070[class60.field600];
-            var5 = class70.field1070[class60.field600 + 1];
-            int var10 = class70.field1070[class60.field600 + 2];
-            var7 = class70.field1070[class60.field600 + 3];
+            var4 = ScriptExecutor.field1070[class60.field600];
+            var5 = ScriptExecutor.field1070[class60.field600 + 1];
+            int var10 = ScriptExecutor.field1070[class60.field600 + 2];
+            var7 = ScriptExecutor.field1070[class60.field600 + 3];
             class268 var8 = class86.method2166(var10, 1042323579);
             if (var4 == var8.field3425 && var5 == var8.field3417) {
                 for (int var9 = 0; var9 < var8.field3420; ++var9) {
                     if (var7 == var8.field3416[var9]) {
                         if (var5 == 115) {
-                            class70.field1065[++class70.field1072 - 1] = var8.field3423[var9];
+                            ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var8.field3423[var9];
                         } else {
-                            class70.field1070[++class60.field600 - 1] = var8.field3422[var9];
+                            ScriptExecutor.field1070[++class60.field600 - 1] = var8.field3422[var9];
                         }
 
                         var8 = null;
@@ -71,18 +71,18 @@ public class class328 {
 
                 if (var8 != null) {
                     if (var5 == 115) {
-                        class70.field1065[++class70.field1072 - 1] = var8.field3421;
+                        ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = var8.field3421;
                     } else {
-                        class70.field1070[++class60.field600 - 1] = var8.field3415;
+                        ScriptExecutor.field1070[++class60.field600 - 1] = var8.field3415;
                     }
                 }
 
                 return 1;
             } else {
                 if (var5 == 115) {
-                    class70.field1065[++class70.field1072 - 1] = "null";
+                    ScriptExecutor.field1065[++ScriptExecutor.field1072 - 1] = "null";
                 } else {
-                    class70.field1070[++class60.field600 - 1] = 0;
+                    ScriptExecutor.field1070[++class60.field600 - 1] = 0;
                 }
 
                 return 1;
